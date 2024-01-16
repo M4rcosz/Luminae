@@ -1,0 +1,30 @@
+[
+    {
+        "trending": [
+            {
+                "id": 1,
+                "newArivals": true,
+                "image": "/images/ilustrations/trends-1.png",
+                "title": "Cool & Sexy Calvin Klein",
+                "description": "Dotted dress-Casual",
+                "shopNowValue": 89
+            },
+            {
+                "id": 2,
+                "newArivals": false,
+                "image": "/images/ilustrations/trends-2.png",
+                "title": "Cool & Sexy Calvin Klein",
+                "description": "Dotted dress-Casual",
+                "shopNowValue": 89
+            },
+            {
+                "id": 3,
+                "newArivals": true,
+                "image": "/images/ilustrations/trends-3.png",
+                "title": "Beige coat Zara",
+                "description": "Cream-Brown-Formal",
+                "shopNowValue": 102
+            }
+        ]
+    }
+]

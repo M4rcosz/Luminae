@@ -1,0 +1,50 @@
+[
+    {
+        "flashSales": [
+            {
+                "id": 1,
+                "discountLeft": "12:43:12",
+                "imageProduct": "/images/products/produto1.png",
+                "productName": "Tonny Black",
+                "productDescription": "Shoulder bag-White-Plain",
+                "evaluationNumber": 54,
+                "price": 129.99,
+                "discountPrice": 69.99,
+                "discount": 40
+            },
+            {
+                "id": 2,
+                "discountLeft": "02:05:32",
+                "imageProduct": "/images/products/produto2.png",
+                "productName": "Reebok",
+                "productDescription": "Women’s Powder sneakers",
+                "evaluationNumber": 54,
+                "price": 129.99,
+                "discountPrice": 112.02,
+                "discount": 40
+            },
+            {
+                "id": 3,
+                "discountLeft": "12:43:12",
+                "imageProduct": "/images/products/produto3.png",
+                "productName": "Patso",
+                "productDescription": "Shoulder bag-Pink-Plain",
+                "evaluationNumber": 54,
+                "price": 129.99,
+                "discountPrice": 69.99,
+                "discount": 40
+            },
+            {
+                "id": 4,
+                "discountLeft": "02:05:32",
+                "imageProduct": "/images/products/produto4.png",
+                "productName": "Sketchers",
+                "productDescription": "Sport-shoe 2102",
+                "evaluationNumber": 54,
+                "price": 129.99,
+                "discountPrice": 80.00,
+                "discount": 40
+            }
+        ]
+    }
+]
