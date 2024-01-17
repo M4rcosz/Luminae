@@ -43,7 +43,7 @@ const Typography: React.FC<TypographyProps> = ({
     lineHeight?: string,
   }>`
 
-    color: ${color ? color : "#fff"};
+    color: ${color ? color : "#e4e4e4"};
     font-size: ${fontSize};
     line-height: ${lineHeight};
     

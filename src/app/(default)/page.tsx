@@ -1,12 +1,15 @@
 "use client"
 import ExploreCard from "@/components/ExploreCard"
 import FlashSales from "@/components/FlashSales";
+import Top100 from "@/components/Top100";
 import TrendingMustHaves from "@/components/TrendingMustHaves";
+import { useRouter } from "next/navigation";
 
 const Landing = () => {
+  const router = useRouter();
   return (
     <main>
-      {/* <h1 style={{ opacity: "0", position: "absolute", width: "1px", margin: "-1px", zIndex: "-1" }}>Landing Page</h1>
+      <h1 style={{ opacity: "0", position: "absolute", width: "1px", margin: "-1px", zIndex: "-1" }}>Landing Page</h1>
       <section className="px-5 gap-y-3 flex flex-col mb-5">
         <ExploreCard
           cardColor="#BF2E3B"
@@ -33,7 +36,11 @@ const Landing = () => {
 
       <section className="mt-3 ">
         <TrendingMustHaves />
-      </section> */}
+      </section>
+
+      <section className="mt-3">
+        <Top100 />
+      </section>
     </main>
   )
 }

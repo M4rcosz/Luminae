@@ -58,11 +58,17 @@ const Footer = () => {
                     <li>Privacy Policy</li>
                 </ul>
             </StyledFooterContainer>
-            <div className="flex grayscale justify-center gap-6 my-6">
-                <img className="scale-90" src="/images/icons/visa.svg" alt="Logo da VISA" />
-                <img className="scale-90" src="/images/icons/mastercard.svg" alt="Logo da Mastercard" />
-                <img className="scale-90" src="/images/icons/paypal.svg" alt="Logo do Paypal" />
-            </div>
+            <ul className="flex grayscale justify-center gap-6 my-6">
+                <li className="flex justify-center">
+                    <img className="scale-90" src="/images/icons/visa.svg" alt="Logo da VISA" />
+                </li>
+                <li className="flex justify-center">
+                    <img className="scale-90" src="/images/icons/mastercard.svg" alt="Logo da Mastercard" />
+                </li>
+                <li className="flex justify-center">
+                    <img className="scale-90 bg-transparent" src="/images/icons/paypal.svg" alt="Logo do Paypal" />
+                </li>
+            </ul>
         </footer>
     )
 }

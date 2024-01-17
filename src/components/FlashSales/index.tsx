@@ -2,14 +2,14 @@
 
 import FlashSalesCard from "./FlashSalesCard";
 import data from "../../data/flashSales.json"
-import HeaderViewAll from "../HeaderViewAll";
+import ViewAllTitle from "../ViewAllTitle";
 
 const cardsFlashSales = data[0].flashSales;
 
 const FlashSales = () => {
     return (
         <>
-            <HeaderViewAll
+            <ViewAllTitle
                 title="Flash Sales"
             />
             <ul className="flex overflow-scroll ">

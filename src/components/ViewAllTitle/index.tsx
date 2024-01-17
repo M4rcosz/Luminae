@@ -4,14 +4,14 @@ import { theme } from "@/components/ThemeProviderComp"
 import Typography from "@/components/Typography"
 
 
-interface HeaderViewAllProps {
+interface ViewAllTitleProps {
     title: string
     urlPath?: string
 }
 
-const HeaderViewAll = ({ title, urlPath = "#" }: HeaderViewAllProps) => {
+const ViewAllTitle = ({ title, urlPath = "#" }: ViewAllTitleProps) => {
     return (
-        <div className="flex mx-5 mb-4">
+        <div className="flex mx-5 mb-4 items-center">
             <Typography
                 componente="h3"
                 color={theme.colors.base.b900}
@@ -21,13 +21,13 @@ const HeaderViewAll = ({ title, urlPath = "#" }: HeaderViewAllProps) => {
             </Typography>
             <Link
                 href={urlPath}
-                className="ml-auto"
+                className="ml-auto text-xs"
             // css={styledLink1}
             >
-                View all
+                {`View all >`}
             </Link>
         </div>
     )
 }
 
-export default HeaderViewAll
+export default ViewAllTitle

@@ -1,6 +1,6 @@
 'use client'
 
-import HeaderViewAll from "../HeaderViewAll"
+import ViewAllTitle from "../ViewAllTitle"
 import data from "../../data/trendingMustHave.json"
 import TrendingMustHavesCard from "./TrendingMustHavesCard";
 
@@ -10,7 +10,7 @@ const trends = data[0].trending;
 const TrendingMustHaves = () => {
     return (
         <>
-            <HeaderViewAll
+            <ViewAllTitle
                 title="Trending Must Have"
             />
             <ul className="flex overflow-x-auto mb-2 min-w-64">
