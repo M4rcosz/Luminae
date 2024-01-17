@@ -13,9 +13,15 @@ const config: Config = {
         "3xs": "8px"
       },
       spacing: {
-        "0.75": "3px"
+        "0.75": "3px",
       },
     },
+    colors: {
+      "whiteText": "#f0f0f0",
+      "grayText": "#C4C4C4",
+      "veryGrayText": "#9D9D9D",
+      "notifications": "#FF2E00"
+    }
   },
   plugins: [],
 }

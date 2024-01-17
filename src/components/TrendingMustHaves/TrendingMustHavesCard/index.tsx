@@ -1,8 +1,7 @@
 
 import Link from "next/link"
-import StyledImageProduct from "@/components/BgImageTemplate"
+import BgImageTemplate from "@/components/BgImageTemplate"
 import { theme } from "@/components/ThemeProviderComp"
-import Typography from "@/components/Typography"
 
 interface TrendingMustHavesCardProps {
     newArivals: boolean
@@ -20,10 +19,10 @@ const TrendingMustHavesCard = ({
     shopNowValue
 }: TrendingMustHavesCardProps) => {
     return (
-        <>
-            <StyledImageProduct
-                image={image}
-                className="h-80 bg-center bg-cover bg-no-repeat rounded-t-lg w-[87.5vw]"
+        <article>
+            <BgImageTemplate
+                src={image}
+                className="h-80 rounded-t-lg w-[87.5vw] bg-cover"
             >
                 {newArivals && <span
                     className="flex items-center text-2xs w-fit py-0.75 px-1.5 gap-1.5 rounded relative top-2.5 left-2.5"
@@ -34,28 +33,19 @@ const TrendingMustHavesCard = ({
                     </svg>
                     New Arivals
                 </span>}
-            </StyledImageProduct>
+            </BgImageTemplate>
 
             <footer
                 style={{ backgroundColor: theme.colors.base.b800 }}
                 className="flex rounded-b-lg p-4 gap-3 items-center justify-between h-32 "
             >
-                <div>
-                    <Typography
-                        componente="h5"
-                        color={theme.colors.base.b000}
-                        className="text-sm max-[380px]:text-xs"
-                    >
+                <div className="flex flex-col gap-3">
+                    <h4 className="text-sm max-[380px]:text-xs text-whiteText">
                         {title}
-                    </Typography>
-
-                    <Typography
-                        componente="span"
-                        color={theme.colors.base.b300}
-                        className="text-sm max-[380px]:text-xs  "
-                    >
+                    </h4>
+                    <p className="text-sm max-[380px]:text-xs text-grayText">
                         {description}
-                    </Typography>
+                    </p>
                 </div>
                 <Link
                     href="#"
@@ -65,7 +55,7 @@ const TrendingMustHavesCard = ({
                     ${shopNowValue} Shop Now
                 </Link>
             </footer>
-        </>
+        </article>
     )
 }
 

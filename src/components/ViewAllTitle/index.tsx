@@ -1,8 +1,4 @@
 import Link from "next/link"
-import { styledLink1 } from "@/common/styles/StyledLink"
-import { theme } from "@/components/ThemeProviderComp"
-import Typography from "@/components/Typography"
-
 
 interface ViewAllTitleProps {
     title: string
@@ -11,14 +7,10 @@ interface ViewAllTitleProps {
 
 const ViewAllTitle = ({ title, urlPath = "#" }: ViewAllTitleProps) => {
     return (
-        <div className="flex mx-5 mb-4 items-center">
-            <Typography
-                componente="h3"
-                color={theme.colors.base.b900}
-                className="text-xl font-semibold"
-            >
+        <div className="flex  mb-4 items-center">
+            <h3 className="text-xl font-semibold">
                 {title}
-            </Typography>
+            </h3>
             <Link
                 href={urlPath}
                 className="ml-auto text-xs"

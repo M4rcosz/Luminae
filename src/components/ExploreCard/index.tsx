@@ -1,7 +1,4 @@
-'use client'
-
 import styled from "@emotion/styled"
-import Typography from "@/components/Typography"
 
 interface ExploreCardProps {
     title: string,
@@ -27,23 +24,14 @@ const ExploreCard = ({ title, description, link = "#", anchorText, cardColor, ca
                 style={{ backgroundColor: cardColor }}
                 className="px-3 py-4 flex flex-col justify-center"
             >
-                <Typography
-                    componente="h2"
-                    lineHeight="30px"
-                    className="font-extrabold text-base"
-
-                >
+                <h2 className="leading-7 font-extrabold text-base text-whiteText">
                     {title}
-                </Typography>
+                </h2>
 
-                <Typography
-                    componente="p"
-                    lineHeight="30px"
-                    className="text-sm"
-
-                >
+                <p className="leading-7 text-sm text-whiteText">
                     {description}
-                </Typography>
+                </p>
+
                 <AnchorExploreCard href={link}>{anchorText}</AnchorExploreCard>
             </div>
             <img src={cardImage} alt="" className="w-1/2" />

@@ -1,7 +1,6 @@
-import Typography from "@/components/Typography"
 import { theme } from "@/components/ThemeProviderComp"
 
-import StyledImageProduct from "@/components/BgImageTemplate";
+import BgImageTemplate from "@/components/BgImageTemplate";
 
 interface FlashSalesCardProps {
     imageProduct: string,
@@ -26,85 +25,67 @@ const FlashSalesCard = ({
     discountPrice,
     discount, }: FlashSalesCardProps) => {
     return (
-        <>
+        <article>
             <div className="text-center">
-                <Typography
-                    componente="h4"
-                    color={theme.colors.base.b400}
-                    className="font-extrabold text-sm uppercase"
-                >
+                <h4 className="text-veryGrayText font-extrabold text-sm uppercase">
                     Deal of the Day
-                </Typography>
+                </h4>
 
                 <div className="flex justify-center gap-2">
-                    <span className="flex flex-col text-xs" style={{ color: theme.colors.base.b400 }}>
-                        <strong className="text-lg font-extrabold" style={{ color: theme.colors.base.b800 }}>12</strong>
+                    <span className="flex flex-col text-xs text-[#9D9D9D]">
+                        <strong className="text-lg font-extrabold text-[#262626]">12</strong>
                         hour
                     </span>
 
-                    <span className="flex flex-col text-xs" style={{ color: theme.colors.base.b400 }}>:</span>
+                    <span className="text-2xl text-xs text-[#9D9D9D]">:</span>
 
-                    <span className="flex flex-col text-xs" style={{ color: theme.colors.base.b400 }}>
-                        <strong className="text-lg font-extrabold" style={{ color: theme.colors.base.b800 }}>43</strong>
+                    <span className="flex flex-col text-xs text-[#9D9D9D]">
+                        <strong className="text-lg font-extrabold text-[#262626]">43</strong>
                         min
                     </span>
 
-                    <span className="flex flex-col text-xs" style={{ color: theme.colors.base.b400 }}>:</span>
+                    <span className="text-2xl text-xs text-[#9D9D9D]">:</span>
 
-                    <span className="flex flex-col text-xs" style={{ color: theme.colors.base.b400 }}>
-                        <strong className="text-lg font-extrabold" style={{ color: theme.colors.base.b800 }}>12</strong>
+                    <span className="flex flex-col text-xs text-[#9D9D9D]">
+                        <strong className="text-lg font-extrabold text-[#262626]">12</strong>
                         sec
                     </span>
                 </div>
             </div>
 
-            <StyledImageProduct className="w-full h-44 bg-[length:135px_auto] bg-no-repeat bg-center" image={imageProduct}></StyledImageProduct>
+            <BgImageTemplate className="w-full h-44 bg-[length:135px_auto]" src={imageProduct}></BgImageTemplate>
 
             <div className="flex flex-col gap-1.5 px-3">
-                <Typography
-                    componente="h5"
-                    color={theme.colors.base.b800}
-                    className="text-base font-bold"
-                >
+
+                <h5 className="text-base font-bold text-[#262626]">
                     {productName}
-                </Typography>
+                </h5>
 
-                <Typography
-                    componente="span"
-                    color={theme.colors.base.b700}
-                    className="text-xs font-normal"
-
-                >
+                <p className="text-xs font-normal text-[#434343]">
                     {productDescription}
-                </Typography>
+                </p>
 
                 <div className="flex w-[45%] items-center">
                     <span><img src="/images/icons/Star.svg" alt="" /></span>
                     <span><img src="/images/icons/Star.svg" alt="" /></span>
                     <span><img src="/images/icons/Star.svg" alt="" /></span>
                     <span><img src="/images/icons/Star.svg" alt="" /></span>
-                    <strong className="ml-1 text-xs" style={{ color: theme.colors.base.b700 }}>({evaluationNumber})</strong>
+                    <strong className="ml-1 text-xs text-[#434343]">({evaluationNumber})</strong>
                 </div>
                 <div className="flex gap-4 items-center">
-                    <strong className="text-sm" style={{ color: theme.colors.notifications }} >${discountPrice}</strong>
-                    <strong
-                        className="text-xs line-through"
-                        style={{ color: theme.colors.base.b700 }}
-                    >
+                    <strong className="text-sm text-notifications">
+                        ${discountPrice}
+                    </strong>
+                    <strong className="text-2xs line-through text-[#434343]">
                         ${price}
                     </strong>
                     <strong
-                        className="text-3xs px-1.5 py-0.75 rounded-sm"
-                        style={{
-                            color: theme.colors.base.b000,
-                            backgroundColor: theme.colors.notifications
-                        }}
-                    >
+                        className="text-3xs px-1.5 py-0.75 rounded-sm text-whiteText bg-notifications">
                         -{discount}%
                     </strong>
                 </div>
             </div>
-        </>
+        </article>
     )
 }
 
