@@ -6,7 +6,7 @@ const cardsFlashSales = data[0].flashSales;
 
 const FlashSales = () => {
     return (
-        <>
+        <section>
             <ViewAllTitle
                 title="Flash Sales"
             />
@@ -29,7 +29,7 @@ const FlashSales = () => {
                     )
                 })}
             </ul>
-        </>
+        </section>
     )
 }
 

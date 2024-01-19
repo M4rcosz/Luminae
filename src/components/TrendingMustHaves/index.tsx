@@ -7,7 +7,7 @@ const trends = data[0].trending;
 
 const TrendingMustHaves = () => {
     return (
-        <>
+        <section>
             <ViewAllTitle
                 title="Trending Must Have"
             />
@@ -24,7 +24,7 @@ const TrendingMustHaves = () => {
                     </li>
                 ))}
             </ul>
-        </>
+        </section>
     )
 }
 

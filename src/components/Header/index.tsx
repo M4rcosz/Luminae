@@ -12,7 +12,7 @@ text-align: center;
 const Header = () => {
     return (
         <header className="h-max py-5 px-5">
-            <div className="flex justify-between ">
+            <nav className="flex justify-between mb-12">
                 <img src="/images/icons/hamburguer.svg" alt="hamburguer para abrir o menu" />
                 <img src="/images/icons/logo.svg" alt="icone da logo do site Luminae" />
                 <div className="flex items-center text-white gap-0.5">
@@ -22,9 +22,12 @@ const Header = () => {
                     </svg>
                     <CardNumber>3</CardNumber>
                 </div>
-            </div>
+            </nav>
             <Field
                 placeholder="Search Producs"
+                ariaLabel="Search Producs"
+                type="search"
+                className=" w-[110px]"
             />
         </header>
     )

@@ -4,6 +4,7 @@ interface ButtonProps {
     children?: React.ReactNode;
     className?: string;
     src?: string;
+    ariaLabel?: string;
 }
 
 const StyledButton = styled.button<{
@@ -17,9 +18,9 @@ const StyledButton = styled.button<{
 }
 `
 
-const Button = ({ children, className, src }: ButtonProps) => {
+const Button = ({ children, className, src, ariaLabel }: ButtonProps) => {
     return (
-        <StyledButton className={className} src={src}>
+        <StyledButton className={className} src={src} aria-label={ariaLabel}>
             {children}
         </StyledButton>
     )

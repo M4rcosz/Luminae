@@ -32,17 +32,11 @@ const Landing = () => {
         />
       </section>
 
-      <section>
-        <FlashSales />
-      </section>
+      <FlashSales />
 
-      <section>
-        <TrendingMustHaves />
-      </section>
+      <TrendingMustHaves />
 
-      <section>
-        <Top100 />
-      </section>
+      <Top100 />
     </main>
   )
 }

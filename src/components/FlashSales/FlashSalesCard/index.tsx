@@ -66,10 +66,10 @@ const FlashSalesCard = ({
                 </p>
 
                 <div className="flex w-[45%] items-center">
-                    <span><img src="/images/icons/Star.svg" alt="" /></span>
-                    <span><img src="/images/icons/Star.svg" alt="" /></span>
-                    <span><img src="/images/icons/Star.svg" alt="" /></span>
-                    <span><img src="/images/icons/Star.svg" alt="" /></span>
+                    <span><img src="/images/icons/Star.svg" /></span>
+                    <span><img src="/images/icons/Star.svg" /></span>
+                    <span><img src="/images/icons/Star.svg" /></span>
+                    <span><img src="/images/icons/Star.svg" /></span>
                     <strong className="ml-1 text-xs text-[#434343]">({evaluationNumber})</strong>
                 </div>
                 <div className="flex gap-4 items-center">
