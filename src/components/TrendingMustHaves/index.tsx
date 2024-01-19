@@ -11,7 +11,7 @@ const TrendingMustHaves = () => {
             <ViewAllTitle
                 title="Trending Must Have"
             />
-            <ul className="flex overflow-x-auto mb-2 min-w-64 pb-2.5 gap-5 w-screen relative right-5 pl-5">
+            <ul className="flex overflow-x-auto min-w-64 pb-3 gap-5 w-screen relative right-5 pl-5">
                 {trends.map(trend => (
                     <li key={`trendingMustHaves-${trend.id}`}>
                         <TrendingMustHavesCard

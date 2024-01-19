@@ -7,7 +7,7 @@ import TrendingMustHaves from "@/components/TrendingMustHaves";
 
 const Landing = () => {
   return (
-    <main className="flex flex-col gap-10 px-5">
+    <main className="flex flex-col gap-8 px-5">
       <h1 className="absolute w-[1px] margin-[-1px] z-[-1] opacity-0">Landing Page</h1>
 
       <Banner />
