@@ -61,7 +61,7 @@ interface FieldProps {
 const Field = ({ placeholder, type = "none", className, ariaLabel, iconSrc }: FieldProps) => {
 
     if (type === "search")
-        return <ContainerInput>
+        return <ContainerInput className="w-full">
             <Input
                 type="search"
                 placeholder={placeholder}

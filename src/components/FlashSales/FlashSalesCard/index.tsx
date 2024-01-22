@@ -1,6 +1,6 @@
-import { theme } from "@/components/ThemeProviderComp"
-
 import BgImageTemplate from "@/components/BgImageTemplate";
+import Star from "@/components/SVG/Star";
+import Image from "next/image";
 
 interface FlashSalesCardProps {
     imageProduct: string,
@@ -25,35 +25,42 @@ const FlashSalesCard = ({
     discountPrice,
     discount, }: FlashSalesCardProps) => {
     return (
-        <article>
+        <li className="flex flex-col gap-5 pb-2 pt-3 ml-1 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg ">
             <div className="text-center">
-                <h4 className="text-veryGrayText font-extrabold text-sm uppercase">
+                <h4 className="text-[#555] font-extrabold text-sm uppercase">
                     Deal of the Day
                 </h4>
 
                 <div className="flex justify-center gap-2">
-                    <span className="flex flex-col text-xs text-[#9D9D9D]">
-                        <strong className="text-lg font-extrabold text-[#262626]">12</strong>
+                    <span className="flex flex-col text-xs text-[#555]">
+                        <strong className="text-lg font-extrabold text-[#111]">12</strong>
                         hour
                     </span>
 
-                    <span className="text-2xl text-xs text-[#9D9D9D]">:</span>
+                    <span className="text-2xl text-md text-[#555]">:</span>
 
-                    <span className="flex flex-col text-xs text-[#9D9D9D]">
-                        <strong className="text-lg font-extrabold text-[#262626]">43</strong>
+                    <span className="flex flex-col text-xs text-[#555]">
+                        <strong className="text-lg font-extrabold text-[#111]">43</strong>
                         min
                     </span>
 
-                    <span className="text-2xl text-xs text-[#9D9D9D]">:</span>
+                    <span className="text-2xl text-md text-[#555]">:</span>
 
-                    <span className="flex flex-col text-xs text-[#9D9D9D]">
-                        <strong className="text-lg font-extrabold text-[#262626]">12</strong>
+                    <span className="flex flex-col text-xs text-[#555]">
+                        <strong className="text-lg font-extrabold text-[#111]">12</strong>
                         sec
                     </span>
                 </div>
             </div>
 
-            <BgImageTemplate className="w-full h-44 bg-[length:135px_auto]" src={imageProduct}></BgImageTemplate>
+            <Image
+                src={imageProduct}
+                alt=""
+                width={135}
+                height={100}
+                className="w-full h-[90px] object-cover"
+                loading="lazy"
+            />
 
             <div className="flex flex-col gap-1.5 px-3">
 
@@ -66,10 +73,10 @@ const FlashSalesCard = ({
                 </p>
 
                 <div className="flex w-[45%] items-center">
-                    <span><img src="/images/icons/Star.svg" /></span>
-                    <span><img src="/images/icons/Star.svg" /></span>
-                    <span><img src="/images/icons/Star.svg" /></span>
-                    <span><img src="/images/icons/Star.svg" /></span>
+                    <Star className="w-2.5 h-2.5" />
+                    <Star className="w-2.5 h-2.5" />
+                    <Star className="w-2.5 h-2.5" />
+                    <Star className="w-2.5 h-2.5" />
                     <strong className="ml-1 text-xs text-[#434343]">({evaluationNumber})</strong>
                 </div>
                 <div className="flex gap-4 items-center">
@@ -85,7 +92,7 @@ const FlashSalesCard = ({
                     </strong>
                 </div>
             </div>
-        </article>
+        </li>
     )
 }
 

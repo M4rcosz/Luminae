@@ -1,7 +1,7 @@
 import { discountPriceFunction } from "@/common/utils/priceWithoutDiscount";
-import BgImageTemplate from "@/components/BgImageTemplate";
 import Button from "@/components/Button";
 import Star from "@/components/SVG/Star";
+import Image from "next/image";
 
 interface Top100CardProps {
     src: string;
@@ -23,16 +23,18 @@ const Top100Card = (
     }: Top100CardProps) => {
 
 
-    const priceWithoutDiscount = discountPriceFunction(productPrice, productDiscountPercent);
+    const priceWithDiscount = discountPriceFunction(productPrice, productDiscountPercent);
 
     return (
-
-        <article className="min-w-60 ">
-            <BgImageTemplate
+        <li className="flex flex-col justify-center last:mr-5 shadow-[0_4px_18px_-10px_#7e7e7e] rounded-lg min-w-60">
+            <Image
                 src={src}
-                className="w-full h-64 bg-cover bg-center rounded-t-lg"
-            >
-            </BgImageTemplate>
+                alt=""
+                width={500}
+                height={500}
+                className="w-full h-64 rounded-t-lg"
+                loading="lazy"
+            />
             <footer className="flex flex-col gap-2 px-3 py-2">
                 <div className="flex justify-between items-center">
                     <div>
@@ -56,12 +58,13 @@ const Top100Card = (
                     <strong className="ml-1 text-xs text-[#434343]">({productReviewsAmount})</strong>
                 </div>
                 <div className="flex gap-3 items-center">
-                    <strong className="text-sm text-notifications">${productPrice}</strong>
-                    <span className="text-2xs line-through text-[#434343]">${priceWithoutDiscount.toFixed(2)}</span>
+                    <strong className="text-sm text-notifications">${priceWithDiscount.toFixed(2)}</strong>
+                    <span className="text-2xs line-through text-[#434343]">${productPrice}</span>
                     <span className="text-2xs text-notifications">-{productDiscountPercent}%</span>
                 </div>
             </footer>
-        </article>
+        </li>
+
     )
 }
 

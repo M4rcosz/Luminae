@@ -20,7 +20,7 @@ const config: Config = {
       "whiteText": "#f0f0f0",
       "grayText": "#C4C4C4",
       "veryGrayText": "#9D9D9D",
-      "notifications": "#FF2E00"
+      "notifications": "#d02E00"
     }
   },
   plugins: [],

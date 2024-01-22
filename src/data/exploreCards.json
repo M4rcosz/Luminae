@@ -1,0 +1,38 @@
+[
+    {
+        "exploreCardsInfo": [
+            {
+                "id": 1,
+                "cardColor": "#BF2E3B",
+                "title": "Never-Ending Summer",
+                "description": "Throwback Shirts & all-day dressed",
+                "cardSrc": "/images/cardExplore/cardExplore-small-1.jgp",
+                "href": "#"
+            },
+            {
+                "id": 2,
+                "cardColor": "#006c9e",
+                "title": "Best Sellers Everyone Love",
+                "description": "Bikini & Poolside glam include",
+                "cardSrc": "/images/cardExplore/cardExplore-small-2.jgp",
+                "href": "#"
+            },
+            {
+                "id": 3,
+                "cardColor": "#D11FB5",
+                "title": "The Pinky Barbie Edition",
+                "description": "Lets play dress up",
+                "cardSrc": "/images/cardExplore/cardExplore-small-3.png",
+                "href": "#"
+            },
+            {
+                "id": 4,
+                "cardColor": "#1D5159",
+                "title": "The most famous sport brands",
+                "description": "Get in gym essentials",
+                "cardSrc": "/images/cardExplore/cardExplore-small-4.png",
+                "href": "#"
+            }
+        ]
+    }
+]

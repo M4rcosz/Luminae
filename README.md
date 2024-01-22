@@ -12,6 +12,7 @@ Estou usando o Design e ideias da ***Saina Ghasemi***, Australiana de Melbourne,
 - TypeScript
 - Emotion
 - TailwindCSS
+- Sharp
 
 ## Dinamicidade dos Dados
 

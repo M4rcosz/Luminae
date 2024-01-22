@@ -2,7 +2,7 @@ import Field from "@/components/Field"
 
 const NewsEmailCard = () => {
     return (
-        <section className="flex flex-col gap-3 bg-[#7296AB] py-4 px-4">
+        <section className="flex flex-col gap-3 bg-[#5050c5] py-4 px-4">
             <h2 className="text-whiteText font-bold text-xl text-center">
                 Luminae
                 <span className="text-[#dadada]"> Store</span>

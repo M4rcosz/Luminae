@@ -1,29 +1,26 @@
 import ViewAllTitle from "../ViewAllTitle"
-import data from "@/data/trendingMustHave.json"
+import data from "@/data/data.json"
 import TrendingMustHavesCard from "./TrendingMustHavesCard";
+import ContainerList from "../utils/ContainerList";
 
-const trends = data[0].trending;
-
+const trendsInfo = data[0].trendingMustHaveInfo;
 
 const TrendingMustHaves = () => {
     return (
         <section>
-            <ViewAllTitle
-                title="Trending Must Have"
-            />
-            <ul className="flex overflow-x-auto min-w-64 pb-3 gap-5 w-screen relative right-5 pl-5">
-                {trends.map(trend => (
-                    <li key={`trendingMustHaves-${trend.id}`}>
-                        <TrendingMustHavesCard
-                            newArivals={trend.newArivals}
-                            image={trend.image}
-                            title={trend.title}
-                            description={trend.description}
-                            shopNowValue={trend.shopNowValue}
-                        />
-                    </li>
-                ))}
-            </ul>
+            <ViewAllTitle title="Trending Must Have" />
+            <ContainerList>
+                {trendsInfo.map(trend =>
+                    <TrendingMustHavesCard
+                        key={`trendingMustHaves-${trend.id}`}
+                        newArivals={trend.newArivals}
+                        image={trend.image}
+                        title={trend.title}
+                        description={trend.description}
+                        shopNowValue={trend.shopNowValue}
+                    />
+                )}
+            </ContainerList>
         </section>
     )
 }

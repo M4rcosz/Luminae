@@ -1,6 +1,7 @@
 "use client"
 import styled from "@emotion/styled";
 import NewsEmailCard from "./NewsEmailCard";
+import Image from "next/image";
 
 const Container = styled.div`
 background-color: ${props => props.theme.colors.footer.f100};
@@ -8,9 +9,8 @@ display: flex;
 font-size: 14px;
 flex-wrap: wrap;
 row-gap: 40px;
-padding: 40px ${props => props.theme.spacing.md};
+padding: 40px 25px;
 justify-content: center;
-
 
 ul{
     display: flex;
@@ -61,17 +61,39 @@ const Footer = () => {
                 </ul>
             </Container>
 
-            <ul className="flex grayscale justify-center gap-6 my-6">
-                <li className="flex justify-center">
-                    <img className="scale-90" src="/images/icons/visa.svg" alt="Logo da VISA" />
-                </li>
-                <li className="flex justify-center">
-                    <img className="scale-90" src="/images/icons/mastercard.svg" alt="Logo da Mastercard" />
-                </li>
-                <li className="flex justify-center">
-                    <img className="scale-90 bg-transparent" src="/images/icons/paypal.svg" alt="Logo do Paypal" />
-                </li>
-            </ul>
+            <div>
+                <ul className="flex grayscale justify-center gap-6 my-6">
+                    <li className="flex justify-center">
+                        <Image
+                            src={"/images/icons/visa.svg"}
+                            alt="Logo da VISA"
+                            width={60}
+                            height={60}
+                            loading="lazy"
+
+                        />
+                    </li>
+                    <li className="flex justify-center">
+                        <Image
+                            src={"/images/icons/mastercard.svg"}
+                            alt="Logo da Mastercard"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                        />
+                    </li>
+                    <li className="flex justify-center">
+                        <Image
+                            src={"/images/icons/paypal.svg"}
+                            alt="Logo do Paypal"
+                            width={70}
+                            height={70}
+                            loading="lazy"
+                        />
+                    </li>
+                </ul>
+
+            </div>
         </footer>
     )
 }
