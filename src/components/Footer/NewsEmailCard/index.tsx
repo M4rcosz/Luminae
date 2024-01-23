@@ -2,7 +2,7 @@ import Field from "@/components/Field"
 
 const NewsEmailCard = () => {
     return (
-        <section className="flex flex-col gap-3 bg-[#5050c5] py-4 px-4">
+        <section className="flex flex-col gap-3 bg-[#5050c5] py-4 px-4 sm:translate-y-1/2 sm:w-fit sm:mx-auto sm:rounded-lg sm:px-8 sm:py-6">
             <h2 className="text-whiteText font-bold text-xl text-center">
                 Luminae
                 <span className="text-[#dadada]"> Store</span>
@@ -13,9 +13,7 @@ const NewsEmailCard = () => {
                 className=""
                 type="rightIcon"
                 iconSrc="/images/icons/send.svg"
-            >
-
-            </Field>
+            />
         </section>
     )
 }

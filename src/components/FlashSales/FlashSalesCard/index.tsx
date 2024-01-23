@@ -1,4 +1,3 @@
-import BgImageTemplate from "@/components/BgImageTemplate";
 import Star from "@/components/SVG/Star";
 import Image from "next/image";
 
@@ -25,7 +24,7 @@ const FlashSalesCard = ({
     discountPrice,
     discount, }: FlashSalesCardProps) => {
     return (
-        <li className="flex flex-col gap-5 pb-2 pt-3 ml-1 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg ">
+        <li className="flex flex-col gap-5 py-3 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg sm:last:mr-0 sm:px-3 sm:py-8 sm:min-w-1/2 sm:max-h-[380px] sm:flex-1">
             <div className="text-center">
                 <h4 className="text-[#555] font-extrabold text-sm uppercase">
                     Deal of the Day
@@ -58,38 +57,42 @@ const FlashSalesCard = ({
                 alt=""
                 width={135}
                 height={100}
-                className="w-full h-[90px] object-cover"
+                className="w-full h-fit object-cover"
                 loading="lazy"
             />
 
             <div className="flex flex-col gap-1.5 px-3">
 
-                <h5 className="text-base font-bold text-[#262626]">
-                    {productName}
-                </h5>
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-center">
+                    <h5 className="text-base font-bold text-[#262626]">
+                        {productName}
+                    </h5>
 
-                <p className="text-xs font-normal text-[#434343]">
-                    {productDescription}
-                </p>
-
-                <div className="flex w-[45%] items-center">
-                    <Star className="w-2.5 h-2.5" />
-                    <Star className="w-2.5 h-2.5" />
-                    <Star className="w-2.5 h-2.5" />
-                    <Star className="w-2.5 h-2.5" />
-                    <strong className="ml-1 text-xs text-[#434343]">({evaluationNumber})</strong>
+                    <p className="text-xs font-normal text-[#434343]">
+                        {productDescription}
+                    </p>
                 </div>
-                <div className="flex gap-4 items-center">
-                    <strong className="text-sm text-notifications">
-                        ${discountPrice}
-                    </strong>
-                    <strong className="text-2xs line-through text-[#434343]">
-                        ${price}
-                    </strong>
-                    <strong
-                        className="text-3xs px-1.5 py-0.75 rounded-sm text-whiteText bg-notifications">
-                        -{discount}%
-                    </strong>
+
+                <div className="flex flex-col gap-2 sm:flex-row sm:justify-between">
+                    <div className="flex w-[45%] items-center">
+                        <Star className="w-2.5 h-2.5" />
+                        <Star className="w-2.5 h-2.5" />
+                        <Star className="w-2.5 h-2.5" />
+                        <Star className="w-2.5 h-2.5" />
+                        <strong className="ml-1 text-xs text-[#434343]">({evaluationNumber})</strong>
+                    </div>
+                    <div className="flex gap-4 items-center">
+                        <strong className="text-sm text-notifications">
+                            ${discountPrice}
+                        </strong>
+                        <strong className="text-2xs line-through text-[#434343]">
+                            ${price}
+                        </strong>
+                        <strong
+                            className="text-3xs px-1.5 py-0.75 rounded-sm text-whiteText bg-notifications">
+                            -{discount}%
+                        </strong>
+                    </div>
                 </div>
             </div>
         </li>

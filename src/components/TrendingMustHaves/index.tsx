@@ -9,7 +9,7 @@ const TrendingMustHaves = () => {
     return (
         <section>
             <ViewAllTitle title="Trending Must Have" />
-            <ContainerList>
+            <ContainerList className="justify-center">
                 {trendsInfo.map(trend =>
                     <TrendingMustHavesCard
                         key={`trendingMustHaves-${trend.id}`}

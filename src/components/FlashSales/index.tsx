@@ -9,7 +9,7 @@ const FlashSales = () => {
     return (
         <section>
             <ViewAllTitle title="Flash Sales" />
-            <ContainerList>
+            <ContainerList className="sm:justify-center sm:max-w-[600px] sm:mx-auto">
                 {flashSalesInfo.map(card =>
                     <FlashSalesCard
                         key={`flashSales-${card.id}`}

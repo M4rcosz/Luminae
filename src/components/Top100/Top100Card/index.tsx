@@ -26,7 +26,7 @@ const Top100Card = (
     const priceWithDiscount = discountPriceFunction(productPrice, productDiscountPercent);
 
     return (
-        <li className="flex flex-col justify-center last:mr-5 shadow-[0_4px_18px_-10px_#7e7e7e] rounded-lg min-w-60">
+        <li className="flex flex-col justify-center last:mr-5 shadow-[0_4px_18px_-10px_#7e7e7e] rounded-lg min-w-60 sm:w-1/2 sm:flex-1 sm:last:mr-0">
             <Image
                 src={src}
                 alt=""

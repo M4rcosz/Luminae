@@ -2,10 +2,11 @@
 import Field from "@/components/Field";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { containerPadX, style } from "@/common/styles/containerPadX";
 
 const Header = () => {
     return (
-        <header className="flex flex-col gap-12 h-max py-5 px-5">
+        <header className={`${style(containerPadX)} flex flex-col gap-12 h-max py-5 `}>
             <nav className="flex justify-between items-center">
                 <Button
                     className="w-5 h-4"

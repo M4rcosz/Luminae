@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (<>
     <html lang="en">
-      <body className={`${lato.className} bg-[#f0f0f0] flex flex-col gap-4`}>
+      <body className={`${lato.className}`}>
         <ThemeProviderComp>
           <Header />
           {children}

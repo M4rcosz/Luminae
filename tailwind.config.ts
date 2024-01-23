@@ -15,13 +15,18 @@ const config: Config = {
       spacing: {
         "0.75": "3px",
       },
+      screens: {
+        "xs": "500px",
+      },
+      colors: {
+        "whiteText": "#f0f0f0",
+        "grayText": "#C4C4C4",
+        "veryGrayText": "#9D9D9D",
+        "notifications": "#d02E00"
+      },
     },
-    colors: {
-      "whiteText": "#f0f0f0",
-      "grayText": "#C4C4C4",
-      "veryGrayText": "#9D9D9D",
-      "notifications": "#d02E00"
-    }
+
+
   },
   plugins: [],
 }

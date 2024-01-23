@@ -1,6 +1,5 @@
 
 import Link from "next/link"
-import { theme } from "@/components/ThemeProviderComp"
 import Image from "next/image"
 
 interface TrendingMustHavesCardProps {
@@ -19,16 +18,15 @@ const TrendingMustHavesCard = ({
     shopNowValue
 }: TrendingMustHavesCardProps) => {
     return (
-        <li className="last:mr-5">
-            <div
-                className="h-[75vw] w-[87.5vw] relative"
-            >
+        <li className="last:mr-5 sm:last:mr-0 sm:flex sm:flex-col sm:flex-1 sm:min-w-full">
+            <div className="h-60 w-[280px] relative sm:w-full sm:h-fit">
                 <Image
                     src={image}
                     alt=""
                     width={500}
                     height={500}
-                    className="w-full h-full rounded-t-lg object-cover"
+                    quality={100}
+                    className="w-full h-full rounded-t-lg object-cover object-top"
                     loading="lazy"
                 />
                 {newArivals
@@ -42,10 +40,7 @@ const TrendingMustHavesCard = ({
                     </span>}
             </div>
 
-            <footer
-                style={{ backgroundColor: theme.colors.base.b800 }}
-                className="flex rounded-b-lg p-4 gap-3 items-center justify-between h-32 "
-            >
+            <footer className="flex rounded-b-lg p-4 gap-3 items-center justify-between h-32 bg-[#262626]">
                 <div className="flex flex-col gap-3">
                     <h4 className="text-sm max-[380px]:text-xs text-whiteText">
                         {title}
@@ -56,8 +51,8 @@ const TrendingMustHavesCard = ({
                 </div>
                 <Link
                     href="#"
-                    className="py-3 px-6 whitespace-nowrap border flex items-center rounded-lg h-fit max-[380px]:px-4"
-                    style={{ borderColor: theme.colors.base.b200, color: theme.colors.base.b000 }}
+                    className="text-white border-[#D9D9D9] py-3 px-6 whitespace-nowrap border flex items-center rounded-lg h-fit max-[380px]:px-4"
+                    role="button"
                 >
                     ${shopNowValue} Shop Now
                 </Link>

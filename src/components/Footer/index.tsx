@@ -1,65 +1,43 @@
 "use client"
-import styled from "@emotion/styled";
 import NewsEmailCard from "./NewsEmailCard";
 import Image from "next/image";
-
-const Container = styled.div`
-background-color: ${props => props.theme.colors.footer.f100};
-display: flex;
-font-size: 14px;
-flex-wrap: wrap;
-row-gap: 40px;
-padding: 40px 25px;
-justify-content: center;
-
-ul{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
-    li{
-        color: ${props => props.theme.colors.base.b600};
-    }
-
-    li:first-of-type{
-        color: ${props => props.theme.colors.base.b800};
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-}
-`
+import { containerPadX, style } from "@/common/styles/containerPadX";
 
 const Footer = () => {
+
+    const ulClasses = "flex flex-col gap-2.5 w-1/2 sm:w-fit";
+    const liClasses = "text-[#555] first:text-[#262626] first:font-bold first:mb-1.5";
+
     return (
         <footer>
             <NewsEmailCard />
-            <Container>
-                <ul>
-                    <li>Company</li>
-                    <li>About Us</li>
-                    <li>Our Store</li>
-                    <li>Contact us</li>
+            <nav className={`${style(containerPadX)} flex flex-wrap bg-[#D1E2EB] text-sm justify-center py-10 gap-y-10 sm:gap-14 sm:pt-24`}>
+                <ul className={ulClasses}>
+                    <li className={liClasses}>Company</li>
+                    <li className={liClasses}>About Us</li>
+                    <li className={liClasses}>Our Store</li>
+                    <li className={liClasses}>Contact us</li>
                 </ul>
-                <ul>
-                    <li>Career Opportunities</li>
-                    <li>Selling Programs</li>
-                    <li>Advertise</li>
-                    <li>Cooperation </li>
+                <ul className={ulClasses}>
+                    <li className={liClasses}>Career Opportunities</li>
+                    <li className={liClasses}>Selling Programs</li>
+                    <li className={liClasses}>Advertise</li>
+                    <li className={liClasses}>Cooperation </li>
                 </ul>
-                <ul>
-                    <li>How to Buy</li>
-                    <li>Making Payments</li>
-                    <li>Delivery Options</li>
-                    <li>Buyer Protection</li>
-                    <li>New User Guide</li>
+                <ul className={ulClasses}>
+                    <li className={liClasses}>How to Buy</li>
+                    <li className={liClasses}>Making Payments</li>
+                    <li className={liClasses}>Delivery Options</li>
+                    <li className={liClasses}>Buyer Protection</li>
+                    <li className={liClasses}>New User Guide</li>
                 </ul>
-                <ul>
-                    <li>Help</li>
-                    <li>Contacts Us</li>
-                    <li>FAQ</li>
-                    <li>Privacy Policy</li>
+                <ul className={ulClasses}>
+                    <li className={liClasses}>Help</li>
+                    <li className={liClasses}>Contacts Us</li>
+                    <li className={liClasses}>FAQ</li>
+                    <li className={liClasses}>Privacy Policy</li>
                 </ul>
-            </Container>
+            </nav>
 
             <div>
                 <ul className="flex grayscale justify-center gap-6 my-6">
