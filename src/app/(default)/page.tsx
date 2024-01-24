@@ -9,8 +9,6 @@ import { containerPadX, style, } from "@/common/styles/containerPadX";
 const Landing = () => {
   return (
     <main className={`${style(containerPadX)} flex flex-col gap-8 my-5 sm:mb-0 sm:gap-10`}>
-      <h1 className="absolute w-[1px] margin-[-1px] z-[-1] opacity-0">Landing Page</h1>
-
       <PresentationAd />
 
       <ExploreCards />

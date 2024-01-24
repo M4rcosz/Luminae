@@ -5,8 +5,8 @@ import { containerPadX, style } from "@/common/styles/containerPadX";
 
 const Footer = () => {
 
-    const ulClasses = "flex flex-col gap-2.5 w-1/2 sm:w-fit";
-    const liClasses = "text-[#555] first:text-[#262626] first:font-bold first:mb-1.5";
+    const ulClasses = "flex flex-col gap-2.5 w-1/2 text-[#555] sm:w-fit ";
+    const liClasses = "first:text-[#262626] first:font-bold first:mb-1.5";
 
     return (
         <footer>

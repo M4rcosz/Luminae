@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Luminae',
   description: 'E-commerce de Venda de produtos, roupas, produtos eletrônicos e outros.',
+  authors: [{ name: 'Marcos Paulo', url: 'https://github.com/M4rcosz' }],
 }
 
 

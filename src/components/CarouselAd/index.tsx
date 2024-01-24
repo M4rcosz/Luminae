@@ -15,7 +15,7 @@ const CarouselAd = () => {
                 aria-label="seta para esquerda"
             />
             <div className="flex mx-16 gap-10">
-                <div>
+                <div className="flex flex-col gap-2 justify-center">
                     <h3 className="uppercase font-bold text-[#465D6B] text-lg">MagSafe</h3>
                     <p className="text-[#555] text-sm">Snap on a magnetic case, wallet, or both. And get faster wireless charging.</p>
                 </div>

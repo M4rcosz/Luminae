@@ -9,7 +9,7 @@ const ExploreCards = () => {
         <section className="gap-y-3 flex flex-col w-full xs:flex-row xs:flex-wrap xs:justify-between sm:order-last">
 
             {exploreCardsInfo.map(card =>
-                <article className={`flex xs:w-[49%] order-${card.id}`} key={`exploreCards-${card.id}`}>
+                <article className={`flex xs:w-[49%]`} key={`exploreCards-${card.id}`} style={{ order: card.id }}>
                     <div
                         style={{ backgroundColor: card.cardColor }}
                         className="px-3 py-4 flex flex-col justify-center gap-2 w-full"
