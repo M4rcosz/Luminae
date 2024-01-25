@@ -16,7 +16,7 @@ const PresentationAd = () => {
                 />
 
                 <aside className="hidden md:flex flex-col items-center absolute top-1/2 right-0 translate-x-1/3 translate-y-[-30%] z-10">
-                    <div className="flex flex-col items-center gap-1 p-5 bg-[#eee] justify-center">
+                    <div className="flex flex-col items-center gap-1 p-5 bg-[#fff] justify-center">
                         <h2 className="font-bold">Summer Essentials</h2>
                         <strong className="text-notifications">20% off</strong>
                     </div>
@@ -36,7 +36,7 @@ const PresentationAd = () => {
                     className="bg-[#002574] w-fit py-2 px-8 rounded before:translate-y-[10%] uppercase before:pr-2 lg:text-[24px] lg:py-4 lg:px-12"
                     type="iconLeft"
                     Icon={<Image src="/images/icons/shopIcon1.png" alt="" width={20} height={16} quality={100}
-                        priority className="relative right-2 lg:w-8 lg:h-7 lg:right-4" />}>
+                        priority className="relative right-2 lg:w-8 lg:h-7 lg:right-4 object-cover" />}>
                     Shop Now
                 </Button>
             </div>
