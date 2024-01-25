@@ -1,4 +1,4 @@
-import Dropdown from "../Dropdown";
+import Dropdown from "@components/Dropdown";
 
 interface FieldProps {
     placeholder?: string;
@@ -24,7 +24,7 @@ const Field = ({ placeholder, type = "none", className, ariaLabel, IconElement }
             />
 
             <Dropdown
-                className="mr-1 "
+                className="mr-1"
             />
 
             <svg width="20" height="20" viewBox="0 0 42 43" fill="none" xmlns="http:www.w3.org/2000/svg"

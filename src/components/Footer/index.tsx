@@ -1,7 +1,5 @@
-"use client"
 import NewsEmailCard from "./NewsEmailCard";
 import Image from "next/image";
-import { containerPadX, style } from "@/common/styles/containerPadX";
 
 const Footer = () => {
 
@@ -11,7 +9,7 @@ const Footer = () => {
     return (
         <footer>
             <NewsEmailCard />
-            <nav className={`${style(containerPadX)} flex flex-wrap bg-[#D1E2EB] text-sm justify-center py-10 gap-y-10 sm:gap-14 sm:pt-24`}>
+            <nav className="px-Mobile md:px-Tablet flex flex-wrap bg-[#D1E2EB] text-sm justify-center py-10 gap-y-10 sm:gap-14 sm:pt-24 lg:text-base lg:gap-24 lg:pt-32 lg:pb-12">
                 <ul className={ulClasses}>
                     <li className={liClasses}>Company</li>
                     <li className={liClasses}>About Us</li>
@@ -48,7 +46,6 @@ const Footer = () => {
                             width={60}
                             height={60}
                             loading="lazy"
-
                         />
                     </li>
                     <li className="flex justify-center">
@@ -70,8 +67,9 @@ const Footer = () => {
                         />
                     </li>
                 </ul>
-
             </div>
+
+            {/* Colocar mensagem de copyright e/ou mensagem de alerta de site não comercial e apenas ilustrativo */}
         </footer>
     )
 }

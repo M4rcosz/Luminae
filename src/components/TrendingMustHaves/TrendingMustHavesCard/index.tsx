@@ -40,18 +40,18 @@ const TrendingMustHavesCard = ({
                     </span>}
             </div>
 
-            <footer className="flex rounded-b-lg p-4 gap-3 items-center justify-between h-32 bg-[#262626]">
-                <div className="flex flex-col gap-3">
-                    <h4 className="text-sm max-[380px]:text-xs text-whiteText">
+            <footer className="flex rounded-b-lg h-fit p-4 gap-3 items-center justify-between h-32 bg-[#262626] lg:flex-col lg:items-start lg:p-5 ">
+                <div className="flex flex-col gap-1">
+                    <h4 className="text-sm max-[380px]:text-xs text-whiteText xl:text-2xl">
                         {title}
                     </h4>
-                    <p className="text-sm max-[380px]:text-xs text-grayText">
+                    <p className="text-sm max-[380px]:text-xs text-grayText xl:text-base">
                         {description}
                     </p>
                 </div>
                 <Link
                     href="#"
-                    className="text-white border-[#D9D9D9] py-3 px-6 whitespace-nowrap border flex items-center rounded-lg h-fit max-[380px]:px-4"
+                    className="text-white border-[#D9D9D9] py-3 px-6 whitespace-nowrap border flex items-center rounded-lg h-fit max-[380px]:px-4 lg:self-end"
                     role="button"
                 >
                     ${shopNowValue} Shop Now

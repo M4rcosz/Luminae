@@ -1,28 +1,28 @@
-import data from "@/data/data.json";
+import data from "@data/data.json";
 import Image from "next/image";
-import CarouselAd from "@/components/CarouselAd";
+import CarouselAd from "@components/CarouselAd";
 
 const exploreCardsInfo = data[0].exploreCardsInfo;
 
 const ExploreCards = () => {
     return (
-        <section className="gap-y-3 flex flex-col w-full xs:flex-row xs:flex-wrap xs:justify-between sm:order-last">
+        <section className="px-Mobile md:px-Tablet gap-3 grid w-full xs:grid-cols-2 sm:order-last lg:gap-5">
 
             {exploreCardsInfo.map(card =>
-                <article className={`flex xs:w-[49%]`} key={`exploreCards-${card.id}`} style={{ order: card.id }}>
+                <article className="flex " key={`exploreCards-${card.id}`} style={{ order: card.id }}>
                     <div
                         style={{ backgroundColor: card.cardColor }}
-                        className="px-3 py-4 flex flex-col justify-center gap-2 w-full"
+                        className="px-3 py-4 flex flex-col justify-center gap-2 w-full md:w-[50%] h-full xl:px-6"
                     >
-                        <h2 className="leading-5 font-extrabold text-sm text-whiteText">
+                        <h2 className="font-extrabold text-sm text-whiteText md:text-xl lg:text-2xl xl:text-3xl">
                             {card.title}
                         </h2>
 
-                        <p className="leading-5 text-xs text-whiteText">
+                        <p className="text-xs text-whiteText md:text-base lg:text-lg xl:text-xl">
                             {card.description}
                         </p>
 
-                        <a href={card.href} className="underline text-2xs text-whiteText ">
+                        <a href={card.href} className="underline text-2xs text-whiteText md:text-sm lg:text-base xl:text-lg">
                             Explore All Category
                         </a>
                     </div>
@@ -32,13 +32,15 @@ const ExploreCards = () => {
                         alt=""
                         width={500}
                         height={500}
-                        className="w-[50%] object-cover "
+                        className="w-[50%] h-full object-cover "
                         loading="lazy"
                     />
                 </article>
             )}
 
-            <CarouselAd />
+            <CarouselAd
+                className="col-span-2"
+            />
 
         </section>
     )

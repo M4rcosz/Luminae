@@ -14,6 +14,8 @@ const config: Config = {
       },
       spacing: {
         "0.75": "3px",
+        "Mobile": "20px",
+        "Tablet": "60px",
       },
       screens: {
         "xs": "500px",

@@ -1,36 +1,27 @@
-import styled from "@emotion/styled"
-
 interface ButtonProps {
     children?: React.ReactNode;
     className?: string;
-    src?: string;
+    Icon?: React.ReactNode;
     ariaLabel?: string;
-    type?: "none" | "icon"
+    type?: "none" | "iconLeft"
 }
 
-const StyledButton = styled.button<{
-    src?: string;
-}>`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-&:before{
-    content: url(${props => props.src});
-}
-`
+const Button = ({ children, className, Icon, ariaLabel, type = "none" }: ButtonProps) => {
 
-const Button = ({ children, className, src, ariaLabel, type = "none" }: ButtonProps) => {
-    if (type === "icon") {
+    const buttonStyles = "flex justify-center items-center";
+
+    if (type === "iconLeft") {
         return (
-            <StyledButton className={`before:w-5 before:h-4 ${className}`} aria-label={ariaLabel} src={src}>
+            <button className={`${buttonStyles} ${className}`} aria-label={ariaLabel}>
+                {Icon}
                 {children}
-            </StyledButton>
+            </button>
         )
     }
     return (
-        <StyledButton className={className} aria-label={ariaLabel} src={src}>
+        <button className={`${buttonStyles} ${className}`} aria-label={ariaLabel}>
             {children}
-        </StyledButton>
+        </button>
     )
 }
 

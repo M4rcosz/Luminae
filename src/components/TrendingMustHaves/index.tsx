@@ -1,15 +1,15 @@
-import ViewAllTitle from "../ViewAllTitle"
-import data from "@/data/data.json"
-import TrendingMustHavesCard from "./TrendingMustHavesCard";
-import ContainerList from "../utils/ContainerList";
+import ViewAllTitle from "@components/ViewAllTitle"
+import data from "@data/data.json"
+import TrendingMustHavesCard from "@components/TrendingMustHaves/TrendingMustHavesCard";
+import ContainerList from "@components/utils/ContainerList";
 
 const trendsInfo = data[0].trendingMustHaveInfo;
 
 const TrendingMustHaves = () => {
     return (
-        <section>
+        <section className="px-Mobile md:px-Tablet">
             <ViewAllTitle title="Trending Must Have" />
-            <ContainerList className="justify-center">
+            <ContainerList className="sm:justify-center lg:grid lg:grid-cols-3">
                 {trendsInfo.map(trend =>
                     <TrendingMustHavesCard
                         key={`trendingMustHaves-${trend.id}`}

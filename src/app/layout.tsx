@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-// import ThemeProviderComp from '@/components/ThemeProviderComp'
-import { lato } from '@/app/fonts'
-// import Footer from '@/components/Footer'
+// import ThemeProviderComp from '@components/ThemeProviderComp'
+import { lato } from '@app/fonts'
+// import Footer from '@components/Footer'
 
 export const metadata: Metadata = {
     title: 'Luminae',

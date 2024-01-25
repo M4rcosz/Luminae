@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import '@/app/globals.css'
-import ThemeProviderComp from '@/components/ThemeProviderComp'
-import { lato } from '@/app/fonts'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import '@app/globals.css'
+import ThemeProviderComp from '@components/ThemeProviderComp'
+import { lato } from '@app/fonts'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
 
 export const metadata: Metadata = {
   title: 'Luminae',
@@ -23,8 +23,8 @@ export default function RootLayout({
         <ThemeProviderComp>
           <Header />
           {children}
-          <Footer />
         </ThemeProviderComp>
+        <Footer />
       </body>
     </html>
   </>
