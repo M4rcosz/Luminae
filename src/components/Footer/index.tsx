@@ -1,68 +1,75 @@
-'use client'
-import styled from "@emotion/styled";
-
-const StyledFooterContainer = styled.div`
-background-color: ${props => props.theme.colors.footer.f100};
-display: flex;
-font-size: 14px;
-flex-wrap: wrap;
-row-gap: 40px;
-padding: 40px ${props => props.theme.spacing.md};
-justify-content: center;
-
-
-ul{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
-    li{
-        color: ${props => props.theme.colors.base.b600};
-    }
-
-    li:first-of-type{
-        color: ${props => props.theme.colors.base.b800};
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-}
-`
+import NewsEmailCard from "./NewsEmailCard";
+import Image from "next/image";
 
 const Footer = () => {
+
+    const ulClasses = "flex flex-col gap-2.5 w-1/2 text-[#555] sm:w-fit ";
+    const liClasses = "first:text-[#262626] first:font-bold first:mb-1.5";
+
     return (
         <footer>
-            <StyledFooterContainer>
-                <ul>
-                    <li>Company</li>
-                    <li>About Us</li>
-                    <li>Our Store</li>
-                    <li>Contact us</li>
+            <NewsEmailCard />
+            <nav className="px-Mobile md:px-Tablet flex flex-wrap bg-[#D1E2EB] text-sm justify-center py-10 gap-y-10 sm:gap-14 sm:pt-24 lg:text-base lg:gap-24 lg:pt-32 lg:pb-12">
+                <ul className={ulClasses}>
+                    <li className={liClasses}>Company</li>
+                    <li className={liClasses}>About Us</li>
+                    <li className={liClasses}>Our Store</li>
+                    <li className={liClasses}>Contact us</li>
                 </ul>
-                <ul>
-                    <li>Career Opportunities</li>
-                    <li>Selling Programs</li>
-                    <li>Advertise</li>
-                    <li>Cooperation </li>
+                <ul className={ulClasses}>
+                    <li className={liClasses}>Career Opportunities</li>
+                    <li className={liClasses}>Selling Programs</li>
+                    <li className={liClasses}>Advertise</li>
+                    <li className={liClasses}>Cooperation </li>
                 </ul>
-                <ul>
-                    <li>How to Buy</li>
-                    <li>Making Payments</li>
-                    <li>Delivery Options</li>
-                    <li>Buyer Protection</li>
-                    <li>New User Guide</li>
+                <ul className={ulClasses}>
+                    <li className={liClasses}>How to Buy</li>
+                    <li className={liClasses}>Making Payments</li>
+                    <li className={liClasses}>Delivery Options</li>
+                    <li className={liClasses}>Buyer Protection</li>
+                    <li className={liClasses}>New User Guide</li>
                 </ul>
-                <ul>
-                    <li>Help</li>
-                    <li>Contacts Us</li>
-                    <li>FAQ</li>
-                    <li>Privacy Policy</li>
+                <ul className={ulClasses}>
+                    <li className={liClasses}>Help</li>
+                    <li className={liClasses}>Contacts Us</li>
+                    <li className={liClasses}>FAQ</li>
+                    <li className={liClasses}>Privacy Policy</li>
                 </ul>
-            </StyledFooterContainer>
-            <div className="flex grayscale justify-center gap-6 my-6">
-                <img className="scale-90" src="/images/icons/visa.svg" alt="Logo da VISA" />
-                <img className="scale-90" src="/images/icons/mastercard.svg" alt="Logo da Mastercard" />
-                <img className="scale-90" src="/images/icons/paypal.svg" alt="Logo do Paypal" />
+            </nav>
+
+            <div>
+                <ul className="flex grayscale justify-center gap-6 my-6">
+                    <li className="flex justify-center">
+                        <Image
+                            src={"/images/icons/visa.svg"}
+                            alt="Logo da VISA"
+                            width={60}
+                            height={60}
+                            loading="lazy"
+                        />
+                    </li>
+                    <li className="flex justify-center">
+                        <Image
+                            src={"/images/icons/mastercard.svg"}
+                            alt="Logo da Mastercard"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                        />
+                    </li>
+                    <li className="flex justify-center">
+                        <Image
+                            src={"/images/icons/paypal.svg"}
+                            alt="Logo do Paypal"
+                            width={70}
+                            height={70}
+                            loading="lazy"
+                        />
+                    </li>
+                </ul>
             </div>
+
+            {/* Colocar mensagem de copyright e/ou mensagem de alerta de site não comercial e apenas ilustrativo */}
         </footer>
     )
 }

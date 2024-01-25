@@ -1,35 +1,27 @@
-'use client'
+import ViewAllTitle from "@components/ViewAllTitle"
+import data from "@data/data.json"
+import TrendingMustHavesCard from "@components/TrendingMustHaves/TrendingMustHavesCard";
+import ContainerList from "@components/utils/ContainerList";
 
-import HeaderViewAll from "../HeaderViewAll"
-import data from "../../data/trendingMustHave.json"
-import TrendingMustHavesCard from "./TrendingMustHavesCard";
-
-const trends = data[0].trending;
-
+const trendsInfo = data[0].trendingMustHaveInfo;
 
 const TrendingMustHaves = () => {
     return (
-        <>
-            <HeaderViewAll
-                title="Trending Must Have"
-            />
-            <ul className="flex overflow-x-auto mb-2 min-w-64">
-                {trends.map(trend => (
-                    <li
+        <section className="px-Mobile md:px-Tablet">
+            <ViewAllTitle title="Trending Must Have" />
+            <ContainerList className="sm:justify-center lg:grid lg:grid-cols-3">
+                {trendsInfo.map(trend =>
+                    <TrendingMustHavesCard
                         key={`trendingMustHaves-${trend.id}`}
-                        className=" ml-5 "
-                    >
-                        <TrendingMustHavesCard
-                            newArivals={trend.newArivals}
-                            image={trend.image}
-                            title={trend.title}
-                            description={trend.description}
-                            shopNowValue={trend.shopNowValue}
-                        />
-                    </li>
-                ))}
-            </ul>
-        </>
+                        newArivals={trend.newArivals}
+                        image={trend.image}
+                        title={trend.title}
+                        description={trend.description}
+                        shopNowValue={trend.shopNowValue}
+                    />
+                )}
+            </ContainerList>
+        </section>
     )
 }
 

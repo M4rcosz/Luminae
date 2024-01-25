@@ -1,37 +1,30 @@
-'use client'
-
 import FlashSalesCard from "./FlashSalesCard";
-import data from "../../data/flashSales.json"
-import HeaderViewAll from "../HeaderViewAll";
+import data from "@data/data.json"
+import ViewAllTitle from "@components/ViewAllTitle";
+import ContainerList from "@components/utils/ContainerList";
 
-const cardsFlashSales = data[0].flashSales;
+const flashSalesInfo = data[0].flashSalesInfo;
 
 const FlashSales = () => {
     return (
-        <>
-            <HeaderViewAll
-                title="Flash Sales"
-            />
-            <ul className="flex overflow-scroll ">
-                {cardsFlashSales.map(card => {
-                    return (
-                        <li key={`flashSales-${card.id}`}
-                            className="flex flex-col mb-3 pb-2 pt-3 ml-5 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg ">
-                            <FlashSalesCard
-                                discountLeft={card.discountLeft}
-                                imageProduct={card.imageProduct}
-                                productName={card.productName}
-                                productDescription={card.productDescription}
-                                evaluationNumber={card.evaluationNumber}
-                                price={card.price}
-                                discountPrice={card.discountPrice}
-                                discount={card.discount}
-                            />
-                        </li>
-                    )
-                })}
-            </ul>
-        </>
+        <section className="px-Mobile md:px-Tablet">
+            <ViewAllTitle title="Flash Sales" />
+            <ContainerList className="sm:grid sm:grid-cols-2 lg:flex">
+                {flashSalesInfo.map(card =>
+                    <FlashSalesCard
+                        key={`flashSales-${card.id}`}
+                        discountLeft={card.discountLeft}
+                        imageProduct={card.imageProduct}
+                        productName={card.productName}
+                        productDescription={card.productDescription}
+                        evaluationNumber={card.evaluationNumber}
+                        price={card.price}
+                        discountPrice={card.discountPrice}
+                        discount={card.discount}
+                    />
+                )}
+            </ContainerList>
+        </section>
     )
 }
 

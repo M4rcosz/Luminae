@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
 
 export const styledLink1 = css`
-    color: #262626;
+    /* color: #262626; */
+    color: #f00;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background: #000;
     &::after{
