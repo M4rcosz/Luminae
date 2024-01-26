@@ -24,7 +24,7 @@ const FlashSalesCard = ({
     discountPrice,
     discount, }: FlashSalesCardProps) => {
     return (
-        <li className="flex flex-col gap-5 py-3 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg sm:last:mr-0 sm:px-3 sm:py-8 lg:px-0 lg:py-4 lg:flex-1 lg:justify-center xl:px-3 xl:py-8">
+        <li className="flex flex-col gap-5 py-3 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg sm:last:mr-0 sm:px-3 sm:py-8 lg:px-0 lg:py-4 lg:flex-1 lg:justify-center xl:px-3 xl:py-8 cursor-pointer hover:scale-105 ease-in-out duration-200">
             <div className="text-center">
                 <h4 className="text-[#555] font-extrabold text-sm uppercase xl:text-xl">
                     Deal of the Day

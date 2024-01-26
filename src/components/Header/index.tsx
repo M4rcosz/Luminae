@@ -1,4 +1,3 @@
-'use client'
 import Field from "@components/Field";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +5,7 @@ import BackgroundScreen from "../utils/BackgroudScreen";
 import DesktopNavList from "./DesktopNavList";
 
 const Header = () => {
+
     return (
         <header className="max-w-[1440px] mx-auto lg:mb-10">
             <div className="py-5 flex flex-col gap-5 md:pb-0">
@@ -19,13 +19,13 @@ const Header = () => {
                                 role="button"
                             >
                                 <g id="Menue icon">
-                                    <line id="Line 119" x1="1.05" y1="1.41924" x2="19.95" y2="1.41924" stroke="#023047" stroke-width="2.1" stroke-linecap="round" />
-                                    <line id="Line 120" x1="1.05" y1="8.41924" x2="19.95" y2="8.41924" stroke="#023047" stroke-width="2.1" stroke-linecap="round" />
-                                    <line id="Line 121" x1="1.05" y1="15.4192" x2="19.95" y2="15.4192" stroke="#023047" stroke-width="2.1" stroke-linecap="round" />
+                                    <line id="Line 119" x1="1.05" y1="1.41924" x2="19.95" y2="1.41924" stroke="#023047" strokeWidth="2.1" strokeLinecap="round" />
+                                    <line id="Line 120" x1="1.05" y1="8.41924" x2="19.95" y2="8.41924" stroke="#023047" strokeWidth="2.1" strokeLinecap="round" />
+                                    <line id="Line 121" x1="1.05" y1="15.4192" x2="19.95" y2="15.4192" stroke="#023047" strokeWidth="2.1" strokeLinecap="round" />
                                 </g>
                             </svg>
 
-                            <div className="flex gap-2 items-center">
+                            <Link href="#" className="flex gap-2 items-center">
                                 <Image
                                     src={"/images/icons/Logo.png"}
                                     alt="logo do site Luminae"
@@ -34,7 +34,7 @@ const Header = () => {
                                     className="w-9 h-6 md:w-12 md:h-8"
                                 />
                                 <h1 className="text-xl font-bold md:text-2xl">Luminae</h1>
-                            </div>
+                            </Link>
                             <div className="flex items-center text-white gap-0.5 md:hidden">
                                 <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M15.75 11.025L15.75 12.775C15.75 15.6745 18.1005 18.025 21 18.025C23.8995 18.025 26.25 15.6745 26.25 12.775V11.025" stroke="#434343" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -63,38 +63,38 @@ const Header = () => {
                                 className="lg:w-8 lg:h-8"
                             >
                                 <g id="Icon/categories">
-                                    <path id="Vector" d="M10 6H16M10 14H16M10 10H22M10 18H22M3 10H5C5.55228 10 6 9.55228 6 9V7C6 6.44772 5.55228 6 5 6H3C2.44772 6 2 6.44772 2 7V9C2 9.55228 2.44772 10 3 10ZM3 18H5C5.55228 18 6 17.5523 6 17V15C6 14.4477 5.55228 14 5 14H3C2.44772 14 2 14.4477 2 15V17C2 17.5523 2.44772 18 3 18Z" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                                    <path id="Vector" d="M10 6H16M10 14H16M10 10H22M10 18H22M3 10H5C5.55228 10 6 9.55228 6 9V7C6 6.44772 5.55228 6 5 6H3C2.44772 6 2 6.44772 2 7V9C2 9.55228 2.44772 10 3 10ZM3 18H5C5.55228 18 6 17.5523 6 17V15C6 14.4477 5.55228 14 5 14H3C2.44772 14 2 14.4477 2 15V17C2 17.5523 2.44772 18 3 18Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
                                 </g>
                             </svg>
                             <h2 className="text-whiteText font-bold">Categories</h2>
                         </span>
 
                         <div className="flex text-[#ddd] text-sm gap-10 lg:text-base">
-                            <Link href="#" className="flex items-center gap-2">
+                            <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group hover:scale-105 ease-in-out duration-100">
                                 <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    className="lg:w-8 lg:h-8"
+                                    className="lg:w-8 lg:h-8 *:group-hover:stroke-2"
                                 >
-                                    <ellipse cx="21" cy="31.15" rx="12.25" ry="6.125" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
-                                    <circle cx="21" cy="12.775" r="7" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
+                                    <ellipse cx="21" cy="31.15" rx="12.25" ry="6.125" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
+                                    <circle cx="21" cy="12.775" r="7" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
                                 </svg>
 
                                 Sign In
                             </Link>
-                            <Link href="#" className="flex items-center gap-2">
+                            <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group hover:scale-105 ease-in-out duration-100">
                                 <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    className="lg:w-8 lg:h-8"
+                                    className="lg:w-8 lg:h-8 *:group-hover:stroke-2"
                                 >
-                                    <path d="M22.3388 8.75403L21 10.1924L19.6612 8.75403C15.9641 4.78202 9.96991 4.78202 6.27282 8.75403C2.57573 12.726 2.57573 19.1659 6.27282 23.1379L18.3223 36.0834C19.8012 37.6722 22.1988 37.6722 23.6777 36.0834L35.7272 23.1379C39.4243 19.1659 39.4243 12.726 35.7272 8.75403C32.0301 4.78202 26.0359 4.78202 22.3388 8.75403Z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M22.3388 8.75403L21 10.1924L19.6612 8.75403C15.9641 4.78202 9.96991 4.78202 6.27282 8.75403C2.57573 12.726 2.57573 19.1659 6.27282 23.1379L18.3223 36.0834C19.8012 37.6722 22.1988 37.6722 23.6777 36.0834L35.7272 23.1379C39.4243 19.1659 39.4243 12.726 35.7272 8.75403C32.0301 4.78202 26.0359 4.78202 22.3388 8.75403Z" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
                                 </svg>
 
                                 Favorites
                             </Link>
-                            <Link href="#" className="flex items-center gap-2">
+                            <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group hover:scale-105 ease-in-out duration-100">
                                 <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    className="lg:w-8 lg:h-8"
+                                    className="lg:w-8 lg:h-8 *:group-hover:stroke-2"
                                 >
-                                    <path d="M15.75 11.025L15.75 12.775C15.75 15.6745 18.1005 18.025 21 18.025C23.8995 18.025 26.25 15.6745 26.25 12.775V11.025" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M27.3203 5.77502H14.6801C11.2582 5.77502 8.33791 8.24892 7.77536 11.6242L4.85869 29.1242C4.14757 33.391 7.43787 37.275 11.7635 37.275H30.237C34.5626 37.275 37.8529 33.391 37.1418 29.1242L34.2251 11.6242C33.6625 8.24892 30.7422 5.77502 27.3203 5.77502Z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M15.75 11.025L15.75 12.775C15.75 15.6745 18.1005 18.025 21 18.025C23.8995 18.025 26.25 15.6745 26.25 12.775V11.025" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M27.3203 5.77502H14.6801C11.2582 5.77502 8.33791 8.24892 7.77536 11.6242L4.85869 29.1242C4.14757 33.391 7.43787 37.275 11.7635 37.275H30.237C34.5626 37.275 37.8529 33.391 37.1418 29.1242L34.2251 11.6242C33.6625 8.24892 30.7422 5.77502 27.3203 5.77502Z" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
                                 </svg>
 
                                 Card

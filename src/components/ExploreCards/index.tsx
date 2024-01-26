@@ -1,6 +1,7 @@
 import data from "@data/data.json";
 import Image from "next/image";
 import CarouselAd from "@components/CarouselAd";
+import Link from "next/link";
 
 const exploreCardsInfo = data[0].exploreCardsInfo;
 
@@ -22,9 +23,9 @@ const ExploreCards = () => {
                             {card.description}
                         </p>
 
-                        <a href={card.href} className="underline text-2xs text-whiteText md:text-sm lg:text-base xl:text-lg">
+                        <Link href={card.href} className="underline text-2xs text-whiteText md:text-sm lg:text-base xl:text-lg hover:text-[#ccc] ease-in-out duration-200">
                             Explore All Category
-                        </a>
+                        </Link>
                     </div>
 
                     <Image

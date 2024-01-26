@@ -12,7 +12,6 @@ Estou usando o Design e ideias da ***Saina Ghasemi***, Australiana de Melbourne,
 - TypeScript - Automáticamente installado com o **next create app**.
 - Emotion - `npm install --save @emotion/css && npm i @emotion/styled @emotion/react`.
 - TailwindCSS - Automáticamente installado com o **next create app**.
-- Sharp
 
 ## Dinamicidade dos Dados
 

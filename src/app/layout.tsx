@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
     return (<>
         <html lang="en">
-            <body className={`${lato.className} bg-[#F4F4F4]`}>
+            <body className={`${lato.className}`}>
                 {/* <ThemeProviderComp> */}
                 {children}
                 {/* <Footer /> */}

@@ -19,7 +19,7 @@ const TrendingMustHavesCard = ({
 }: TrendingMustHavesCardProps) => {
     return (
         <li className="last:mr-5 sm:last:mr-0 sm:flex sm:flex-col sm:flex-1 sm:min-w-full">
-            <div className="h-60 w-[280px] relative sm:w-full sm:h-fit">
+            <div className="h-60 w-[280px] relative sm:w-full sm:h-fit cursor-default">
                 <Image
                     src={image}
                     alt=""
@@ -42,7 +42,7 @@ const TrendingMustHavesCard = ({
 
             <footer className="flex rounded-b-lg h-fit p-4 gap-3 items-center justify-between h-32 bg-[#262626] lg:flex-col lg:items-start lg:p-5 ">
                 <div className="flex flex-col gap-1">
-                    <h4 className="text-sm max-[380px]:text-xs text-whiteText xl:text-2xl">
+                    <h4 className="text-sm max-[380px]:text-xs text-whiteText xl:text-2xl cursor-pointer  hover:text-[#eeea] ease-in-out duration-200">
                         {title}
                     </h4>
                     <p className="text-sm max-[380px]:text-xs text-grayText xl:text-base">
@@ -51,7 +51,7 @@ const TrendingMustHavesCard = ({
                 </div>
                 <Link
                     href="#"
-                    className="text-white border-[#D9D9D9] py-3 px-6 whitespace-nowrap border flex items-center rounded-lg h-fit max-[380px]:px-4 lg:self-end"
+                    className="text-white border-[#D9D9D9] py-3 px-6 whitespace-nowrap border flex items-center rounded-lg h-fit max-[380px]:px-4 lg:self-end  hover:bg-[#ddd] hover:text-black hover:font-bold hover:border-[#ffffff0] ease-in-out duration-300"
                     role="button"
                 >
                     ${shopNowValue} Shop Now
