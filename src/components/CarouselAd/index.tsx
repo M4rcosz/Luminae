@@ -22,7 +22,7 @@ const CarouselAd = ({ className }: CarouselAdProps = {}) => {
 
             <div className="flex mx-16 gap-10 items-center mx-auto">
                 <div className="flex flex-col gap-2 justify-center">
-                    <h3 className="uppercase font-bold text-[#465D6B] text-lg">MagSafe</h3>
+                    <h2 className="uppercase font-bold text-[#465D6B] text-lg">MagSafe</h2>
                     <p className="text-[#555] text-sm">Snap on a magnetic case, wallet, or both. And get faster wireless charging.</p>
                 </div>
                 <Image

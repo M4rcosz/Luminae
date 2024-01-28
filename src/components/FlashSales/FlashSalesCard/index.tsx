@@ -27,9 +27,9 @@ const FlashSalesCard = ({
     return (
         <li className="flex flex-col gap-5 py-3 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg sm:last:mr-0 sm:px-3 sm:py-8 lg:px-0 lg:py-4 lg:flex-1 lg:justify-center xl:px-3 xl:py-8 cursor-pointer hover:scale-105 ease-in-out duration-200">
             <div className="text-center">
-                <h4 className="text-[#555] font-extrabold text-sm uppercase xl:text-xl">
+                <strong className="text-[#555] font-extrabold text-sm uppercase xl:text-xl">
                     Deal of the Day
-                </h4>
+                </strong>
 
                 <div className="flex justify-center gap-2">
                     <span className="flex flex-col text-xs text-[#555] xl:text-sm">
@@ -65,9 +65,9 @@ const FlashSalesCard = ({
             <div className="flex flex-col gap-1.5 px-3">
 
                 <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-center lg:flex-col lg:items-start">
-                    <h5 className="text-base font-bold text-[#262626] xl:text-2xl">
+                    <h3 className="text-base font-bold text-[#262626] xl:text-2xl">
                         {productName}
-                    </h5>
+                    </h3>
 
                     <p className="text-xs font-normal text-[#434343] xl:text-base">
                         {productDescription}

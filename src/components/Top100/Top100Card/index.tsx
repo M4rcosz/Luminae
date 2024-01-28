@@ -38,7 +38,7 @@ const Top100Card = (
             <footer className="flex flex-col gap-2 px-3 py-2 lg:py-5 lg:px-4 lg:justify-center">
                 <div className="flex justify-between items-center ">
                     <div className="lg:max-w-[80%]">
-                        <h4 className="w-fit text-[#262626] text-sm font-bold xl:text-xl cursor-pointer  hover:text-[#000a] ease-in-out duration-200">{productName}</h4>
+                        <h3 className="w-fit text-[#262626] text-sm font-bold xl:text-xl cursor-pointer  hover:text-[#000a] ease-in-out duration-200">{productName}</h3>
                         <p className="text-2xs truncate hover:text-clip hover:whitespace-normal lg:hover:whitespace-nowrap lg:hover:overflow-visible xl:text-base"
                         >{productCategories}</p>
                     </div>

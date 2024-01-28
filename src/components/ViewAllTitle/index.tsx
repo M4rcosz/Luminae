@@ -8,9 +8,9 @@ interface ViewAllTitleProps {
 const ViewAllTitle = ({ title, urlPath = "#" }: ViewAllTitleProps) => {
     return (
         <div className="flex mb-4 items-center">
-            <h3 className="text-xl font-semibold md:text-2xl lg:text-3xl">
+            <h2 className="text-xl font-semibold md:text-2xl lg:text-3xl">
                 {title}
-            </h3>
+            </h2>
             <Link
                 href={urlPath}
                 className="flex items-center ml-auto text-xs md:text-sm lg:text-base font-semibold hover:text-[#000a] group"

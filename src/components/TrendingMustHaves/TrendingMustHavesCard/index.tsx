@@ -42,9 +42,9 @@ const TrendingMustHavesCard = ({
 
             <footer className="flex rounded-b-lg h-[92px] p-4 gap-3 items-center justify-between h-32 bg-[#262626] lg:h-fit lg:flex-col lg:items-start lg:p-5 ">
                 <div className="flex flex-col gap-1">
-                    <h4 className="text-sm text-whiteText xl:text-2xl cursor-pointer  hover:text-[#eeea] ease-in-out duration-200">
+                    <h3 className="text-sm text-whiteText xl:text-2xl cursor-pointer  hover:text-[#eeea] ease-in-out duration-200">
                         {title}
-                    </h4>
+                    </h3>
                     <p className="text-xs text-grayText xl:text-base">
                         {description}
                     </p>

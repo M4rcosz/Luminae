@@ -4,38 +4,46 @@ import Image from "next/image";
 
 const Footer = () => {
 
-    const ulClasses = "flex flex-col gap-2.5 w-1/2 sm:w-fit ";
+    const ulClasses = "flex flex-col gap-2.5";
     const liClasses = "text-[#555] hover:text-black hover:scale-105 ease-in-out duration-200 w-fit";
 
     return (
         <footer>
             <NewsEmailCard />
             <nav className="px-Mobile md:px-Tablet flex flex-wrap bg-[#D1E2EB] text-sm justify-center py-10 gap-y-10 sm:gap-14 sm:pt-24 lg:text-base lg:gap-24 lg:pt-32 lg:pb-12">
-                <ul className={ulClasses}>
-                    <h4 className="first:text-[#262626] first:font-bold first:mb-1.5">Company</h4>
-                    <li className={liClasses}><Link href="#">About Us </Link></li>
-                    <li className={liClasses}><Link href="#">Our Store </Link></li>
-                    <li className={liClasses}><Link href="#">Contact us </Link></li>
-                </ul>
-                <ul className={ulClasses}>
-                    <h4 className="first:text-[#262626] first:font-bold first:mb-1.5">Career Opportunities</h4>
-                    <li className={liClasses}><Link href="#">Selling Programs </Link></li>
-                    <li className={liClasses}><Link href="#">Advertise </Link></li>
-                    <li className={liClasses}><Link href="#">Cooperation  </Link></li>
-                </ul>
-                <ul className={ulClasses}>
-                    <h4 className="first:text-[#262626] first:font-bold first:mb-1.5">How to Buy</h4>
-                    <li className={liClasses}><Link href="#">Making Payments </Link></li>
-                    <li className={liClasses}><Link href="#">Delivery Options </Link></li>
-                    <li className={liClasses}><Link href="#">Buyer Protection </Link></li>
-                    <li className={liClasses}><Link href="#">New User Guide </Link></li>
-                </ul>
-                <ul className={ulClasses}>
-                    <h4 className="first:text-[#262626] first:font-bold first:mb-1.5">Help</h4>
-                    <li className={liClasses}><Link href="#">Contacts Us </Link></li>
-                    <li className={liClasses}><Link href="#">FAQ </Link></li>
-                    <li className={liClasses}><Link href="#">Privacy Policy </Link></li>
-                </ul>
+                <div className="flex flex-col gap-2.5 w-1/2 sm:w-fit">
+                    <h3 id="companyTitle" className="first:text-[#262626] first:font-bold first:mb-1.5">Company</h3>
+                    <ul className={ulClasses} aria-labelledby="companyTitle">
+                        <li className={liClasses}><Link href="#">About Us </Link></li>
+                        <li className={liClasses}><Link href="#">Our Store </Link></li>
+                        <li className={liClasses}><Link href="#">Contact us </Link></li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-2.5 w-1/2 sm:w-fit">
+                    <h3 id="carrerOpTitle" className="first:text-[#262626] first:font-bold first:mb-1.5">Career Opportunities</h3>
+                    <ul className={ulClasses} aria-labelledby="carrerOpTitle">
+                        <li className={liClasses}><Link href="#">Selling Programs </Link></li>
+                        <li className={liClasses}><Link href="#">Advertise </Link></li>
+                        <li className={liClasses}><Link href="#">Cooperation  </Link></li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-2.5 w-1/2 sm:w-fit">
+                    <h3 id="howToBuyTitle" className="first:text-[#262626] first:font-bold first:mb-1.5">How to Buy</h3>
+                    <ul className={ulClasses} aria-labelledby="howToBuyTitle">
+                        <li className={liClasses}><Link href="#">Making Payments </Link></li>
+                        <li className={liClasses}><Link href="#">Delivery Options </Link></li>
+                        <li className={liClasses}><Link href="#">Buyer Protection </Link></li>
+                        <li className={liClasses}><Link href="#">New User Guide </Link></li>
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-2.5 w-1/2 sm:w-fit">
+                    <h3 id="helpTitle" className="first:text-[#262626] first:font-bold first:mb-1.5">Help</h3>
+                    <ul className={ulClasses} aria-labelledby="helpTitle">
+                        <li className={liClasses}><Link href="#">Contacts Us </Link></li>
+                        <li className={liClasses}><Link href="#">FAQ </Link></li>
+                        <li className={liClasses}><Link href="#">Privacy Policy </Link></li>
+                    </ul>
+                </div>
             </nav>
 
             <div>

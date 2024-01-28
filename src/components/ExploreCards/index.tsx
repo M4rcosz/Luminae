@@ -9,7 +9,7 @@ const ExploreCards = () => {
     return (
         <section className="px-Mobile md:px-Tablet gap-3 grid w-full xs:grid-cols-2 sm:order-last lg:gap-5">
 
-            {exploreCardsInfo.map(card =>
+            {exploreCardsInfo!.map(card =>
                 <article className="flex " key={`exploreCards-${card.id}`} style={{ order: card.id }}>
                     <div
                         style={{ backgroundColor: card.cardColor }}

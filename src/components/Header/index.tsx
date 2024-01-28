@@ -8,8 +8,8 @@ const Header = () => {
 
     return (
         <header className="max-w-[1440px] mx-auto lg:mb-10">
-            <div className="py-5 flex flex-col gap-5 md:pb-0">
-                <nav className="flex flex-col gap-5 xl:flex-row xl:gap-0 xl:justify-between xl:items-center xl:px-Tablet">
+            <nav className="py-5 flex flex-col gap-5 md:pb-0">
+                <div className="flex flex-col gap-5 xl:flex-row xl:gap-0 xl:justify-between xl:items-center xl:px-Tablet">
 
                     <div className="px-Mobile flex flex-col gap-8 md:flex-row md:justify-between md:px-Tablet xl:px-0 xl:flex-row xl:w-fit">
                         <div className="flex justify-between items-center">
@@ -53,9 +53,9 @@ const Header = () => {
 
                     <DesktopNavList />
 
-                </nav>
+                </div>
 
-                <nav className="hidden md:flex h-11 lg:h-[72px]">
+                <div className="hidden md:flex h-11 lg:h-[72px]">
                     <BackgroundScreen color="#262626" className="h-11 lg:h-[72px]" />
                     <div className="flex w-full justify-between items-center px-Mobile md:px-Tablet">
                         <span className="flex gap-1 items-center lg:gap-2 lg:text-xl">
@@ -102,8 +102,8 @@ const Header = () => {
                             </Link>
                         </div>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </header>
     )
 }

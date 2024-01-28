@@ -14,7 +14,7 @@ interface FieldProps {
     IconElement?: React.ReactNode;
 }
 
-const Field = (props: FieldProps) => <Provider store={store} children={<FieldContent {...props} />} />
+const Field = (props: FieldProps) => <Provider store={store}><FieldContent {...props} /></Provider>
 
 const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, IconElement }: FieldProps) => {
 
@@ -25,7 +25,7 @@ const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, I
     const inputStyles = "flex-1 relative text-sm focus:outline-none";
     const containerStyles = "border border-[#D9D9D9] rounded flex flex-wrap items-center py-2 px-3";
 
-    const useDispatch = useAppDispatch();
+    const dispatch = useAppDispatch();
 
     if (typeModel === "search")
         return <div
@@ -75,7 +75,7 @@ const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, I
             onSubmit={ele => {
                 ele.preventDefault();
                 setInputValue("");
-                useDispatch(activePopUp("Email registrado com sucesso!"));
+                dispatch(activePopUp("Email registrado com sucesso!"));
             }}
             style={{ border: fieldBorder && `2px solid ${fieldBorder}` }}
             className={`${containerStyles} bg-whiteText`}>

@@ -16,9 +16,10 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 
 - Next.js
 - TypeScript - Automáticamente installado com o **next create app**.
-- Emotion - `npm i @emotion/styled @emotion/react && npm install --save @emotion/css`.
+- Emotion - `npm i @emotion/styled @emotion/react && npm install @emotion/css`.
 - TailwindCSS - Automáticamente installado com o **next create app**.
-- Redux-Toolkit - `npm install @reduxjs/toolkit react-redux && @types/react-redux`
+- Redux-Toolkit - `npm install @reduxjs/toolkit react-redux @types/react-redux`
+- uuid - `npm install uuid && npm install @types/uuid`
 
 ## Dinamicidade dos Dados
 

@@ -1,4 +1,5 @@
-import Star from "../SVG/Star";
+import Star from "@/components/SVG/Star";
+import { v4 as uuidv4 } from 'uuid';
 
 interface StarGradesProps {
     grade: number;
@@ -25,13 +26,13 @@ const StarGrades = ({ grade, className }: StarGradesProps) => {
 
     return <>
         {
-            fullStars.map(star => <Star type="fill" className={className} />)
+            fullStars.map(star => <Star type="fill" key={uuidv4()} className={className} />)
         }
         {
             hasHalfStar && <Star type="half" className={className} />
         }
         {
-            emptyStars.map(star => <Star type="empty" className={className} />)
+            emptyStars.map(star => <Star type="empty" key={uuidv4()} className={className} />)
         }
     </>
 }
