@@ -41,9 +41,9 @@
                 "imageProduct": "/images/flashSales/produto-1.png",
                 "productName": "Tonny Black",
                 "productDescription": "Shoulder bag-White-Plain",
-                "evaluationNumber": 54,
+                "reviewsAmount": 54,
+                "grades": 4,
                 "price": 129.99,
-                "discountPrice": 69.99,
                 "discount": 40
             },
             {
@@ -52,10 +52,10 @@
                 "imageProduct": "/images/flashSales/produto-2.png",
                 "productName": "Reebok",
                 "productDescription": "Women’s Powder sneakers",
-                "evaluationNumber": 54,
+                "reviewsAmount": 39,
+                "grades": 3.5,
                 "price": 129.99,
-                "discountPrice": 112.02,
-                "discount": 40
+                "discount": 50
             },
             {
                 "id": 3,
@@ -63,10 +63,10 @@
                 "imageProduct": "/images/flashSales/produto-3.png",
                 "productName": "Patso",
                 "productDescription": "Shoulder bag-Pink-Plain",
-                "evaluationNumber": 54,
+                "reviewsAmount": 157,
+                "grades": 4.5,
                 "price": 129.99,
-                "discountPrice": 69.99,
-                "discount": 40
+                "discount": 20
             },
             {
                 "id": 4,
@@ -74,10 +74,10 @@
                 "imageProduct": "/images/flashSales/produto-4.png",
                 "productName": "Sketchers",
                 "productDescription": "Sport-shoe 2102",
-                "evaluationNumber": 54,
+                "reviewsAmount": 301,
+                "grades": 5,
                 "price": 129.99,
-                "discountPrice": 80.00,
-                "discount": 40
+                "discount": 15
             }
         ],
         "top100Info": [
@@ -87,6 +87,7 @@
                 "name": "Mango",
                 "categories": "Kimono & Caftan - Black - Regular fit",
                 "reviewsAmount": 289,
+                "grades": 5,
                 "price": 290,
                 "discount": 10
             },
@@ -96,6 +97,7 @@
                 "name": "Zara",
                 "categories": "Midi top- Daily fit",
                 "reviewsAmount": 523,
+                "grades": 4,
                 "price": 145,
                 "discount": 7
             },
@@ -105,6 +107,7 @@
                 "name": "Uniqlo",
                 "categories": "Midi atlas Slim fit - bohemian",
                 "reviewsAmount": 86,
+                "grades": 3.5,
                 "price": 156,
                 "discount": 8
             },
@@ -114,6 +117,7 @@
                 "name": "Mango dress",
                 "categories": "Kimono & Caftan - Colorful - Night club fit",
                 "reviewsAmount": 1211,
+                "grades": 4.5,
                 "price": 487,
                 "discount": 15
             }
@@ -121,7 +125,7 @@
         "trendingMustHaveInfo": [
             {
                 "id": 1,
-                "newArivals": true,
+                "newArrivals": true,
                 "image": "/images/ilustrations/trends-1.png",
                 "title": "Cool & Sexy Calvin Klein",
                 "description": "Dotted dress-Casual",
@@ -129,7 +133,7 @@
             },
             {
                 "id": 2,
-                "newArivals": false,
+                "newArrivals": false,
                 "image": "/images/ilustrations/trends-2.png",
                 "title": "Cool & Sexy Calvin Klein",
                 "description": "Dotted dress-Casual",
@@ -137,12 +141,15 @@
             },
             {
                 "id": 3,
-                "newArivals": true,
+                "newArrivals": true,
                 "image": "/images/ilustrations/trends-3.png",
                 "title": "Beige Coat Zara",
                 "description": "Cream-Brown-Formal",
                 "shopNowValue": 102
             }
         ]
+    },
+    {
+        "products": []
     }
 ]

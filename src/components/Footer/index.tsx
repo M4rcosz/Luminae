@@ -72,7 +72,7 @@ const Footer = () => {
 
             <span className="flex justify-center items-center gap-1 mb-5 ">
                 <p className="text-sm text-[#555]">Site não comercial com fins demonstrativos - </p>
-                <a href="https://github.com/M4rcosz" className="text-base text-black hover:text-[#c00] hover:underline decoration-black hover:scale-105 ease-in-out duration-300">M4rcosz</a>
+                <a href="https://github.com/M4rcosz" target="_blank" className="text-base text-black hover:text-[#c00] hover:underline decoration-black hover:scale-105 ease-in-out duration-300">M4rcosz</a>
             </span>
         </footer>
     )

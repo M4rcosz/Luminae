@@ -10,10 +10,10 @@ const TrendingMustHaves = () => {
         <section className="px-Mobile md:px-Tablet">
             <ViewAllTitle title="Trending Must Have" />
             <ContainerList className="sm:justify-center lg:grid lg:grid-cols-3">
-                {trendsInfo.map(trend =>
+                {trendsInfo!.map(trend =>
                     <TrendingMustHavesCard
                         key={`trendingMustHaves-${trend.id}`}
-                        newArivals={trend.newArivals}
+                        newArrivals={trend.newArrivals}
                         image={trend.image}
                         title={trend.title}
                         description={trend.description}

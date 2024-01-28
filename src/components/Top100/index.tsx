@@ -10,13 +10,14 @@ const Top100 = () => {
         <section className="px-Mobile md:px-Tablet">
             <ViewAllTitle title="Top 100" />
             <ContainerList className="sm:grid sm:grid-cols-2 lg:grid-cols-4 ">
-                {top100Info.map(product =>
+                {top100Info!.map(product =>
                     <Top100Card
                         key={`top100-${product.id}`}
                         src={product.src}
                         productName={product.name}
                         productCategories={product.categories}
                         productReviewsAmount={product.reviewsAmount}
+                        grade={product.grades}
                         productPrice={product.price}
                         productDiscountPercent={product.discount}
                     />

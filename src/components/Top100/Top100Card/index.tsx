@@ -1,5 +1,5 @@
+import StarGrades from "@/components/utils/StarGrades";
 import { discountPriceFunction } from "@common/utils/priceWithoutDiscount";
-import Star from "@components/SVG/Star";
 import Image from "next/image";
 
 interface Top100CardProps {
@@ -9,6 +9,7 @@ interface Top100CardProps {
     productPrice: number;
     productDiscountPercent: number;
     productReviewsAmount: number;
+    grade: number
 }
 
 const Top100Card = (
@@ -18,11 +19,10 @@ const Top100Card = (
         productCategories,
         productPrice,
         productDiscountPercent,
-        productReviewsAmount
+        productReviewsAmount,
+        grade
     }: Top100CardProps) => {
 
-
-    const priceWithDiscount = discountPriceFunction(productPrice, productDiscountPercent);
 
     return (
         <li className="flex flex-col justify-center last:mr-5 shadow-[0_4px_18px_-10px_#7e7e7e] rounded-lg min-w-60 sm:last:mr-0 lg:min-w-0">
@@ -51,16 +51,12 @@ const Top100Card = (
 
                 </div>
                 <div className="flex items-center">
-                    <Star className="w-5 h-5 xl:w-6 xl:h-6" />
-                    <Star className="w-5 h-5 xl:w-6 xl:h-6" />
-                    <Star className="w-5 h-5 xl:w-6 xl:h-6" />
-                    <Star className="w-5 h-5 xl:w-6 xl:h-6" />
-                    <Star className="w-5 h-5 xl:w-6 xl:h-6" />
+                    <StarGrades grade={grade} className="w-5 h-5 xl:w-6 xl:h-6" />
 
                     <strong className="ml-1 text-xs text-[#434343] xl:text-base">({productReviewsAmount})</strong>
                 </div>
                 <div className="flex gap-3 items-center">
-                    <strong className="text-sm text-notifications xl:text-lg">${priceWithDiscount.toFixed(2)}</strong>
+                    <strong className="text-sm text-notifications xl:text-lg">${discountPriceFunction(productPrice, productDiscountPercent)}</strong>
                     <span className="text-2xs line-through text-[#434343] xl:text-sm">${productPrice}</span>
                     <span className="text-2xs text-notifications xl:text-lg">-{productDiscountPercent}%</span>
                 </div>

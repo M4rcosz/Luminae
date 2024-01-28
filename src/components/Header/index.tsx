@@ -46,7 +46,7 @@ const Header = () => {
                         <Field
                             placeholder="Search Producs"
                             ariaLabel="Search Producs"
-                            type="search"
+                            typeModel="search"
                             className=" w-[110px] sm:w-[200px] lg:w-[250px] lg:text-base"
                         />
                     </div>

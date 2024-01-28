@@ -10,16 +10,16 @@ const FlashSales = () => {
         <section className="px-Mobile md:px-Tablet">
             <ViewAllTitle title="Flash Sales" />
             <ContainerList className="sm:grid sm:grid-cols-2 lg:flex">
-                {flashSalesInfo.map(card =>
+                {flashSalesInfo!.map(card =>
                     <FlashSalesCard
                         key={`flashSales-${card.id}`}
                         discountLeft={card.discountLeft}
                         imageProduct={card.imageProduct}
                         productName={card.productName}
                         productDescription={card.productDescription}
-                        evaluationNumber={card.evaluationNumber}
+                        reviewsAmount={card.reviewsAmount}
+                        grades={card.grades}
                         price={card.price}
-                        discountPrice={card.discountPrice}
                         discount={card.discount}
                     />
                 )}

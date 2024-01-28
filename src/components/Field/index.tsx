@@ -1,24 +1,33 @@
 "use client"
+import { useAppDispatch } from "@/hooks/redux";
+import { store } from "@/store";
+import { activePopUp } from "@/store/reducer/PopUpUtils";
 import Dropdown from "@components/Dropdown";
 import { useState } from "react";
+import { Provider } from "react-redux";
 
 interface FieldProps {
     placeholder?: string;
-    type?: "search" | "rightIcon" | "none";
+    typeModel?: "search" | "rightIcon" | "emailRegister" | "none";
     className?: string;
     ariaLabel?: string;
     IconElement?: React.ReactNode;
 }
 
+const Field = (props: FieldProps) => <Provider store={store} children={<FieldContent {...props} />} />
 
-const Field = ({ placeholder, type = "none", className, ariaLabel, IconElement }: FieldProps) => {
+const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, IconElement }: FieldProps) => {
+
+    const [inputValue, setInputValue] = useState<string>("")
 
     const [fieldBorder, setFieldBorder] = useState<string>("")
 
     const inputStyles = "flex-1 relative text-sm focus:outline-none";
     const containerStyles = "border border-[#D9D9D9] rounded flex flex-wrap items-center py-2 px-3";
 
-    if (type === "search")
+    const useDispatch = useAppDispatch();
+
+    if (typeModel === "search")
         return <div
             style={{ border: fieldBorder && `1px solid ${fieldBorder}` }}
             className={`${containerStyles} w-full md:w-fit `}>
@@ -44,7 +53,7 @@ const Field = ({ placeholder, type = "none", className, ariaLabel, IconElement }
             </svg>
         </div>
 
-    else if (type === "rightIcon")
+    else if (typeModel === "rightIcon")
         return <div
             style={{ border: fieldBorder && `2px solid ${fieldBorder}` }}
             className={`${containerStyles} bg-whiteText`}>
@@ -55,11 +64,38 @@ const Field = ({ placeholder, type = "none", className, ariaLabel, IconElement }
                 className={`${inputStyles} bg-whiteText w-full ${className}`}
                 onFocus={() => setFieldBorder("#000")}
                 onBlur={() => setFieldBorder("")}
+                value={inputValue}
+                onChange={e => setInputValue(e.target.value)}
             />
             {IconElement}
         </div>
 
-    else if (type === "none")
+    else if (typeModel === "emailRegister")
+        return <form
+            onSubmit={ele => {
+                ele.preventDefault();
+                setInputValue("");
+                useDispatch(activePopUp("Email registrado com sucesso!"));
+            }}
+            style={{ border: fieldBorder && `2px solid ${fieldBorder}` }}
+            className={`${containerStyles} bg-whiteText`}>
+            <input
+                type="email"
+                placeholder={placeholder}
+                aria-label={placeholder}
+                className={`${inputStyles} bg-whiteText w-full ${className}`}
+                onFocus={() => setFieldBorder("#000")}
+                onBlur={() => setFieldBorder("")}
+                value={inputValue}
+                onChange={e => setInputValue(e.target.value)}
+                required
+            />
+            <button type="submit" aria-label="Botão de Enviar">
+                {IconElement}
+            </button>
+        </form>
+
+    else if (typeModel === "none")
         return <input
             type="text"
             placeholder={placeholder}
