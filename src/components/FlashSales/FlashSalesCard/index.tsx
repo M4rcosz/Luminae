@@ -1,6 +1,7 @@
 import { discountPriceFunction } from "@/common/utils/priceWithoutDiscount";
 import StarGrades from "@/components/utils/StarGrades";
 import Image from "next/image";
+import Timer from "@components/FlashSales/Timer";
 
 interface FlashSalesCardProps {
     imageProduct: string,
@@ -31,26 +32,7 @@ const FlashSalesCard = ({
                     Deal of the Day
                 </strong>
 
-                <div className="flex justify-center gap-2">
-                    <span className="flex flex-col text-xs text-[#555] xl:text-sm">
-                        <strong className="text-lg font-extrabold text-[#111] xl:text-2xl">12</strong>
-                        hour
-                    </span>
-
-                    <span className="text-2xl text-[#555]">:</span>
-
-                    <span className="flex flex-col text-xs text-[#555] xl:text-sm">
-                        <strong className="text-lg font-extrabold text-[#111] xl:text-2xl">43</strong>
-                        min
-                    </span>
-
-                    <span className="text-2xl text-[#555]">:</span>
-
-                    <span className="flex flex-col text-xs text-[#555] xl:text-sm">
-                        <strong className="text-lg font-extrabold text-[#111] xl:text-2xl">12</strong>
-                        sec
-                    </span>
-                </div>
+                <Timer />
             </div>
 
             <Image

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BackgroundScreen from "../utils/BackgroudScreen";
 import DesktopNavList from "./DesktopNavList";
+import MenuHamburguer from "./MenuHamburguer";
 
 const Header = () => {
 
@@ -13,17 +14,7 @@ const Header = () => {
 
                     <div className="px-Mobile flex flex-col gap-8 md:flex-row md:justify-between md:px-Tablet xl:px-0 xl:flex-row xl:w-fit">
                         <div className="flex justify-between items-center">
-                            <svg width="20" height="16" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                className="md:hidden"
-                                aria-label="menu hamburguer"
-                                role="button"
-                            >
-                                <g id="Menue icon">
-                                    <line id="Line 119" x1="1.05" y1="1.41924" x2="19.95" y2="1.41924" stroke="#023047" strokeWidth="2.1" strokeLinecap="round" />
-                                    <line id="Line 120" x1="1.05" y1="8.41924" x2="19.95" y2="8.41924" stroke="#023047" strokeWidth="2.1" strokeLinecap="round" />
-                                    <line id="Line 121" x1="1.05" y1="15.4192" x2="19.95" y2="15.4192" stroke="#023047" strokeWidth="2.1" strokeLinecap="round" />
-                                </g>
-                            </svg>
+                            <MenuHamburguer />
 
                             <Link href="#" className="flex gap-2 items-center">
                                 <Image

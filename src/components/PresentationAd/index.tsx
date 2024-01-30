@@ -2,6 +2,11 @@ import Image from "next/image"
 import Button from "@components/Button"
 
 const PresentationAd = () => {
+
+    const offerInitialDate = new Date(new Date().getTime() - 5 * 24 * 60 * 60 * 1000);
+
+    const offerLimitDate = new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000);
+
     return (
         <article className="w-full sm:flex max-w-[1320px] mx-auto">
             <div className="w-full h-fit lg:max-w-[547px] relative">
@@ -21,7 +26,11 @@ const PresentationAd = () => {
                         <strong className="text-notifications">20% off</strong>
                     </div>
                     <div className="bg-[#222] w-full">
-                        <p className="text-whiteText text-sm text-center py-2">19 Jul-30 Jul</p>
+                        <p className="text-whiteText text-sm text-center py-2">
+                            {` ${offerInitialDate.getUTCDate()} ${offerInitialDate.toUTCString().split(" ")[2]}`}
+                            -
+                            {`${offerLimitDate.getUTCDate()} ${offerLimitDate.toUTCString().split(" ")[2]}`}
+                        </p>
                     </div>
                 </aside>
             </div>

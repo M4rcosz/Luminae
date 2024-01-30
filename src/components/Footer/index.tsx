@@ -8,7 +8,7 @@ const Footer = () => {
     const liClasses = "text-[#555] hover:text-black hover:scale-105 ease-in-out duration-200 w-fit";
 
     return (
-        <footer>
+        <footer className="pb-5">
             <NewsEmailCard />
             <nav className="px-Mobile md:px-Tablet flex flex-wrap bg-[#D1E2EB] text-sm justify-center py-10 gap-y-10 sm:gap-14 sm:pt-24 lg:text-base lg:gap-24 lg:pt-32 lg:pb-12">
                 <div className="flex flex-col gap-2.5 w-1/2 sm:w-fit">
@@ -47,7 +47,7 @@ const Footer = () => {
             </nav>
 
             <div>
-                <ul className="flex grayscale justify-center gap-6 my-6">
+                <ul className="flex grayscale justify-center gap-6 py-6 bg-white">
                     <li className="flex justify-center">
                         <Image
                             src={"/images/icons/visa.svg"}
@@ -78,8 +78,8 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <span className="flex justify-center items-center gap-1 mb-5 ">
-                <p className="text-sm text-[#555]">Site não comercial com fins demonstrativos - </p>
+            <span className="flex justify-center items-center gap-1 bg-white">
+                <p className="text-xs xs:text-sm text-[#555]">Site não comercial com fins demonstrativos - </p>
                 <a href="https://github.com/M4rcosz" target="_blank" className="text-base text-black hover:text-[#c00] hover:underline decoration-black hover:scale-105 ease-in-out duration-300">M4rcosz</a>
             </span>
         </footer>
