@@ -15,14 +15,14 @@ const CarouselAd = ({ className }: CarouselAdProps = {}) => {
                 role="button"
             >
                 <g id="Icon/arrow/right">
-                    <path id="Vector 175" d="M6.6665 5.60547L9.33317 8.9388L6.6665 12.2721" stroke="#434343" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="Vector 175" d="M6.6665 5.60547L9.33317 8.9388L6.6665 12.2721" stroke="#434343" strokeLinecap="round" strokeLinejoin="round" />
                 </g>
             </svg>
 
 
             <div className="flex mx-16 gap-10 items-center mx-auto">
                 <div className="flex flex-col gap-2 justify-center">
-                    <h3 className="uppercase font-bold text-[#465D6B] text-lg">MagSafe</h3>
+                    <h2 className="uppercase font-bold text-[#465D6B] text-lg">MagSafe</h2>
                     <p className="text-[#555] text-sm">Snap on a magnetic case, wallet, or both. And get faster wireless charging.</p>
                 </div>
                 <Image
@@ -30,7 +30,7 @@ const CarouselAd = ({ className }: CarouselAdProps = {}) => {
                     alt=""
                     width={500}
                     height={500}
-                    className="w-[50%] h-fit object-cover lg:self-end"
+                    className="w-[50%] max-h-[150px] h-fit object-cover lg:self-end"
                     loading="lazy"
                 />
             </div>
@@ -41,7 +41,7 @@ const CarouselAd = ({ className }: CarouselAdProps = {}) => {
                 role="button"
             >
                 <g id="Icon/arrow/right">
-                    <path id="Vector 175" d="M6.6665 5.60547L9.33317 8.9388L6.6665 12.2721" stroke="#434343" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="Vector 175" d="M6.6665 5.60547L9.33317 8.9388L6.6665 12.2721" stroke="#434343" strokeLinecap="round" strokeLinejoin="round" />
                 </g>
             </svg>
         </section>

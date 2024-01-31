@@ -1,9 +1,9 @@
-"use client"
 import PresentationAd from "@components/PresentationAd";
 import ExploreCards from "@components/ExploreCards"
 import FlashSales from "@components/FlashSales";
 import Top100 from "@components/Top100";
 import TrendingMustHaves from "@components/TrendingMustHaves";
+import ViewAllTitle from "@/components/ViewAllTitle";
 
 const Landing = () => {
   return (
@@ -12,11 +12,21 @@ const Landing = () => {
 
       <ExploreCards />
 
-      <FlashSales />
+      <section className="px-Mobile md:px-Tablet">
+        <ViewAllTitle title="Flash Sales" />
+        <FlashSales />
+      </section>
 
-      <TrendingMustHaves />
+      <section className="px-Mobile md:px-Tablet">
+        <ViewAllTitle title="Trending Must Have" />
+        <TrendingMustHaves />
+      </section>
 
-      <Top100 />
+      <section className="px-Mobile md:px-Tablet">
+        <ViewAllTitle title="Top 100" />
+
+        <Top100 />
+      </section>
 
     </main>
   )

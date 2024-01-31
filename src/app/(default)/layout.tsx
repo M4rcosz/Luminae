@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import '@app/globals.css'
-import ThemeProviderComp from '@components/ThemeProviderComp'
 import { lato } from '@app/fonts'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import PopUp from '@/components/PopUp'
 
 export const metadata: Metadata = {
   title: 'Luminae',
@@ -20,10 +20,9 @@ export default function RootLayout({
   return (<>
     <html lang="en">
       <body className={`${lato.className}`}>
-        <ThemeProviderComp>
-          <Header />
-          {children}
-        </ThemeProviderComp>
+        <PopUp />
+        <Header />
+        {children}
         <Footer />
       </body>
     </html>

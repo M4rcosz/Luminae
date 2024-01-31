@@ -26,6 +26,31 @@ const config: Config = {
         "veryGrayText": "#9D9D9D",
         "notifications": "#d02E00"
       },
+      animation: {
+        "popUp": "fadeInOut 3s linear forwards",
+      },
+      keyframes: {
+        "fadeInOut": {
+          "0%": {
+            display: "block",
+            opacity: "0%",
+            top: "100px",
+          },
+          "10%": {
+            opacity: "100%",
+            top: "48px",
+          },
+          "90%": {
+            opacity: "100%",
+            top: "48px",
+          },
+          "100%": {
+            display: "none",
+            opacity: "0%",
+            top: "-48px",
+          }
+        }
+      }
     },
 
 

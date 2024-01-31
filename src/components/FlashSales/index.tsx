@@ -1,30 +1,41 @@
+"use client"
+import http from "@/http";
 import FlashSalesCard from "./FlashSalesCard";
-import data from "@data/data.json"
-import ViewAllTitle from "@components/ViewAllTitle";
 import ContainerList from "@components/utils/ContainerList";
-
-const flashSalesInfo = data[0].flashSalesInfo;
+import { useEffect, useState } from "react";
+import { productType } from "@/common/types/product";
 
 const FlashSales = () => {
+    const [flashSalesData, setFlashSalesData] = useState<productType[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = (await http.get("/products?flashSales=true&_limit=4")).data;
+                setFlashSalesData(data);
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        fetchData();
+    }, [])
+
     return (
-        <section className="px-Mobile md:px-Tablet">
-            <ViewAllTitle title="Flash Sales" />
-            <ContainerList className="sm:grid sm:grid-cols-2 lg:flex">
-                {flashSalesInfo.map(card =>
-                    <FlashSalesCard
-                        key={`flashSales-${card.id}`}
-                        discountLeft={card.discountLeft}
-                        imageProduct={card.imageProduct}
-                        productName={card.productName}
-                        productDescription={card.productDescription}
-                        evaluationNumber={card.evaluationNumber}
-                        price={card.price}
-                        discountPrice={card.discountPrice}
-                        discount={card.discount}
-                    />
-                )}
-            </ContainerList>
-        </section>
+        <ContainerList className="sm:grid sm:grid-cols-2 lg:flex">
+            {flashSalesData!.map(card =>
+                <FlashSalesCard
+                    key={`flashSales-${card.id}`}
+                    productImage={card.src}
+                    productName={card.name}
+                    productDescription={card.description}
+                    productReviews={card.reviews}
+                    productGrade={card.grades}
+                    productPrice={card.price}
+                    productDiscount={card.discount}
+                />
+            )}
+        </ContainerList>
     )
 }
 
