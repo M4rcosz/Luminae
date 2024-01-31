@@ -3,31 +3,31 @@ import { discountPriceFunction } from "@common/utils/priceWithoutDiscount";
 import Image from "next/image";
 
 interface Top100CardProps {
-    src: string;
+    productImage: string;
     productName: string;
-    productCategories: string;
+    productDescription: string;
     productPrice: number;
-    productDiscountPercent: number;
-    productReviewsAmount: number;
-    grade: number
+    productDiscount: number;
+    productReviews: number;
+    productGrade: number;
 }
 
 const Top100Card = (
     {
-        src,
+        productImage,
         productName,
-        productCategories,
+        productDescription,
         productPrice,
-        productDiscountPercent,
-        productReviewsAmount,
-        grade
+        productDiscount,
+        productReviews,
+        productGrade
     }: Top100CardProps) => {
 
 
     return (
         <li className="flex flex-col justify-center last:mr-5 shadow-[0_4px_18px_-10px_#7e7e7e] rounded-lg min-w-60 sm:last:mr-0 lg:min-w-0">
             <Image
-                src={src}
+                src={productImage}
                 alt=""
                 width={500}
                 height={500}
@@ -40,7 +40,7 @@ const Top100Card = (
                     <div className="lg:max-w-[80%]">
                         <h3 className="w-fit text-[#262626] text-sm font-bold xl:text-xl cursor-pointer  hover:text-[#000a] ease-in-out duration-200">{productName}</h3>
                         <p className="text-2xs truncate hover:text-clip hover:whitespace-normal lg:hover:whitespace-nowrap lg:hover:overflow-visible xl:text-base"
-                        >{productCategories}</p>
+                        >{productDescription}</p>
                     </div>
 
                     <svg width="20" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -51,14 +51,14 @@ const Top100Card = (
 
                 </div>
                 <div className="flex items-center">
-                    <StarGrades grade={grade} className="w-5 h-5 xl:w-6 xl:h-6" />
+                    <StarGrades grade={productGrade} className="w-5 h-5 xl:w-6 xl:h-6" />
 
-                    <strong className="ml-1 text-xs text-[#434343] xl:text-base">({productReviewsAmount})</strong>
+                    <strong className="ml-1 text-xs text-[#434343] xl:text-base">({productReviews})</strong>
                 </div>
                 <div className="flex gap-3 items-center">
-                    <strong className="text-sm text-notifications xl:text-lg">${discountPriceFunction(productPrice, productDiscountPercent)}</strong>
+                    <strong className="text-sm text-notifications xl:text-lg">${discountPriceFunction(productPrice, productDiscount)}</strong>
                     <span className="text-2xs line-through text-[#434343] xl:text-sm">${productPrice}</span>
-                    <span className="text-2xs text-notifications xl:text-lg">-{productDiscountPercent}%</span>
+                    <span className="text-2xs text-notifications xl:text-lg">-{productDiscount}%</span>
                 </div>
             </footer>
         </li>

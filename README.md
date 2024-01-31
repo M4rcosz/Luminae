@@ -18,12 +18,18 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 - TypeScript - Automáticamente installado com o **next create app**.
 - Emotion - `npm i @emotion/styled @emotion/react && npm install @emotion/css`.
 - TailwindCSS - Automáticamente installado com o **next create app**.
-- Redux-Toolkit - `npm install @reduxjs/toolkit react-redux @types/react-redux`
-- uuid - `npm install uuid && npm install @types/uuid`
+- Redux-Toolkit - `npm install @reduxjs/toolkit react-redux @types/react-redux`.
+- uuid - `npm install uuid && npm install @types/uuid`.
+- json-server - `npm install -g json-server`.
+- axios - `npm install axios`
 
 ## Dinamicidade dos Dados
 
 Nesta versão que estou trabalhando deste projeto, o objetivo primeiramente é criar o template do site, por isso, estou criando vários arquivos **JSON** para simular uma possível e futura implementação de um API que consiga gerir esses dados, trazendo assim um já template dinâmico.
+
+## json-server
+
+Use esse comando `json-server --watch db.json` para inicializar o JSON server.
 
 ## DOCS - Funcionalidades:
 

@@ -3,28 +3,26 @@ import StarGrades from "@/components/utils/StarGrades";
 import Image from "next/image";
 import Timer from "@components/FlashSales/Timer";
 
-interface FlashSalesCardProps {
-    imageProduct: string,
-    discountLeft: string,
-    productName: string,
-    productDescription: string,
-    reviewsAmount: number,
-    grades: number,
-    price: number,
-    discount: number
+interface flashSalesCardProps {
+    productImage: string;
+    productName: string;
+    productDescription: string;
+    productPrice: number;
+    productDiscount: number;
+    productReviews: number;
+    productGrade: number;
 }
 
-// Implementar o time conter
-
-const FlashSalesCard = ({
-    imageProduct,
-    discountLeft,
-    productName,
-    productDescription,
-    reviewsAmount,
-    grades,
-    price,
-    discount, }: FlashSalesCardProps) => {
+const FlashSalesCard = (
+    {
+        productImage,
+        productName,
+        productDescription,
+        productPrice,
+        productDiscount,
+        productReviews,
+        productGrade
+    }: flashSalesCardProps) => {
     return (
         <li className="flex flex-col gap-5 py-3 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg sm:last:mr-0 sm:px-3 sm:py-8 lg:px-0 lg:py-4 lg:flex-1 lg:justify-center xl:px-3 xl:py-8 cursor-pointer hover:scale-105 ease-in-out duration-200">
             <div className="text-center">
@@ -36,7 +34,7 @@ const FlashSalesCard = ({
             </div>
 
             <Image
-                src={imageProduct}
+                src={productImage}
                 alt=""
                 width={135}
                 height={100}
@@ -58,20 +56,20 @@ const FlashSalesCard = ({
 
                 <div className="flex flex-col gap-2 sm:flex-row sm:justify-between lg:flex-col">
                     <div className="flex items-center lg:w-full">
-                        <StarGrades grade={grades} className="w-3 h-3 lg:w-5 lg:h-5" />
+                        <StarGrades grade={productGrade} className="w-3 h-3 lg:w-5 lg:h-5" />
 
-                        <strong className="ml-1 text-xs text-[#434343] lg:text-sm xl:text-base">({reviewsAmount})</strong>
+                        <strong className="ml-1 text-xs text-[#434343] lg:text-sm xl:text-base">({productReviews})</strong>
                     </div>
                     <div className="flex gap-4 items-center">
                         <strong className="text-sm text-notifications lg:text-base xl:text-lg">
-                            ${discountPriceFunction(price, discount)}
+                            ${discountPriceFunction(productPrice, productDiscount)}
                         </strong>
                         <strong className="text-2xs line-through text-[#434343] self-end lg:text-xs xl:text-sm">
-                            ${price}
+                            ${productPrice}
                         </strong>
                         <strong
                             className="text-3xs px-1.5 py-0.75 ml-auto rounded-sm text-whiteText bg-notifications lg:text-xs xl:text-sm xl:ml-auto">
-                            -{discount}%
+                            -{productDiscount}%
                         </strong>
                     </div>
                 </div>
