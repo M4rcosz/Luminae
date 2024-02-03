@@ -96,5 +96,6 @@
                 "discount": 15,
                 "top100": true
             }
-        ]
+        ],
+        "users": []
     }

@@ -63,6 +63,24 @@ Use esse comando `json-server --watch db.json` para inicializar o JSON server.
 
 Função matemática para calcular o preço de um produto após o desconto.
 
+#### getData 
+
+Uma classe para pegar informações de uma API.
+
+Ela possui dois métodos:
+
+-`getData.client()` é um método para pegar as informações da API de forma client side.
+-`getData.server()` é um método para pegar as informações da API de forma server side.
+
+
+Ambos recebem dois parâmetros em comum:
+
+- **urlResource**: é a url do recurso da API, ou seja, apenas o recurso: "/products" por exemplo.
+- **errorMessage**: é a mensagem de erro caso ocorrá algum, *esse parâmetro é opcional e possui valor padrão pré-definido*.
+
+E o `getData.client` recebe um parâmetro a mais, o seu segundo parâmetro é o *setState*, que basicamente é a função de configurar o estado da aplicação do React, por exemplo: "setProdutos([])"..
+
+
 ### utils - styles/components
 
 #### BackgroundScreen

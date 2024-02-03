@@ -1,25 +1,10 @@
-"use client"
-import http from "@/http";
 import FlashSalesCard from "./FlashSalesCard";
 import ContainerList from "@components/utils/ContainerList";
-import { useEffect, useState } from "react";
 import { productType } from "@/common/types/product";
+import getData from "@/common/utils/getData";
 
-const FlashSales = () => {
-    const [flashSalesData, setFlashSalesData] = useState<productType[]>([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = (await http.get("/products?flashSales=true&_limit=4")).data;
-                setFlashSalesData(data);
-            } catch (error) {
-                console.log(error)
-            }
-        }
-
-        fetchData();
-    }, [])
+const FlashSales = async () => {
+    const flashSalesData: productType[] = await getData.server("/products?flashSales=true&_limit=4");
 
     return (
         <ContainerList className="sm:grid sm:grid-cols-2 lg:flex">

@@ -1,25 +1,12 @@
-"use client"
-import { useEffect, useState } from "react";
 import Top100Card from "./Top100Card";
 import ContainerList from "@components/utils/ContainerList";
 import { productType } from "@/common/types/product";
-import http from "@/http";
+import getData from "@/common/utils/getData";
 
-const Top100 = () => {
-    const [top100Data, setTop100Data] = useState<productType[]>([]);
+const Top100 = async () => {
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = (await http.get("/products?top100=true&_limit=4")).data;
-                setTop100Data(data);
-            } catch (error) {
-                console.log(error)
-            }
-        }
+    const top100Data: productType[] = await getData.server("/products?top100=true&_limit=4");
 
-        fetchData();
-    }, [])
 
     return (
         <ContainerList className="sm:grid sm:grid-cols-2 lg:grid-cols-4 ">

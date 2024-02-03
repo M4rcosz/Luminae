@@ -54,6 +54,7 @@ const Footer = () => {
                             alt="Logo da VISA"
                             width={60}
                             height={60}
+                            className="w-auto h-auto"
                             loading="lazy"
                         />
                     </li>
@@ -63,6 +64,7 @@ const Footer = () => {
                             alt="Logo da Mastercard"
                             width={40}
                             height={40}
+                            className="w-auto h-auto"
                             loading="lazy"
                         />
                     </li>

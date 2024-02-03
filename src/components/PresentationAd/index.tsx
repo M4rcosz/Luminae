@@ -46,7 +46,7 @@ const PresentationAd = () => {
                     type="iconLeft"
                     Icon={<Image src="/images/icons/shopIcon1.png" alt="" width={20} height={16} quality={100}
                         priority
-                        className="relative object-cover w-5 h-auto right-2 lg:w-8 lg:right-4 " />}>
+                        className="relative object-cover w-auto h-auto right-2 lg:w-8 lg:right-4 " />}>
                     Shop Now
                 </Button>
             </div>
