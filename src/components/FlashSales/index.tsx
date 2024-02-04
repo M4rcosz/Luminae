@@ -15,7 +15,7 @@ const FlashSales = async () => {
                     productName={card.name}
                     productDescription={card.description}
                     productReviews={card.reviews}
-                    productGrade={card.grades}
+                    productGrade={card.grade}
                     productPrice={card.price}
                     productDiscount={card.discount}
                 />

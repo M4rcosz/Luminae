@@ -17,7 +17,7 @@ const Top100 = async () => {
                     productName={product.name}
                     productDescription={product.description}
                     productReviews={product.reviews}
-                    productGrade={product.grades}
+                    productGrade={product.grade}
                     productPrice={product.price}
                     productDiscount={product.discount}
                 />

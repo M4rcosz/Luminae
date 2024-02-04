@@ -1,101 +1,101 @@
+{
+  "products": [
     {
-        "products": [
-            {
-                "id": 1,
-                "categorie": "accessories",
-                "name": "Tonny Black",
-                "description": "Shoulder bag-White-Plain",
-                "src": "/images/flashSales/produto-1.png",
-                "grades": 4,
-                "reviews": 54,
-                "price": 129.99,
-                "discount": 40,
-                "flashSales": true
-            },
-            {
-                "id": 2,
-                "categorie": "shoes",
-                "name": "Reebok",
-                "description": "Women’s Powder sneakers",
-                "src": "/images/flashSales/produto-2.png",
-                "grades": 3.5,
-                "reviews": 39,
-                "price": 129.99,
-                "discount": 50,
-                "flashSales": true
-            },
-            {
-                "id": 3,
-                "categorie": "accessories",
-                "name": "Patso",
-                "description": "Shoulder bag-Pink-Plain",
-                "src": "/images/flashSales/produto-3.png",
-                "grades": 4.5,
-                "reviews": 157,
-                "price": 129.99,
-                "discount": 20,
-                "flashSales": true
-            },
-            {
-                "id": 4,
-                "categorie": "shoes",
-                "name": "Sketchers",
-                "description": "Sport-shoe 2102",
-                "src": "/images/flashSales/produto-4.png",
-                "grades": 5,
-                "reviews": 301,
-                "price": 129.99,
-                "discount": 15,
-                "flashSales": true
-            },
-            {
-                "id": 5,
-                "categorie": "clothes",
-                "name": "Mango",
-                "description": "Kimono & Caftan - Black - Regular fit",
-                "src": "/images/top100/top100-1.png",
-                "grades": 5,
-                "reviews": 289,
-                "price": 290,
-                "discount": 10,
-                "top100": true
-            },
-            {
-                "id": 6,
-                "categorie": "clothes",
-                "name": "Zara",
-                "description": "Midi top- Daily fit",
-                "src": "/images/top100/top100-2.png",
-                "grades": 4,
-                "reviews": 523,
-                "price": 145,
-                "discount": 7,
-                "top100": true
-            },
-            {
-                "id": 7,
-                "categorie": "clothes",
-                "name": "Uniqlo",
-                "description": "Midi atlas Slim fit - bohemian",
-                "src": "/images/top100/top100-3.png",
-                "grades": 3.5,
-                "reviews": 86,
-                "price": 156,
-                "discount": 8,
-                "top100": true
-            },
-            {
-                "id": 8,
-                "categorie": "clothes",
-                "name": "Mango dress",
-                "description": "Kimono & Caftan - Colorful - Night club fit",
-                "src": "/images/top100/top100-4.png",
-                "grades": 4.5,
-                "reviews": 1211,
-                "price": 487,
-                "discount": 15,
-                "top100": true
-            }
-        ],
-        "users": []
+      "id": 1,
+      "categorie": "accessories",
+      "name": "Tonny Black",
+      "description": "Shoulder bag-White-Plain",
+      "src": "/images/flashSales/produto-1.png",
+      "grade": 4,
+      "reviews": 54,
+      "price": 129.99,
+      "discount": 40,
+      "flashSales": true
+    },
+    {
+      "id": 2,
+      "categorie": "shoes",
+      "name": "Reebok",
+      "description": "Women’s Powder sneakers",
+      "src": "/images/flashSales/produto-2.png",
+      "grade": 3.5,
+      "reviews": 39,
+      "price": 129.99,
+      "discount": 50,
+      "flashSales": true
+    },
+    {
+      "id": 3,
+      "categorie": "accessories",
+      "name": "Patso",
+      "description": "Shoulder bag-Pink-Plain",
+      "src": "/images/flashSales/produto-3.png",
+      "grade": 4.5,
+      "reviews": 157,
+      "price": 129.99,
+      "discount": 20,
+      "flashSales": true
+    },
+    {
+      "id": 4,
+      "categorie": "shoes",
+      "name": "Sketchers",
+      "description": "Sport-shoe 2102",
+      "src": "/images/flashSales/produto-4.png",
+      "grade": 5,
+      "reviews": 301,
+      "price": 129.99,
+      "discount": 15,
+      "flashSales": true
+    },
+    {
+      "id": 5,
+      "categorie": "clothes",
+      "name": "Mango",
+      "description": "Kimono & Caftan - Black - Regular fit",
+      "src": "/images/top100/top100-1.png",
+      "grade": 5,
+      "reviews": 289,
+      "price": 290,
+      "discount": 10,
+      "top100": true
+    },
+    {
+      "id": 6,
+      "categorie": "clothes",
+      "name": "Zara",
+      "description": "Midi top- Daily fit",
+      "src": "/images/top100/top100-2.png",
+      "grade": 4,
+      "reviews": 523,
+      "price": 145,
+      "discount": 7,
+      "top100": true
+    },
+    {
+      "id": 7,
+      "categorie": "clothes",
+      "name": "Uniqlo",
+      "description": "Midi atlas Slim fit - bohemian",
+      "src": "/images/top100/top100-3.png",
+      "grade": 3.5,
+      "reviews": 86,
+      "price": 156,
+      "discount": 8,
+      "top100": true
+    },
+    {
+      "id": 8,
+      "categorie": "clothes",
+      "name": "Mango dress",
+      "description": "Kimono & Caftan - Colorful - Night club fit",
+      "src": "/images/top100/top100-4.png",
+      "grade": 4.5,
+      "reviews": 1211,
+      "price": 487,
+      "discount": 15,
+      "top100": true
     }
+  ],
+  "users": []
+}

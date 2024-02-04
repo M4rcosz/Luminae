@@ -4,7 +4,7 @@ export interface productType {
     name: string;
     description: string;
     src: string;
-    grades: number;
+    grade: number;
     reviews: number;
     price: number;
     discount: number;

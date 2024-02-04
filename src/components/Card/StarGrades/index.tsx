@@ -3,10 +3,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 interface StarGradesProps {
     grade: number;
+    reviews: number;
     className?: string;
 }
 
-const StarGrades = ({ grade, className }: StarGradesProps) => {
+const StarGrades = ({ grade, reviews, className = "w-4 h-4" }: StarGradesProps) => {
     const amountFullStars: number = Math.floor(grade);
 
     const hasHalfStar: boolean = grade % 1 !== 0;
@@ -24,7 +25,7 @@ const StarGrades = ({ grade, className }: StarGradesProps) => {
         emptyStars.push(1)
     }
 
-    return <>
+    return <div className="flex items-center">
         {
             fullStars.map(star => <Star type="fill" key={uuidv4()} className={className} />)
         }
@@ -34,7 +35,8 @@ const StarGrades = ({ grade, className }: StarGradesProps) => {
         {
             emptyStars.map(star => <Star type="empty" key={uuidv4()} className={className} />)
         }
-    </>
+        <strong className="ml-1 text-xs text-[#434343] xl:text-base">({reviews})</strong>
+    </div>
 }
 
 export default StarGrades
