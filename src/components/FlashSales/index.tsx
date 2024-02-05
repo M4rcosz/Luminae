@@ -1,6 +1,6 @@
 import FlashSalesCard from "./FlashSalesCard";
 import ContainerList from "@components/utils/ContainerList";
-import { productType } from "@/common/types/product";
+import { productType } from "@/types/product";
 import getData from "@/common/utils/getData";
 
 const FlashSales = async () => {

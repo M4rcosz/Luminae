@@ -5,6 +5,7 @@ import BackgroundScreen from "@/components/utils/BackgroudScreen";
 import DesktopNavList from "./DesktopNavList";
 import MenuHamburguer from "./MenuHamburguer";
 import NotificationPopUp from "../NotificationPopUp";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
 
@@ -62,16 +63,23 @@ const Header = () => {
                         </span>
 
                         <div className="flex text-[#ddd] text-sm gap-10 lg:text-base">
-                            <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group hover:scale-105 ease-in-out duration-100">
-                                <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    className="lg:w-8 lg:h-8 *:group-hover:stroke-2"
-                                >
-                                    <ellipse cx="21" cy="31.15" rx="12.25" ry="6.125" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
-                                    <circle cx="21" cy="12.775" r="7" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
-                                </svg>
+                            <SignedOut>
+                                <SignInButton mode="modal">
+                                    <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group hover:scale-105 ease-in-out duration-100">
+                                        <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            className="lg:w-8 lg:h-8 *:group-hover:stroke-2"
+                                        >
+                                            <ellipse cx="21" cy="31.15" rx="12.25" ry="6.125" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
+                                            <circle cx="21" cy="12.775" r="7" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
+                                        </svg>
 
-                                Sign In
-                            </Link>
+                                        Sign In
+                                    </Link>
+                                </SignInButton>
+                            </SignedOut>
+                            <SignedIn>
+                                <UserButton />
+                            </SignedIn>
                             <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group hover:scale-105 ease-in-out duration-100">
                                 <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     className="lg:w-8 lg:h-8 *:group-hover:stroke-2"

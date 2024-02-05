@@ -22,6 +22,7 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 - uuid - `npm install uuid && npm install @types/uuid`.
 - json-server - `npm install -g json-server`.
 - axios - `npm install axios`
+- clerk - `npm install @clerk/nextjs`
 
 ## Dinamicidade dos Dados
 

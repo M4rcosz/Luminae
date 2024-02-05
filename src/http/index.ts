@@ -1,12 +1,7 @@
 import axios from "axios";
 
-const urlForDev = "http://localhost:3000/";
-
-const urlForDeploy = "https://my-json-server.typicode.com/M4rcosz/Luminae/";
-
-
 const http = axios.create({
-    baseURL: urlForDev,
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
     headers: {
         "Content-Type": "application/json",
     }

@@ -1,6 +1,6 @@
 import Top100Card from "./Top100Card";
 import ContainerList from "@components/utils/ContainerList";
-import { productType } from "@/common/types/product";
+import { productType } from "@/types/product";
 import getData from "@/common/utils/getData";
 
 const Top100 = async () => {

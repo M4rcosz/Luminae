@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { popUpUtilsSliceReducer } from '@/store/reducer/PopUpUtils'
+import { searchingSliceReducer } from './reducer/Searching'
 
 export const store = configureStore({
     reducer: {
-        popUpUtils: popUpUtilsSliceReducer
+        popUpUtils: popUpUtilsSliceReducer,
+        searchingTasks: searchingSliceReducer
     },
 })
 

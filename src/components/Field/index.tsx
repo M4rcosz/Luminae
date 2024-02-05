@@ -1,5 +1,5 @@
 "use client"
-import { useAppDispatch } from "@/hooks/redux";
+import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { store } from "@/store";
 import { activePopUp } from "@/store/reducer/PopUpUtils";
 import Dropdown from "@components/Dropdown";
@@ -34,11 +34,11 @@ const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, I
         return <form
             onSubmit={e => {
                 e.preventDefault();
-                if (inputValue) { router.push(`/${inputValue}`) }
+                if (inputValue) { router.push(`/search/${inputValue}`) }
 
             }}
             style={{ border: fieldBorder && `1px solid ${fieldBorder}` }}
-            className={`${containerStyles} w-full md:w-fit `}>
+            className={`${containerStyles} w-full md:w-fit relative`}>
             <input
                 type="text"
                 placeholder={placeholder}
@@ -68,6 +68,7 @@ const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, I
 
             <Dropdown
                 className="mr-1"
+                categories={["all categories", "accessories", "shoes", "clothes"]}
             />
 
             <button

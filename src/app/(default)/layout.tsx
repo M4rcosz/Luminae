@@ -4,6 +4,7 @@ import { lato } from '@app/fonts'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 import PopUp from '@/components/PopUp'
+import { ClerkProvider } from '@clerk/nextjs'
 
 export const metadata: Metadata = {
   title: 'Luminae',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (<>
+  return (<ClerkProvider>
     <html lang="en">
       <body className={`${lato.className}`}>
         <PopUp />
@@ -26,6 +27,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  </>
+  </ClerkProvider>
   )
 }
