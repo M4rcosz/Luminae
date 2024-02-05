@@ -19,10 +19,12 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 - Emotion - `npm i @emotion/styled @emotion/react && npm install @emotion/css`.
 - TailwindCSS - Automáticamente installado com o **next create app**.
 - Redux-Toolkit - `npm install @reduxjs/toolkit react-redux @types/react-redux`.
-- uuid - `npm install uuid && npm install @types/uuid`.
-- json-server - `npm install -g json-server`.
-- axios - `npm install axios`
-- clerk - `npm install @clerk/nextjs`
+- Uuid - `npm install uuid && npm install @types/uuid`.
+- Json-server - `npm install -g json-server`.
+- Axios - `npm install axios`
+- Clerk - `npm install @clerk/nextjs`
+- Prisma `npm install prisma --dev & npm install @prisma/client`
+- Vercel Postgres - Banco de Dados da vercel.
 
 ## Dinamicidade dos Dados
 
