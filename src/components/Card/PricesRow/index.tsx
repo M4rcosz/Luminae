@@ -1,4 +1,4 @@
-import { discountPriceFunction } from "@/common/utils/priceWithoutDiscount";
+import { discountPriceFunction } from "@/lib/utils/priceWithoutDiscount";
 
 interface PricesRowProps {
     price: number;

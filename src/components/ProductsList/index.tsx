@@ -1,6 +1,6 @@
 "use client"
 import { productType } from "@/types/product"
-import getData from "@/common/utils/getData"
+import getData from "@/lib/utils/getData"
 import PricesRow from "@/components/Card/PricesRow"
 import StarGrades from "@/components/Card/StarGrades"
 import TitleDesc from "@/components/Card/TitleDesc"

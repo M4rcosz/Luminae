@@ -23,8 +23,10 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 - Json-server - `npm install -g json-server`.
 - Axios - `npm install axios`
 - Clerk - `npm install @clerk/nextjs`
-- Prisma `npm install prisma --dev & npm install @prisma/client`
+- Prisma - `npm install prisma --dev & npm install @prisma/client`
 - Vercel Postgres - Banco de Dados da vercel.
+- Stripe - `npm install @stripe/stripe-js stripe`
+- svix - `npm install svix`
 
 ## Dinamicidade dos Dados
 

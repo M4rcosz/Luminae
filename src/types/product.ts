@@ -9,3 +9,13 @@ export interface productType {
     price: number;
     discount: number;
 }
+
+export interface ProductTypeStripe {
+    id: string;
+    price: number | null;
+    name: string;
+    quantity?: number | 1;
+    image: string;
+    description: string | null;
+    currency: string;
+};

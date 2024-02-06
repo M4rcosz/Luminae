@@ -1,7 +1,7 @@
 import FlashSalesCard from "./FlashSalesCard";
 import ContainerList from "@components/utils/ContainerList";
 import { productType } from "@/types/product";
-import getData from "@/common/utils/getData";
+import getData from "@/lib/utils/getData";
 
 const FlashSales = async () => {
     const flashSalesData: productType[] = await getData.server("/products?flashSales=true&_limit=4");
