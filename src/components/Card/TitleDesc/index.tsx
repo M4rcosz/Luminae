@@ -2,7 +2,7 @@ import FavoriteButton from "@/components/Button/FavoriteButton";
 
 interface TitleDescProps {
     name: string;
-    description: string;
+    description: string | null;
 }
 
 const TitleDesc = ({ name, description }: TitleDescProps) =>

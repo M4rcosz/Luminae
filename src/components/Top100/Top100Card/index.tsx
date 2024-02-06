@@ -29,7 +29,7 @@ const Top100Card = (
         <li className="flex flex-col justify-center last:mr-5 shadow-[0_4px_18px_-10px_#7e7e7e] rounded-lg min-w-60 sm:last:mr-0 lg:min-w-0">
             <Image
                 src={productImage}
-                alt=""
+                alt={productName}
                 width={500}
                 height={500}
                 quality={100}

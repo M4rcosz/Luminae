@@ -1,7 +1,7 @@
 import ProductsList from "@/components/ProductsList"
-import { formatPrice } from "@/lib/utils/formatPrice";
+import Product from "@/components/ProductsList/Product";
+import SkeletonProduct from "@/components/ProductsList/SkeletonProduct";
 import { ProductTypeStripe } from "@/types/product"
-import Image from "next/image";
 import Stripe from "stripe";
 
 const getProducts = async (): Promise<ProductTypeStripe[]> => {
@@ -34,14 +34,9 @@ const SearchProducts = async () => {
     return (
         <main>
             {/* <ProductsList /> */}
-            <ul>
+            <ul className="px-Mobile md:px-Tablet max-w-[1440px] mx-auto flex flex-col gap-5 my-4">
                 {products.map(product => (
-                    <li>
-                        <h1>{product.name}</h1>
-                        <p>{product.description}</p>
-                        <Image src={product.image} alt={product.name} width={100} height={100} />
-                        <strong>{formatPrice(product.price)}</strong>
-                    </li>
+                    <Product product={product} key={product.id} />
                 ))}
             </ul>
         </main>

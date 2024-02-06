@@ -35,7 +35,7 @@ const FlashSalesCard = (
 
             <Image
                 src={productImage}
-                alt=""
+                alt={productName}
                 width={135}
                 height={100}
                 className="w-full h-fit object-cover"

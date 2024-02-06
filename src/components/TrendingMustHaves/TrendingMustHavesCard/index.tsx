@@ -22,7 +22,7 @@ const TrendingMustHavesCard = ({
             <div className="h-60 w-[280px] relative sm:w-full sm:h-fit cursor-default">
                 <Image
                     src={image}
-                    alt=""
+                    alt={title}
                     width={500}
                     height={500}
                     quality={100}

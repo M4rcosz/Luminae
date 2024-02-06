@@ -1,14 +1,14 @@
-import { discountPriceFunction } from "@/lib/utils/priceWithoutDiscount";
+import { formatPrice } from "@/lib/utils/formatPrice";
 
 interface PricesRowProps {
-    price: number;
-    discount?: number;
+    price: number | null;
+    discount?: number | undefined;
 }
 
-const PricesRow = ({ price, discount = 0 }: PricesRowProps) =>
+const PricesRow = ({ price, discount }: PricesRowProps) =>
     <div className="flex gap-4 items-center">
         <strong className="text-sm text-notifications min-w-[60px] lg:text-base xl:text-lg">
-            ${discountPriceFunction(price, discount)}
+            {formatPrice(price)}
         </strong>
 
         {discount && <div className="flex gap-4 items-center">

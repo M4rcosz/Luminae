@@ -64,7 +64,7 @@ const ExploreCards = () => {
 
                     <Image
                         src={card.cardSrc}
-                        alt=""
+                        alt={card.title}
                         width={500}
                         height={500}
                         className="w-[50%] h-full object-cover "
