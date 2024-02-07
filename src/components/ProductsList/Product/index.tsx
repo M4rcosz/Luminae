@@ -10,7 +10,7 @@ interface ProductProps {
 
 const Product = ({ product }: ProductProps) => {
     return (
-        <div className="w-full flex gap-3 items-center bg-[#ddd] h-fit rounded-lg py-3 px-2 md:py-5 px-4">
+        <div className="w-full flex gap-3 items-center bg-[#ddd] h-fit rounded-lg py-3 px-2 md:py-5 md:px-4">
             <div className="min-w-[100px] w-[100px] h-[100px] flex items-center md:min-w-[150px] md:w-[150px]">
                 <Image
                     width={100}

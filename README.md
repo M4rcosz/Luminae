@@ -16,9 +16,9 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 
 - Next.js
 - TypeScript - Automáticamente installado com o **next create app**.
-- Emotion - `npm i @emotion/styled @emotion/react && npm install @emotion/css`.
+<!-- - Emotion - `npm i @emotion/styled @emotion/react && npm install @emotion/css`. -->
 - TailwindCSS - Automáticamente installado com o **next create app**.
-- Redux-Toolkit - `npm install @reduxjs/toolkit react-redux @types/react-redux`.
+<!-- - Redux-Toolkit - `npm install @reduxjs/toolkit react-redux @types/react-redux`. -->
 - Uuid - `npm install uuid && npm install @types/uuid`.
 - Json-server - `npm install -g json-server`.
 - Axios - `npm install axios`
@@ -27,6 +27,7 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 - Vercel Postgres - Banco de Dados da vercel.
 - Stripe - `npm install @stripe/stripe-js stripe`
 - svix - `npm install svix`
+- Zustand - `npm install zustand`
 
 ## Dinamicidade dos Dados
 

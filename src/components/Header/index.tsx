@@ -40,7 +40,7 @@ const Header = () => {
                             placeholder="Search Products"
                             ariaLabel="Search Products"
                             typeModel="search"
-                            className=" w-[90px] sm:w-[200px] lg:w-[250px] lg:text-base"
+                            className=" w-[80px] sm:w-[200px] lg:w-[250px] lg:text-base"
                         />
                     </div>
 

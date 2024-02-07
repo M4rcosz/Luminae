@@ -1,25 +1,20 @@
 "use client"
 
-import { useAppDispatch, useAppSelector } from "@/hooks/redux";
-import { store } from "@/store";
-import { setCategorySelected } from "@/store/reducer/Searching";
+import { useSearchingStore } from "@/store";
 import { useEffect, useRef, useState } from "react";
-import { Provider } from "react-redux";
 
 interface DropdownProps {
     className?: string;
     categories: string[];
 }
 
-const Dropdown = (props: DropdownProps) => <Provider store={store}><DropdownContent {...props} /></Provider>
 
-const DropdownContent = ({ className, categories }: DropdownProps) => {
+const Dropdown = ({ className, categories }: DropdownProps) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-    const dispatch = useAppDispatch();
 
-    const categorySelected = useAppSelector(state => state.searchingTasks.categorySelected);
+    const { categorySelected, setCategorySelected } = useSearchingStore(state => state)
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -35,7 +30,7 @@ const DropdownContent = ({ className, categories }: DropdownProps) => {
     }, [])
 
     return (
-        <div className={`whitespace-nowrap text-xs my-auto flex items-center capitalize cursor-pointer sm:text-sm lg:text-base min-w-[107px] ${className}`} role="listbox" aria-expanded="true" aria-label="All Categories"
+        <div className={`whitespace-nowrap text-xs my-auto flex items-center capitalize cursor-pointer sm:text-sm lg:text-base min-w-[107px] lg:min-w-[127px] ${className}`} role="listbox" aria-expanded="true" aria-label="All Categories"
             ref={dropdownRef}
         >
             <span className="flex items-center ml-auto"
@@ -62,7 +57,7 @@ const DropdownContent = ({ className, categories }: DropdownProps) => {
                     }
                     return (
                         <li className="px-2 py-1.5 text-white font-bold hover:bg-[#555] "
-                            onClick={() => { setIsOpen(false); dispatch(setCategorySelected(category)) }}
+                            onClick={() => { setIsOpen(false); setCategorySelected(category) }}
                             key={category}
                         >
                             {category}

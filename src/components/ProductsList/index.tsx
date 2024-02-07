@@ -4,18 +4,15 @@ import getData from "@/lib/utils/getData"
 import PricesRow from "@/components/Card/PricesRow"
 import StarGrades from "@/components/Card/StarGrades"
 import TitleDesc from "@/components/Card/TitleDesc"
-import { useAppSelector } from "@/hooks/redux"
-import { store } from "@/store"
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import { Provider } from "react-redux"
+import { useSearchingStore } from "@/store"
 
-const ProductsList = () => <Provider store={store}><ProductsListContent /></Provider>
 
-const ProductsListContent = () => {
+const ProductsList = () => {
     const [products, setProducts] = useState<productType[]>([])
 
-    const { categorySelected, inputValue: searchValue } = useAppSelector(state => state.searchingTasks);
+    const { categorySelected, inputValue: searchValue } = useSearchingStore(state => state);
 
     console.log(categorySelected)
 

@@ -1,6 +1,5 @@
 import ProductsList from "@/components/ProductsList"
 import Product from "@/components/ProductsList/Product";
-import SkeletonProduct from "@/components/ProductsList/SkeletonProduct";
 import { ProductTypeStripe } from "@/types/product"
 import Stripe from "stripe";
 

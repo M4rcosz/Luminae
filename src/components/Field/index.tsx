@@ -1,11 +1,8 @@
 "use client"
-import { useAppDispatch, useAppSelector } from "@/hooks/redux";
-import { store } from "@/store";
-import { activePopUp } from "@/store/reducer/PopUpUtils";
+import { usePopUpStore } from "@/store";
 import Dropdown from "@components/Dropdown";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Provider } from "react-redux";
 
 interface FieldProps {
     placeholder?: string;
@@ -15,9 +12,7 @@ interface FieldProps {
     IconElement?: React.ReactNode;
 }
 
-const Field = (props: FieldProps) => <Provider store={store}><FieldContent {...props} /></Provider>
-
-const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, IconElement }: FieldProps) => {
+const Field = ({ placeholder, typeModel = "none", className, ariaLabel, IconElement }: FieldProps) => {
 
     const [inputValue, setInputValue] = useState<string>("")
 
@@ -26,7 +21,7 @@ const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, I
     const inputStyles = "flex-1 relative text-sm focus:outline-none";
     const containerStyles = "border border-[#D9D9D9] rounded flex flex-wrap items-center py-2 px-3";
 
-    const dispatch = useAppDispatch();
+    const { activePopUp } = usePopUpStore(state => state);
 
     const router = useRouter();
 
@@ -38,7 +33,7 @@ const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, I
 
             }}
             style={{ border: fieldBorder && `1px solid ${fieldBorder}` }}
-            className={`${containerStyles} w-full md:w-fit relative`}>
+            className={`${containerStyles} w-full md:w-[398px] relative`}>
             <input
                 type="text"
                 placeholder={placeholder}
@@ -109,7 +104,7 @@ const FieldContent = ({ placeholder, typeModel = "none", className, ariaLabel, I
             onSubmit={ele => {
                 ele.preventDefault();
                 setInputValue("");
-                dispatch(activePopUp("Email registrado com sucesso!"));
+                activePopUp("Email registrado com sucesso!");
             }}
             style={{ border: fieldBorder && `2px solid ${fieldBorder}` }}
             className={`${containerStyles} bg-whiteText`}>
