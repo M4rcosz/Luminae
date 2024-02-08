@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import NotificationPopUp from "@/components/NotificationPopUp"
 
 const MenuHamburguer = () => {
     const [open, setOpen] = useState(false)
@@ -20,7 +19,7 @@ const MenuHamburguer = () => {
                 <line id="Line 121" x1="1.05" y1="15.4192" x2="19.95" y2="15.4192" stroke="#023047" strokeWidth="2.1" strokeLinecap="round" />
             </g>
         </svg>
-        <div className={`${open ? "flex" : "hidden"} flex-col fixed top-0 left-0 w-screen bg-white z-50  border-[3px] border-[#000]`}>
+        {open && <div className="flex flex-col fixed top-0 left-0 w-screen bg-white z-50  border-[3px] border-[#000]">
             <div className="flex w-full items-center px-Mobile py-3">
                 <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
                     className="translate-x-[-25%] "
@@ -42,7 +41,6 @@ const MenuHamburguer = () => {
                 </li>
                 <li className=" text-white font-semibold text-base">
                     <Link href="#" className="flex items-center gap-2">Card
-                        <NotificationPopUp />
                     </Link>
                 </li>
             </ul>
@@ -61,7 +59,7 @@ const MenuHamburguer = () => {
                     <Link href="#">Help & Support</Link>
                 </li>
             </ul>
-        </div>
+        </div>}
     </>
 }
 

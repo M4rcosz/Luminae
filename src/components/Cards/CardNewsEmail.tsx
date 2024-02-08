@@ -1,6 +1,6 @@
 import Field from "@components/Field"
 
-const NewsEmailCard = () => {
+const CardNewsEmail = () => {
     return (
         <section className="flex flex-col gap-3 bg-[#5050c5] px-8 py-6 max-h-[154px] sm:translate-y-1/2 sm:w-fit sm:mx-auto sm:rounded-lg lg:max-h-[166px]">
             <h2 className="text-whiteText font-bold text-xl text-center lg:text-2xl">
@@ -27,4 +27,4 @@ const NewsEmailCard = () => {
     )
 }
 
-export default NewsEmailCard
+export default CardNewsEmail

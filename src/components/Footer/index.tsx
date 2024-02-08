@@ -1,5 +1,5 @@
 import Link from "next/link";
-import NewsEmailCard from "./NewsEmailCard";
+import CardNewsEmail from "@/components/Cards/CardNewsEmail";
 import Image from "next/image";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <footer className="pb-5">
-            <NewsEmailCard />
+            <CardNewsEmail />
             <nav className="px-Mobile md:px-Tablet flex flex-wrap bg-[#D1E2EB] text-sm justify-center py-10 gap-y-10 sm:gap-14 sm:pt-24 lg:text-base lg:gap-24 lg:pt-32 lg:pb-12">
                 <div className="flex flex-col gap-2.5 w-1/2 sm:w-fit">
                     <h3 id="companyTitle" className="first:text-[#262626] first:font-bold first:mb-1.5">Company</h3>

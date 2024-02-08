@@ -1,7 +1,7 @@
-import Top100Card from "./Top100Card";
 import ContainerList from "@components/utils/ContainerList";
 import { productType } from "@/types/product";
 import getData from "@/lib/utils/getData";
+import CardTop100 from "@/components/Cards/CardTop100";
 
 const Top100 = async () => {
 
@@ -11,7 +11,7 @@ const Top100 = async () => {
     return (
         <ContainerList className="sm:grid sm:grid-cols-2 lg:grid-cols-4 ">
             {top100Data!.map(product =>
-                <Top100Card
+                <CardTop100
                     key={`top100-${product.id}`}
                     productImage={product.src}
                     productName={product.name}

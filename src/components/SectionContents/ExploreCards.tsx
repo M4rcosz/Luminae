@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CarouselAd from "@components/CarouselAd";
+import CarouselAd from "@/components/Carousel/CarouselAd";
 import Link from "next/link";
 
 

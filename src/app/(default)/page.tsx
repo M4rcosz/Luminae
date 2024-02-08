@@ -1,9 +1,9 @@
-import PresentationAd from "@components/PresentationAd";
-import ExploreCards from "@components/ExploreCards"
-import FlashSales from "@components/FlashSales";
-import Top100 from "@components/Top100";
-import TrendingMustHaves from "@components/TrendingMustHaves";
-import ViewAllTitle from "@/components/ViewAllTitle";
+import PresentationAd from "@/components/SectionContents/PresentationAd";
+import ExploreCards from "@/components/SectionContents/ExploreCards"
+import FlashSales from "@/components/SectionContents/FlashSales";
+import Top100 from "@/components/SectionContents/Top100";
+import TrendingMustHaves from "@/components/SectionContents/TrendingMustHaves";
+import ViewAllTitle from "@/components/SectionContents/UtilsItems/ViewAllTitle";
 
 const Landing = () => {
 

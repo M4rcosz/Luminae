@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-interface CustomImageProps {
+interface ImageCustomProps {
     alt: string;
     src: string;
     fill?: boolean;
@@ -12,7 +12,7 @@ interface CustomImageProps {
     quality?: number;
 }
 
-const CustomImage = ({ src, fill, alt, className, loading = undefined, quality = 75 }: CustomImageProps) => {
+const ImageCustom = ({ src, fill, alt, className, loading = undefined, quality = 75 }: ImageCustomProps) => {
     const [isLoading, setIsLoading] = useState(true);
 
     return fill ? (
@@ -39,4 +39,4 @@ const CustomImage = ({ src, fill, alt, className, loading = undefined, quality =
     )
 }
 
-export default CustomImage
+export default ImageCustom

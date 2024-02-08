@@ -1,9 +1,9 @@
-import StarGrades from "@/components/Card/StarGrades";
+import StarGrades from "@/components/Cards/Items/StarGrades";
 import Image from "next/image";
-import Timer from "@components/FlashSales/Timer";
-import PricesRow from "@/components/Card/PricesRow";
+import Timer from "@/components/SectionContents/UtilsItems/Timer";
+import PricesRow from "@/components/Cards/Items/PricesRow";
 
-interface flashSalesCardProps {
+interface CardFlashSalesProps {
     productImage: string;
     productName: string;
     productDescription: string;
@@ -13,7 +13,7 @@ interface flashSalesCardProps {
     productGrade: number;
 }
 
-const FlashSalesCard = (
+const CardFlashSales = (
     {
         productImage,
         productName,
@@ -22,7 +22,7 @@ const FlashSalesCard = (
         productDiscount,
         productReviews,
         productGrade
-    }: flashSalesCardProps) => {
+    }: CardFlashSalesProps) => {
     return (
         <li className="flex flex-col gap-5 py-3 last:mr-5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)] rounded-lg sm:last:mr-0 sm:px-3 sm:py-8 lg:px-0 lg:py-4 lg:flex-1 lg:justify-center xl:px-3 xl:py-8 cursor-pointer hover:scale-105 ease-in-out duration-200">
             <div className="text-center">
@@ -63,4 +63,4 @@ const FlashSalesCard = (
     )
 }
 
-export default FlashSalesCard
+export default CardFlashSales

@@ -1,4 +1,4 @@
-import FlashSalesCard from "./FlashSalesCard";
+import CardFlashSales from "@/components/Cards/CardFlashSales";
 import ContainerList from "@components/utils/ContainerList";
 import { productType } from "@/types/product";
 import getData from "@/lib/utils/getData";
@@ -9,7 +9,7 @@ const FlashSales = async () => {
     return (
         <ContainerList className="sm:grid sm:grid-cols-2 lg:flex">
             {flashSalesData!.map(card =>
-                <FlashSalesCard
+                <CardFlashSales
                     key={`flashSales-${card.id}`}
                     productImage={card.src}
                     productName={card.name}

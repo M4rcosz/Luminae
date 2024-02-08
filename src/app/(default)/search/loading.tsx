@@ -1,4 +1,4 @@
-import SkeletonProduct from "@/components/ProductsList/SkeletonProduct"
+import SkeletonProduct from "@/components/Cards/Skeletons/SkeletonProduct"
 
 const Loading = () => {
     return (

@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
-interface TrendingMustHavesCardProps {
+interface CardTrendingMustHavesProps {
     newArrivals: boolean
     image: string
     title: string
@@ -10,13 +10,13 @@ interface TrendingMustHavesCardProps {
     shopNowValue: number
 }
 
-const TrendingMustHavesCard = ({
+const CardTrendingMustHaves = ({
     newArrivals = false,
     image,
     title,
     description,
     shopNowValue
-}: TrendingMustHavesCardProps) => {
+}: CardTrendingMustHavesProps) => {
     return (
         <li className="last:mr-5 sm:last:mr-0 sm:flex sm:flex-col sm:flex-1 sm:min-w-full">
             <div className="h-60 w-[280px] relative sm:w-full sm:h-fit cursor-default">
@@ -40,7 +40,7 @@ const TrendingMustHavesCard = ({
                     </span>}
             </div>
 
-            <footer className="flex rounded-b-lg h-[92px] p-4 gap-3 items-center justify-between h-32 bg-[#262626] lg:h-fit lg:flex-col lg:items-start lg:p-5 ">
+            <footer className="flex rounded-b-lg p-4 gap-3 items-center justify-between h-32 bg-[#262626] lg:h-fit lg:flex-col lg:items-start lg:p-5 ">
                 <div className="flex flex-col gap-1">
                     <h3 className="text-sm text-whiteText xl:text-2xl cursor-pointer  hover:text-[#eeea] ease-in-out duration-200">
                         {title}
@@ -61,4 +61,4 @@ const TrendingMustHavesCard = ({
     )
 }
 
-export default TrendingMustHavesCard
+export default CardTrendingMustHaves

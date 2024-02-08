@@ -1,9 +1,9 @@
-import FavoriteButton from "@/components/Button/FavoriteButton";
-import PricesRow from "@/components/Card/PricesRow";
-import StarGrades from "@/components/Card/StarGrades";
+import ButtonFavorite from "@/components/Button/ButtonFavorite";
+import PricesRow from "@/components/Cards/Items/PricesRow";
+import StarGrades from "@/components/Cards/Items/StarGrades";
 import Image from "next/image";
 
-interface Top100CardProps {
+interface CardTop100Props {
     productImage: string;
     productName: string;
     productDescription: string;
@@ -13,7 +13,7 @@ interface Top100CardProps {
     productGrade: number;
 }
 
-const Top100Card = (
+const CardTop100 = (
     {
         productImage,
         productName,
@@ -22,7 +22,7 @@ const Top100Card = (
         productDiscount,
         productReviews,
         productGrade
-    }: Top100CardProps) => {
+    }: CardTop100Props) => {
 
 
     return (
@@ -44,7 +44,7 @@ const Top100Card = (
                         >{productDescription}</p>
                     </div>
 
-                    <FavoriteButton />
+                    <ButtonFavorite />
 
                 </div>
                 <StarGrades grade={productGrade} reviews={productReviews} className="w-5 h-5 xl:w-6 xl:h-6" />
@@ -55,4 +55,4 @@ const Top100Card = (
     )
 }
 
-export default Top100Card
+export default CardTop100

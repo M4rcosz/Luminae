@@ -4,7 +4,7 @@ import Link from "next/link";
 import BackgroundScreen from "@/components/utils/BackgroudScreen";
 import DesktopNavList from "./DesktopNavList";
 import MenuHamburguer from "./MenuHamburguer";
-import NotificationPopUp from "../NotificationPopUp";
+import NotificationPopUp from "../SectionContents/UtilsItems/NotificationPopUp";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {

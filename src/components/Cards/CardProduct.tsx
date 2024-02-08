@@ -1,14 +1,14 @@
 import Button from "@/components/Button"
-import PricesRow from "@/components/Card/PricesRow"
-import TitleDesc from "@/components/Card/TitleDesc"
+import PricesRow from "@/components/Cards/Items/PricesRow"
+import TitleDesc from "@/components/Cards/Items/TitleDesc"
 import { ProductTypeStripe } from "@/types/product"
 import Image from "next/image"
 
-interface ProductProps {
+interface CardProductProps {
     product: ProductTypeStripe
 }
 
-const Product = ({ product }: ProductProps) => {
+const CardProduct = ({ product }: CardProductProps) => {
     return (
         <div className="w-full flex gap-3 items-center bg-[#ddd] h-fit rounded-lg py-3 px-2 md:py-5 md:px-4">
             <div className="min-w-[100px] w-[100px] h-[100px] flex items-center md:min-w-[150px] md:w-[150px]">
@@ -33,4 +33,4 @@ const Product = ({ product }: ProductProps) => {
     )
 }
 
-export default Product
+export default CardProduct

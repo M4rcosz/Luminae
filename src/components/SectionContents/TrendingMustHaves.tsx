@@ -1,4 +1,4 @@
-import TrendingMustHavesCard from "@components/TrendingMustHaves/TrendingMustHavesCard";
+import CardTrendingMustHaves from "@/components/Cards/CardTrendingMustHaves";
 import ContainerList from "@components/utils/ContainerList";
 
 const trendsInfo = [
@@ -32,7 +32,7 @@ const TrendingMustHaves = () => {
     return (
         <ContainerList className="sm:justify-center lg:grid lg:grid-cols-3">
             {trendsInfo!.map(trend =>
-                <TrendingMustHavesCard
+                <CardTrendingMustHaves
                     key={`trendingMustHaves-${trend.id}`}
                     newArrivals={trend.newArrivals}
                     image={trend.image}

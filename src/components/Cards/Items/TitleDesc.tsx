@@ -1,4 +1,4 @@
-import FavoriteButton from "@/components/Button/FavoriteButton";
+import ButtonFavorite from "@/components/Button/ButtonFavorite";
 
 interface TitleDescProps {
     name: string;
@@ -16,7 +16,7 @@ const TitleDesc = ({ name, description }: TitleDescProps) =>
             </p>
         </div>
 
-        <FavoriteButton />
+        <ButtonFavorite />
     </div>
 
 
