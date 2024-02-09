@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const DesktopNavList = () =>
-    <div className="hidden px-Tablet md:flex justify-between w-full xl:gap-8 xl:px-0 xl:justify-normal xl:w-fit xl:whitespace-nowrap">
+    <section className="hidden px-Tablet md:flex justify-between w-full xl:gap-8 xl:px-0 xl:justify-normal xl:w-fit xl:whitespace-nowrap">
         <ul className="flex gap-8 text-sm text-[#555] font-semibold lg:text-base">
             <li className="hover:text-[#0006] hover:scale-105 ease-in-out duration-100">
                 <Link href="#">About us</Link>
@@ -46,7 +46,7 @@ const DesktopNavList = () =>
                 </a>
             </li>
         </ul>
-    </div>
+    </section>
 
 
 export default DesktopNavList

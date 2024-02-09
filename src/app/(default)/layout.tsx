@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import '@app/globals.css'
 import { lato } from '@app/fonts'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Header from '@/components/Header/HomePage'
+import Footer from '@/components/Footer/HomePage'
 import PopUp from '@/components/PopUp'
 import { ClerkProvider } from '@clerk/nextjs'
 

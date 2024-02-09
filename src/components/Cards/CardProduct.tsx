@@ -1,8 +1,8 @@
-import Button from "@/components/Button"
 import PricesRow from "@/components/Cards/Items/PricesRow"
 import TitleDesc from "@/components/Cards/Items/TitleDesc"
 import { ProductTypeStripe } from "@/types/product"
 import Image from "next/image"
+import ButtonAddToCart from "../Button/ButtonAddToCart"
 
 interface CardProductProps {
     product: ProductTypeStripe
@@ -27,7 +27,9 @@ const CardProduct = ({ product }: CardProductProps) => {
                     {/* <StarGrades grade={product.grade} reviews={product.reviews} className="w-4 h-4" /> */}
                     <PricesRow price={product.price} />
                 </div>
-                <Button className="ml-auto bg-[#66fd] py-1.5 px-4 rounded text-white font-bold hover:scale-105 ease-in-out duration-200">Add to Cart</Button>
+                <ButtonAddToCart className="ml-auto bg-teal-700 py-1.5 px-4 rounded text-white font-bold hover:bg-teal-700/75 ease-in-out duration-200"
+                    product={product}
+                />
             </div>
         </div>
     )

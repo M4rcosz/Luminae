@@ -6,13 +6,13 @@ import StarGrades from "@/components/Cards/Items/StarGrades"
 import TitleDesc from "@/components/Cards/Items/TitleDesc"
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import { useSearchingStore } from "@/store"
+import { useStoreSearching } from "@/store"
 
 
 const ProductsList = () => {
     const [products, setProducts] = useState<productType[]>([])
 
-    const { categorySelected, inputValue: searchValue } = useSearchingStore(state => state);
+    const { categorySelected, inputValue: searchValue } = useStoreSearching(state => state);
 
     console.log(categorySelected)
 

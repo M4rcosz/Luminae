@@ -1,5 +1,5 @@
 "use client"
-import { usePopUpStore } from "@/store";
+import { useStorePopUp } from "@/store";
 import Dropdown from "@components/Dropdown";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -21,7 +21,7 @@ const Field = ({ placeholder, typeModel = "none", className, ariaLabel, IconElem
     const inputStyles = "flex-1 relative text-sm focus:outline-none";
     const containerStyles = "border border-[#D9D9D9] rounded flex flex-wrap items-center py-2 px-3";
 
-    const { activePopUp } = usePopUpStore(state => state);
+    const activePopUp = useStorePopUp(state => state.activePopUp);
 
     const router = useRouter();
 

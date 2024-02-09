@@ -1,7 +1,8 @@
 "use client"
 
-import { useSearchingStore } from "@/store";
+import { useStoreSearching } from "@/store";
 import { useEffect, useRef, useState } from "react";
+import { useShallow } from "zustand/react/shallow";
 
 interface DropdownProps {
     className?: string;
@@ -14,7 +15,7 @@ const Dropdown = ({ className, categories }: DropdownProps) => {
     const dropdownRef = useRef<HTMLDivElement | null>(null);
 
 
-    const { categorySelected, setCategorySelected } = useSearchingStore(state => state)
+    const { categorySelected, setCategorySelected } = useStoreSearching(useShallow(state => state));
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

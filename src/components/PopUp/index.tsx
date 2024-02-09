@@ -1,17 +1,20 @@
 "use client"
 
-import { usePopUpStore } from "@/store"
+import { useStorePopUp } from "@/store"
+import { useShallow } from "zustand/react/shallow";
 
 const PopUp = () => {
 
-    const { isOpen, message, desactivePopUp } = usePopUpStore(state => state);
+    const { isPopUp: isOpen, popUpMessage: message, desactivePopUp } = useStorePopUp(useShallow(state => state));
 
     if (isOpen) setTimeout(() => desactivePopUp(), 3000);
 
 
-    return <div className={`${isOpen ? "animate-popUp" : "hidden"}  fixed top-12 left-1/2 translate-x-[-50%] py-3 px-7 bg-[#00662F] text-whiteText text-base rounded-lg font-bold z-[99999]`}>
-        <p>{message}</p>
-    </div>
+    return <>
+        {isOpen && <div className="animate-popUp fixed top-12 left-1/2 translate-x-[-50%] py-3 px-7 bg-[#00662F] text-whiteText text-base rounded-lg font-bold z-[99999]">
+            <p>{message}</p>
+        </div>}
+    </>
 }
 
 export default PopUp
