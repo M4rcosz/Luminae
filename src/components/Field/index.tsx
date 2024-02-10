@@ -104,7 +104,7 @@ const Field = ({ placeholder, typeModel = "none", className, ariaLabel, IconElem
             onSubmit={ele => {
                 ele.preventDefault();
                 setInputValue("");
-                activePopUp("Email registrado com sucesso!");
+                activePopUp("Email registered successfully!");
             }}
             style={{ border: fieldBorder && `2px solid ${fieldBorder}` }}
             className={`${containerStyles} bg-whiteText`}>

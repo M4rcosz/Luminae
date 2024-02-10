@@ -45,8 +45,8 @@ interface CartState {
     toogleCart: () => void;
     addCart: (product: ProductTypeStripe) => void;
     removeCart: (product: ProductTypeStripe) => void;
-    // incrementProduct: (product: ProductTypeStripe) => void;
-    // decrementProduct: (product: ProductTypeStripe) => void;
+    incrementProduct: (product: ProductTypeStripe) => void;
+    decrementProduct: (product: ProductTypeStripe) => void;
 }
 
 export const useStoreCart = create<CartState>()(
@@ -57,21 +57,37 @@ export const useStoreCart = create<CartState>()(
             toogleCart: () => set(state => ({
                 isCartOpen: !state.isCartOpen
             })),
-            addCart: (product) => set(state => {
-                let valor;
-                const isInCart = state.cart.find(item => item.id === product.id);
+            addCart: (product) => set(state =>
+                ({ cart: [...state.cart, product] })),
+            removeCart: (product) => set(state =>
+                ({ cart: [...state.cart.filter(item => item.id !== product.id)] })),
+            incrementProduct: (product) => set(state => {
 
-                if (isInCart) valor = state.cart;
-                else valor = [...state.cart, product];
+                const valor = state.cart.map(item => {
+                    if (item.id === product.id) {
+
+                        if (item.quantity) return { ...item, quantity: item.quantity + 1 }
+
+                        else return { ...item, quantity: 2 }
+                    }
+
+                    return item
+                })
 
                 return { cart: valor }
             }),
-            removeCart: (product) => set(state => ({
-                cart: [...state.cart.filter(item => item.id !== product.id)],
-            })),
-            // incrementProduct: (product) => set(state => {
+            decrementProduct: (product) => set(state => {
 
-            // })
+                const valor = state.cart.map(item => {
+                    if (item.id === product.id) {
+                        if (item.quantity && item.quantity > 1)
+                            return { ...item, quantity: item.quantity - 1 };
+                    }
+                    return item
+                })
+
+                return { cart: valor }
+            })
         }),
         {
             name: "cart"

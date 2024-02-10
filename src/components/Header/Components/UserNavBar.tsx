@@ -46,10 +46,9 @@ const UserNavBar = () => {
 
                         Favorites
                     </Link>
-                    <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group ease-in-out duration-100">
-                        <CartIcon stroke="#fff" svgClassName="*:group-hover:stroke-2 lg:w-8 lg:h-8" />
+                    <CartIcon stroke="#fff" svgClassName="*:group-hover:stroke-2 lg:w-8 lg:h-8">
                         Cart
-                    </Link>
+                    </CartIcon>
                 </div>
             </div>
         </div>

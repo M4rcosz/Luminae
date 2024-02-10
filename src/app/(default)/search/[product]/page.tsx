@@ -34,8 +34,8 @@ const SearchProducts = async () => {
         <main>
             {/* <ProductsList /> */}
             <ul className="px-Mobile md:px-Tablet max-w-[1440px] mx-auto flex flex-col gap-5 my-4">
-                {products.map(product => (
-                    <CardProduct product={product} key={product.id} />
+                {products.map((product, index) => (
+                    <CardProduct product={product} key={product.id} index={index} />
                 ))}
             </ul>
         </main>

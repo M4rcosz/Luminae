@@ -5,21 +5,30 @@ import Image from "next/image"
 import ButtonAddToCart from "../Button/ButtonAddToCart"
 
 interface CardProductProps {
-    product: ProductTypeStripe
+    product: ProductTypeStripe;
+    index: number;
 }
 
-const CardProduct = ({ product }: CardProductProps) => {
+const CardProduct = ({ product, index }: CardProductProps) => {
     return (
         <div className="w-full flex gap-3 items-center bg-[#ddd] h-fit rounded-lg py-3 px-2 md:py-5 md:px-4">
             <div className="min-w-[100px] w-[100px] h-[100px] flex items-center md:min-w-[150px] md:w-[150px]">
-                <Image
+                {index < 4 ? <Image
                     width={100}
                     height={100}
                     src={product.image}
                     alt={product.name}
                     className="w-full h-fit object-cover "
-                    loading="lazy"
-                />
+                    priority
+                /> :
+                    <Image
+                        width={100}
+                        height={100}
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-fit object-cover "
+                        loading="lazy"
+                    />}
             </div>
             <div className="flex flex-col gap-4 w-full">
                 <TitleDesc name={product.name} description={product.description} />
