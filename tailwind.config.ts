@@ -28,6 +28,8 @@ const config: Config = {
       },
       animation: {
         "popUp": "fadeInOut 3s linear forwards",
+        "rightFadeInOut": "rightFadeInOut .2s linear forwards",
+        "rightFadeInOutReverse": "rightFadeInOutReverse .2s linear forwards"
       },
       keyframes: {
         "fadeInOut": {
@@ -48,6 +50,22 @@ const config: Config = {
             display: "none",
             opacity: "0%",
             top: "-48px",
+          }
+        },
+        "rightFadeInOut": {
+          "0%": {
+            transform: "translateX(100%)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
+        "rightFadeInOutReverse": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(100%)",
           }
         }
       }
