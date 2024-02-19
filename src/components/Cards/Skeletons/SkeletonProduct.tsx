@@ -1,7 +1,7 @@
 const SkeletonProduct = () => {
     return (
         <div className="w-full flex gap-3 items-center bg-[#ddd]  rounded-lg py-3  md:py-5 px-4 h-[147px] md:h-[163px]">
-            <div className="animate-pulse min-w-[100px] w-[100px] h-[100px] flex items-center md:min-w-[150px] md:w-[150px] bg-[#999] rounded">
+            <div className="animate-pulse min-w-[75px] w-[75px] h-[75px] flex items-center md:min-w-[150px] md:w-[150px] bg-[#999] rounded">
 
             </div>
             <div className="flex flex-col gap-4 w-full">

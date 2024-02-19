@@ -18,4 +18,8 @@ export interface ProductTypeStripe {
     image: string;
     description: string | null;
     currency: string;
+    statusType?: string;
+    discount?: number;
+    grade?: number;
+    reviews?: number;
 };

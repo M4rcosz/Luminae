@@ -6,11 +6,11 @@ import Image from "next/image";
 interface CardTop100Props {
     productImage: string;
     productName: string;
-    productDescription: string;
-    productPrice: number;
-    productDiscount: number;
-    productReviews: number;
-    productGrade: number;
+    productDescription: string | null;
+    productReviews: number | undefined;
+    productGrade: number | undefined;
+    productPrice: number | null;
+    productDiscount: number | undefined;
 }
 
 const CardTop100 = (

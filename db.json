@@ -8,7 +8,7 @@
       "src": "/images/flashSales/produto-1.png",
       "grade": 4,
       "reviews": 54,
-      "price": 129.99,
+      "price": 12999,
       "discount": 40,
       "flashSales": true
     },
@@ -20,7 +20,7 @@
       "src": "/images/flashSales/produto-2.png",
       "grade": 3.5,
       "reviews": 39,
-      "price": 129.99,
+      "price": 12999,
       "discount": 50,
       "flashSales": true
     },
@@ -32,7 +32,7 @@
       "src": "/images/flashSales/produto-3.png",
       "grade": 4.5,
       "reviews": 157,
-      "price": 129.99,
+      "price": 12999,
       "discount": 20,
       "flashSales": true
     },
@@ -44,7 +44,7 @@
       "src": "/images/flashSales/produto-4.png",
       "grade": 5,
       "reviews": 301,
-      "price": 129.99,
+      "price": 12999,
       "discount": 15,
       "flashSales": true
     },
@@ -56,7 +56,7 @@
       "src": "/images/top100/top100-1.png",
       "grade": 5,
       "reviews": 289,
-      "price": 290,
+      "price": 29000,
       "discount": 10,
       "top100": true
     },
@@ -68,7 +68,7 @@
       "src": "/images/top100/top100-2.png",
       "grade": 4,
       "reviews": 523,
-      "price": 145,
+      "price": 14500,
       "discount": 7,
       "top100": true
     },
@@ -80,7 +80,7 @@
       "src": "/images/top100/top100-3.png",
       "grade": 3.5,
       "reviews": 86,
-      "price": 156,
+      "price": 15600,
       "discount": 8,
       "top100": true
     },
@@ -92,7 +92,7 @@
       "src": "/images/top100/top100-4.png",
       "grade": 4.5,
       "reviews": 1211,
-      "price": 487,
+      "price": 48700,
       "discount": 15,
       "top100": true
     }

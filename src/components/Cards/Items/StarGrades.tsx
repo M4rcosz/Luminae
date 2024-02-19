@@ -2,15 +2,15 @@ import Star from "@/components/SVG/Star";
 import { v4 as uuidv4 } from 'uuid';
 
 interface StarGradesProps {
-    grade: number;
-    reviews: number;
+    grade: number | undefined;
+    reviews: number | undefined;
     className?: string;
 }
 
 const StarGrades = ({ grade, reviews, className = "w-4 h-4" }: StarGradesProps) => {
-    const amountFullStars: number = Math.floor(grade);
+    const amountFullStars: number = Math.floor(grade || 0);
 
-    const hasHalfStar: boolean = grade % 1 !== 0;
+    const hasHalfStar: boolean = (grade || 0) % 1 !== 0;
 
     const amountEmptyStars: number = 5 - amountFullStars - (hasHalfStar ? 1 : 0);
 

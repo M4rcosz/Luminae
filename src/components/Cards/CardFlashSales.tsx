@@ -6,11 +6,11 @@ import PricesRow from "@/components/Cards/Items/PricesRow";
 interface CardFlashSalesProps {
     productImage: string;
     productName: string;
-    productDescription: string;
-    productPrice: number;
-    productDiscount: number;
-    productReviews: number;
-    productGrade: number;
+    productDescription: string | null;
+    productReviews: number | undefined;
+    productGrade: number | undefined;
+    productPrice: number | null;
+    productDiscount: number | undefined;
 }
 
 const CardFlashSales = (

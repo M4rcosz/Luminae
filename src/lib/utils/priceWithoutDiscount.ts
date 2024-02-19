@@ -1,3 +1,3 @@
-export const discountPriceFunction = (price: number, discount: number) => {
-    return (price * (1 - (discount / 100))).toFixed(2);
+export const discountPriceFunction = (price: number | null, discount: number | undefined) => {
+    return ((price || 0) * (1 - ((discount || 0) / 100)));
 }  

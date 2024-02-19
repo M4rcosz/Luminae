@@ -16,7 +16,7 @@ const ButtonAddToCart = ({ className, product }: ButtonAddToCartProps) => {
 
     return (
         <button
-            className={`flex justify-center items-center ${className}`}
+            className={`flex justify-center items-center ${isInCart ? "bg-red-700 hover:bg-red-700/75" : "bg-teal-700 hover:bg-teal-700/75"}  ${className}`}
             onClick={() => { isInCart ? removeCart(product) : addCart(product) }}
 
         >
