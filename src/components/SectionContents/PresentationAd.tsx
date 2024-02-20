@@ -8,7 +8,7 @@ const PresentationAd = () => {
     const offerLimitDate = new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000);
 
     return (
-        <article className="w-full sm:flex max-w-[1320px] mx-auto">
+        <article className="w-full sm:flex mx-auto px-Mobile md:px-Tablet">
             <div className="w-full h-fit lg:max-w-[547px] relative">
                 <Image
                     src="/images/ilustrations/leftBanner.png"
@@ -42,7 +42,7 @@ const PresentationAd = () => {
                     <p>From $4.99</p>
                 </span>
                 <Button
-                    className="bg-[#002574] w-fit py-2 px-8 rounded before:translate-y-[10%] uppercase hover:bg-[#051842] hover:scale-105 ease-in-out duration-200 lg:text-[24px] lg:py-4 lg:px-12"
+                    className="bg-[#002574] w-full sm:w-fit py-2 px-8 rounded before:translate-y-[10%] uppercase hover:bg-[#051842] hover:scale-105 ease-in-out duration-200 lg:text-[24px] lg:py-4 lg:px-12"
                     type="iconLeft"
                     Icon={<Image src="/images/icons/shopIcon1.png" alt="" width={20} height={16} quality={100}
                         priority

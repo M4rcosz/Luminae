@@ -8,7 +8,7 @@ import ViewAllTitle from "@/components/SectionContents/UtilsItems/ViewAllTitle";
 const Landing = () => {
 
   return (
-    <main className=" flex flex-col gap-8 mb-5 sm:mb-0 sm:gap-10 max-w-[1440px] mx-auto">
+    <main className=" flex flex-col gap-8 mb-5 sm:mb-0 sm:gap-10 container mx-auto">
       <PresentationAd />
 
       <ExploreCards />

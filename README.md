@@ -19,7 +19,7 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 <!-- - Emotion - `npm i @emotion/styled @emotion/react && npm install @emotion/css`. -->
 - TailwindCSS - Automáticamente installado com o **next create app**.
 <!-- - Redux-Toolkit - `npm install @reduxjs/toolkit react-redux @types/react-redux`. -->
-- Uuid - `npm install uuid && npm install @types/uuid`.
+- Uuid - `npm install uuid && npm install --dev @types/uuid`.
 - Json-server - `npm install -g json-server`.
 - Axios - `npm install axios`
 - Clerk - `npm install @clerk/nextjs`

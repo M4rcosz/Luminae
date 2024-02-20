@@ -18,10 +18,14 @@ const getProducts = async (filterName?: string): Promise<ProductTypeStripe[]> =>
     if (products.data.length === 0) {
         products = await stripe.products.list({ limit: 10, });
         HasFound = async () =>
-            <p className="px-Mobile md:px-Tablet md:my-5 lg:my-0 italic font-bold">Not found by:  "<span className="text-red-700">{filterName}</span>"</p>
+            <div className="container mx-auto px-Mobile md:px-Tablet">
+                <p className="md:my-5 lg:my-0 italic font-bold">Not found by "<span className="text-red-700">{filterName}</span>"</p>
+            </div>
     } else
         HasFound = async () =>
-            <p className="px-Mobile md:px-Tablet md:my-5 lg:my-0 italic font-bold">Searching by:  "<span className="text-blue-700">{filterName}</span>"</p>;
+            <div className="container mx-auto">
+                <p className="px-Mobile md:px-Tablet md:my-5 lg:my-0 italic font-bold">Searching by  "<span className="text-blue-700">{filterName}</span>":</p>
+            </div>
 
     const formatedProducts = await Promise.all(
 
@@ -52,7 +56,7 @@ const SearchProducts = async ({ params }: { params: { product: string } }) => {
     return (
         <main>
             <HasFound />
-            <ul className="px-Mobile md:px-Tablet max-w-[1440px] mx-auto flex flex-col gap-5 my-4">
+            <ul className="px-Mobile md:px-Tablet container mx-auto flex flex-col gap-5 my-4">
                 {products.map((product, index) => (
                     <CardProduct product={product} key={product.id} index={index} />
                 ))}

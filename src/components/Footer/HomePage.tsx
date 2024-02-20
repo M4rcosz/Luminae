@@ -81,11 +81,11 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-2 justify-center items-center">
-                <p className="text-xs xs:text-sm text-[#555]">Non-commercial website for demonstration purposes. By:
-                    <a href="https://github.com/M4rcosz" target="_blank" className="text-xs xs:text-base text-black hover:text-[#c00] hover:underline decoration-black hover:scale-105 ease-in-out duration-300"> M4rcosz</a>
+                <p className="text-xs sm:text-sm text-[#555]">Non-commercial website for demonstration purposes. By:
+                    <a href="https://github.com/M4rcosz" target="_blank" className="text-xs sm:text-base text-black hover:text-[#c00] hover:underline decoration-black hover:scale-105 ease-in-out duration-300"> M4rcosz</a>
                 </p>
-                <p className="text-xs xs:text-sm text-[#555]">Design used as a basis and inspiration for the Luminae project. Per:
-                    <a href="https://www.figma.com/file/UN5zuXxowlakVlkj9u7ef8/Ecommerce-UI-Kit-(Community)?type=design&node-id=1-197&mode=design&t=2aZJedVmSRBmVvnH-0" target="_blank" className="text-xs xs:text-base text-black hover:text-[#c00] hover:underline decoration-black hover:scale-105 ease-in-out duration-300"> Saina Ghasemi</a>
+                <p className="text-xs sm:text-sm text-[#555]">Design used as a basis and inspiration for the Luminae project. Per:
+                    <a href="https://www.figma.com/file/UN5zuXxowlakVlkj9u7ef8/Ecommerce-UI-Kit-(Community)?type=design&node-id=1-197&mode=design&t=2aZJedVmSRBmVvnH-0" target="_blank" className="text-xs sm:text-base text-black hover:text-[#c00] hover:underline decoration-black hover:scale-105 ease-in-out duration-300"> Saina Ghasemi</a>
                 </p>
             </div>
 

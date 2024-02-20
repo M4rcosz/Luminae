@@ -40,7 +40,7 @@ const ProductsList = () => {
     // }
 
     return (
-        <section className="px-Mobile md:px-Tablet max-w-[1440px] mx-auto flex flex-col gap-5 my-4">
+        <section className="px-Mobile md:px-Tablet container mx-auto flex flex-col gap-5 my-4">
             {products.map(product => (
                 <div key={product.id} className="w-full flex gap-3 items-center bg-[#ccc] h-fit py-3 px-2">
                     <div className="min-w-[100px] w-[100px] h-[100px] flex items-center ">

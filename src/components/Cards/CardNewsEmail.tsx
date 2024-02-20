@@ -1,4 +1,4 @@
-import Field from "@components/Field"
+import FieldEmailRegister from "@components/Field/FieldEmailRegister"
 
 const CardNewsEmail = () => {
     return (
@@ -8,10 +8,9 @@ const CardNewsEmail = () => {
                 <span className="text-[#dadada]"> Store</span>
             </h2>
             <p className="text-[#F4F4F4] text-center text-xs lg:text-sm">Register your email not to miss the last minutes off+ Free delivery</p>
-            <Field
+            <FieldEmailRegister
                 placeholder="Enter your email"
-                className="lg:text-base"
-                typeModel="emailRegister"
+                inputClassName="lg:text-base"
                 IconElement={
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"
                         className=" lg:w-5 lg:h-5 group hover:scale-125 ease-in-out duration-300">

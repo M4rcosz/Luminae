@@ -1,44 +1,36 @@
-"use client"
-import { useStorePopUp } from "@/store";
+"use client";
 import Dropdown from "@components/Dropdown";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-interface FieldProps {
+interface FieldSearchProps {
     placeholder?: string;
-    typeModel?: "search" | "rightIcon" | "emailRegister" | "none";
-    className?: string;
+    inputClassName?: string;
     ariaLabel?: string;
-    IconElement?: React.ReactNode;
 }
 
-const Field = ({ placeholder, typeModel = "none", className, ariaLabel, IconElement }: FieldProps) => {
+const FieldSearch = ({ placeholder, inputClassName, ariaLabel }: FieldSearchProps) => {
 
     const [inputValue, setInputValue] = useState<string>("")
 
     const [fieldBorder, setFieldBorder] = useState<string>("")
 
-    const inputStyles = "flex-1 relative text-sm focus:outline-none";
-    const containerStyles = "border border-[#D9D9D9] rounded flex flex-wrap items-center py-2 px-3";
-
-    const activePopUp = useStorePopUp(state => state.activePopUp);
-
     const router = useRouter();
 
-    if (typeModel === "search") {
-        return <form
+    return (
+        <form
             onSubmit={e => {
                 e.preventDefault();
                 if (inputValue) { router.push(`/search/${inputValue}`) }
 
             }}
             style={{ border: fieldBorder && `1px solid ${fieldBorder}` }}
-            className={`${containerStyles} w-full md:w-[398px] relative`}>
+            className={`border border-[#D9D9D9] rounded flex flex-wrap items-center py-2 px-3 w-full md:w-full md:ml-16 relative`}>
             <input
                 type="text"
                 placeholder={placeholder}
-                aria-label={ariaLabel}
-                className={`${inputStyles} bg-[#fff0] ${className}`}
+                aria-label={ariaLabel || placeholder}
+                className={`flex-1 relative text-sm focus:outline-none bg-[#fff0] ${inputClassName}`}
                 onFocus={() => setFieldBorder("#27549c")}
                 onBlur={() => setFieldBorder("")}
                 value={inputValue}
@@ -79,60 +71,7 @@ const Field = ({ placeholder, typeModel = "none", className, ariaLabel, IconElem
                 </svg>
             </button>
         </form>
-    }
-
-    else if (typeModel === "rightIcon") {
-        return <div
-            style={{ border: fieldBorder && `2px solid ${fieldBorder}` }}
-            className={`${containerStyles} bg-whiteText`}>
-            <input
-                type="email"
-                placeholder={placeholder}
-                aria-label={placeholder}
-                className={`${inputStyles} bg-whiteText w-full ${className}`}
-                onFocus={() => setFieldBorder("#000")}
-                onBlur={() => setFieldBorder("")}
-                value={inputValue}
-                onChange={e => setInputValue(e.target.value)}
-            />
-            {IconElement}
-        </div>
-    }
-
-    else if (typeModel === "emailRegister") {
-        return <form
-            onSubmit={ele => {
-                ele.preventDefault();
-                setInputValue("");
-                activePopUp("Email registered successfully!");
-            }}
-            style={{ border: fieldBorder && `2px solid ${fieldBorder}` }}
-            className={`${containerStyles} bg-whiteText`}>
-            <input
-                type="email"
-                placeholder={placeholder}
-                aria-label={placeholder}
-                className={`${inputStyles} bg-whiteText w-full ${className}`}
-                onFocus={() => setFieldBorder("#000")}
-                onBlur={() => setFieldBorder("")}
-                value={inputValue}
-                onChange={e => setInputValue(e.target.value)}
-                required
-            />
-            <button type="submit" aria-label="Botão de Enviar">
-                {IconElement}
-            </button>
-        </form>
-    }
-
-    else if (typeModel === "none") {
-        return <input
-            type="text"
-            placeholder={placeholder}
-            aria-label={placeholder}
-            className={`${inputStyles} bg-whiteText py-2 px-3 rounded w-full  ${className}`}
-        />
-    }
+    )
 }
 
-export default Field
+export default FieldSearch
