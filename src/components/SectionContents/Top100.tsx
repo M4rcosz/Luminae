@@ -40,7 +40,8 @@ const Top100 = async () => {
         <ContainerList className="sm:grid sm:grid-cols-2 lg:grid-cols-4 ">
             {produtos!.map(product =>
                 <CardTop100
-                    key={`top100-${product.id}`}
+                    key={product.id}
+                    productId={product.id}
                     productImage={product.image}
                     productName={product.name}
                     productDescription={product.description}

@@ -1,5 +1,5 @@
 interface BackgroundScreenProps {
-    color: string;
+    color?: string;
     height?: string;
     className?: string;
 }

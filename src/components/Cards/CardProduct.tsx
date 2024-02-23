@@ -31,7 +31,7 @@ const CardProduct = ({ product, index }: CardProductProps) => {
                     />}
             </div>
             <div className="flex flex-col gap-4 w-full">
-                <TitleDesc name={product.name} description={product.description} />
+                <TitleDesc name={product.name} description={product.description} href={`/product/${product.id}`} />
                 <div className="flex flex-col gap-1.5">
                     {/* <StarGrades grade={product.grade} reviews={product.reviews} className="w-4 h-4" /> */}
                     <PricesRow price={product.price} />

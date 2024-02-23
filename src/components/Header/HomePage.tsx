@@ -10,7 +10,7 @@ import FieldSearch from "@components/Field/FieldSearch";
 const Header = () => {
 
     return (
-        <header className="container mx-auto lg:mb-10">
+        <header className="container mx-auto">
             <nav className="py-5 flex flex-col gap-5 md:pb-0">
                 <div className="flex flex-col gap-5 xl:flex-row xl:gap-0 xl:justify-between xl:items-center xl:px-Tablet">
 

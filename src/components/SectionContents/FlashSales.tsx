@@ -40,7 +40,8 @@ const FlashSales = async () => {
         <ContainerList className="sm:grid sm:grid-cols-2 lg:flex">
             {produtos!.map(card =>
                 <CardFlashSales
-                    key={`flashSales-${card.id}`}
+                    key={card.id}
+                    productId={card.id}
                     productImage={card.image}
                     productName={card.name}
                     productDescription={card.description}

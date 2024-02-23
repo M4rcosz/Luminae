@@ -57,7 +57,7 @@ const ExploreCards = () => {
                             {card.description}
                         </p>
 
-                        <Link href={card.href} className="underline text-2xs text-whiteText md:text-sm lg:text-base xl:text-lg hover:text-[#ccc] ease-in-out duration-200">
+                        <Link href={card.href} className="mt-auto underline text-2xs text-whiteText md:text-sm lg:text-base xl:text-lg hover:text-[#ccc] ease-in-out duration-200">
                             Explore All Category
                         </Link>
                     </div>
