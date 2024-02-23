@@ -62,7 +62,7 @@ const CardFlashSales = (
 
                     <div className="flex flex-col gap-2 sm:flex-row sm:justify-between lg:flex-col">
                         <StarGrades grade={productGrade} reviews={productReviews} className="w-3 h-3 lg:w-5 lg:h-5" />
-                        <PricesRow price={productPrice} discount={productDiscount} />
+                        <PricesRow price={productPrice} discount={productDiscount} className="sm:mb-0" />
                     </div>
                 </div>
             </Link>

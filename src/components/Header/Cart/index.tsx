@@ -1,22 +1,16 @@
 "use client"
 
-import { formatPrice } from "@/lib/utils/formatPrice"
 import { useStoreCart } from "@/store"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { useShallow } from "zustand/react/shallow"
+import { cartTotalSum } from "@/lib/utils/cartTotalSum"
+import { formatPrice } from "@/lib/utils/formatPrice"
 
 const Cart = () => {
     const { isCartOpen: isOpen, toogleCart, cart, removeCart, incrementProduct, decrementProduct } = useStoreCart(useShallow(state => state));
     const [toggle, setToggle] = useState<boolean>(false);
-
-    const someToTotal = () => {
-        let total: number = 0;
-        cart.map(item => total += (item.price || 0) * (item.quantity || 1));
-
-        return total;
-    }
 
     useEffect(() => {
         const toggleFunction = () => { setTimeout(() => setToggle(false), 200) };
@@ -45,7 +39,7 @@ const Cart = () => {
                             <path d="M28.4249 14.1004L13.5757 28.9497M28.4249 28.9496L13.5757 14.1003" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
-                    <div className="text-white font-bold text-center h-[5%]">Total: {formatPrice(someToTotal())}</div>
+                    <div className="text-white font-bold text-center h-[5%]">Total: {cartTotalSum(cart)}</div>
                     <ul className="flex flex-col gap-3 px-3 py-3 h-fit ">
                         {cart.map((product, index) => (
                             index < 4 && (
@@ -79,18 +73,20 @@ const Cart = () => {
 
                                         </div>
                                         <div className="flex items-center justify-between ">
-                                            <strong className="text-xs sm:text-sm text-blue-400 ">{formatPrice(product.price)}</strong>
+                                            <strong className="text-xs sm:text-sm text-blue-400 ">{formatPrice(product.price, product.discount)}</strong>
                                             <div className="flex gap-2 items-center">
+
+                                                <span className={`flex justify-center items-center text-xs sm:text-sm bg-slate-500/50 cursor-default rounded-full w-3.5 h-3.5 sm:w-4 sm:h-4  ${!product.quantity || product.quantity === 1 ? "bg-slate-500/25 text-white/30" : "hover:bg-slate-500 cursor-pointer"}`}
+                                                    onClick={() => decrementProduct(product)}
+                                                >-</span>
+
+                                                <span className="text-xs sm:text-sm">{product.quantity ? product.quantity : 1}</span>
 
                                                 <span className="flex justify-center items-center text-xs sm:text-sm bg-slate-500/50 rounded-full w-3.5 h-3.5 sm:w-4 sm:h-4 hover:bg-slate-500 cursor-pointer"
                                                     onClick={() => incrementProduct(product)}
                                                 >+</span>
 
-                                                <span className="text-xs sm:text-sm">{product.quantity ? product.quantity : 1}</span>
 
-                                                <span className={`flex justify-center items-center text-xs sm:text-sm bg-slate-500/50 cursor-default rounded-full w-3.5 h-3.5 sm:w-4 sm:h-4  ${!product.quantity || product.quantity === 1 ? "bg-slate-500/25 text-white/30" : "hover:bg-slate-500 cursor-pointer"}`}
-                                                    onClick={() => decrementProduct(product)}
-                                                >-</span>
                                             </div>
                                         </div>
                                     </div>
@@ -106,8 +102,10 @@ const Cart = () => {
                                 See Entire Cart ({cart.length - 4}+)
                             </Link>
                         }
-
-                        <Link href="#" className="text-center text-white bg-green-800/50 hover:bg-green-800 rounded py-2 px-12 font-bold">Checkout</Link>
+                        <div className="w-full h-0.5 bg-slate-700 rounded-lg"></div>
+                        {cart.length > 0 && (
+                            <Link href="#" className="text-center text-white bg-green-800/50 hover:bg-green-800 rounded py-2 px-12 font-bold">Checkout</Link>
+                        )}
                     </div>
                 </section>
             </div>

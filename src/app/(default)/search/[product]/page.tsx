@@ -56,7 +56,7 @@ const SearchProducts = async ({ params }: { params: { product: string } }) => {
     return (
         <main>
             <HasFound />
-            <ul className="px-Mobile md:px-Tablet container mx-auto flex flex-col gap-5 my-4">
+            <ul className="px-Mobile md:px-Tablet container mx-auto grid gap-5 my-4">
                 {products.map((product, index) => (
                     <CardProduct product={product} key={product.id} index={index} />
                 ))}
