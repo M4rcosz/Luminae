@@ -1,9 +1,13 @@
+// "use client"
 import BackgroundScreen from "@/components/utils/BackgroudScreen"
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
+import { SignedIn, SignedOut, UserButton, UserProfile, useUser } from "@clerk/nextjs"
 import Link from "next/link"
 import CartIcon from "@components/Header/Cart/CartIcon"
 
 const UserNavBar = () => {
+
+    // const {user} = useUser();
+
     return (
         <div className="hidden md:flex h-11 lg:h-[72px]">
             <BackgroundScreen color="#262626" className="h-11 lg:h-[72px]" />
@@ -21,21 +25,22 @@ const UserNavBar = () => {
 
                 <div className="flex text-[#ddd] text-sm gap-10 lg:text-base">
                     <SignedOut>
-                        <SignInButton mode="modal">
-                            <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group ease-in-out duration-100">
-                                <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    className="lg:w-8 lg:h-8 *:group-hover:stroke-2"
-                                >
-                                    <ellipse cx="21" cy="31.15" rx="12.25" ry="6.125" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
-                                    <circle cx="21" cy="12.775" r="7" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
-                                </svg>
+                        <Link href="/sign-in" className="flex items-center gap-2 hover:text-[#fff] group ease-in-out duration-100">
+                            <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                className="lg:w-8 lg:h-8 *:group-hover:stroke-2"
+                            >
+                                <ellipse cx="21" cy="31.15" rx="12.25" ry="6.125" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
+                                <circle cx="21" cy="12.775" r="7" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round" />
+                            </svg>
 
-                                Sign In
-                            </Link>
-                        </SignInButton>
+                            Sign In
+                        </Link>
                     </SignedOut>
                     <SignedIn>
-                        <UserButton />
+                        <div className="flex items-center gap-2 hover:text-[#fff] group ease-in-out duration-100">
+                            <UserButton />
+                            {/* <p className="cursor-pointer">{user?.fullName}</p> */}
+                        </div>
                     </SignedIn>
                     <Link href="#" className="flex items-center gap-2 hover:text-[#fff] group ease-in-out duration-100">
                         <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"

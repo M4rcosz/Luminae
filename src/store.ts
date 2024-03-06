@@ -47,6 +47,8 @@ interface CartState {
     removeCart: (product: ProductTypeStripe) => void;
     incrementProduct: (product: ProductTypeStripe) => void;
     decrementProduct: (product: ProductTypeStripe) => void;
+    onCheckout: string;
+    setCheckout: (status: string) => void;
 }
 
 export const useStoreCart = create<CartState>()(
@@ -54,6 +56,7 @@ export const useStoreCart = create<CartState>()(
         set => ({
             cart: [],
             isCartOpen: false,
+            onCheckout: "cart",
             toogleCart: () => set(state => ({
                 isCartOpen: !state.isCartOpen
             })),
@@ -87,7 +90,8 @@ export const useStoreCart = create<CartState>()(
                 })
 
                 return { cart: valor }
-            })
+            }),
+            setCheckout: (status) => set({ onCheckout: status })
         }),
         {
             name: "cart"

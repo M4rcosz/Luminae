@@ -18,12 +18,12 @@ const getProducts = async (filterName?: string): Promise<ProductTypeStripe[]> =>
     if (products.data.length === 0) {
         products = await stripe.products.list({ limit: 10, });
         HasFound = async () =>
-            <div className="container mx-auto px-Mobile md:px-Tablet">
+            <div className="container mx-auto px-Mobile md:px-Tablet my-3">
                 <p className="md:my-5 lg:my-0 italic font-bold">Not found by "<span className="text-red-700">{filterName}</span>"</p>
             </div>
     } else
         HasFound = async () =>
-            <div className="container mx-auto">
+            <div className="container mx-auto my-3">
                 <p className="px-Mobile md:px-Tablet md:my-5 lg:my-0 italic font-bold">Searching by  "<span className="text-blue-700">{filterName}</span>":</p>
             </div>
 

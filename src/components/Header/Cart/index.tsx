@@ -2,11 +2,11 @@
 
 import { useStoreCart } from "@/store"
 import Image from "next/image"
-import Link from "next/link"
 import { useEffect, useState } from "react"
 import { useShallow } from "zustand/react/shallow"
 import { cartTotalSum } from "@/lib/utils/cartTotalSum"
 import { formatPrice } from "@/lib/utils/formatPrice"
+import ButtonCheckout from "@/components/Button/ButtonCheckout"
 
 const Cart = () => {
     const { isCartOpen: isOpen, toogleCart, cart, removeCart, incrementProduct, decrementProduct } = useStoreCart(useShallow(state => state));
@@ -94,19 +94,7 @@ const Cart = () => {
                             )))
                         }
                     </ul>
-                    <div className="flex flex-col gap-3 px-3 py-3">
-                        {cart.length > 4 &&
-                            <Link href="#"
-                                className="mx-auto text-center text-white bg-slate-700 hover:bg-slate-600 rounded py-2 px-12 font-bold "
-                            >
-                                See Entire Cart ({cart.length - 4}+)
-                            </Link>
-                        }
-                        <div className="w-full h-0.5 bg-slate-700 rounded-lg"></div>
-                        {cart.length > 0 && (
-                            <Link href="#" className="text-center text-white bg-green-800/50 hover:bg-green-800 rounded py-2 px-12 font-bold">Checkout</Link>
-                        )}
-                    </div>
+                    <ButtonCheckout />
                 </section>
             </div>
         </>
