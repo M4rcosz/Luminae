@@ -36,7 +36,7 @@ const ListInfiniteScroll = ({ products: initialProducts, filterName, has_More }:
         }
 
         setIsLoading(false);
-    }, [])
+    }, [filterName, lastProductId])
 
     useEffect(() => {
         if (inView && hasMore && !isLoading) {
