@@ -18,7 +18,7 @@ const CartIcon = ({ className, stroke = "#434343", svgClassName, children }: Car
         <>
             {children ? <div className="flex items-center gap-2 hover:text-[#fff] group ease-in-out duration-100 cursor-pointer"
                 aria-label="Carrinho de compras"
-                onClick={toogleCart}
+                onClick={() => toogleCart()}
             >
                 <div className={`flex items-center text-white gap-0.5 relative ${className}`}>
                     <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const CartIcon = ({ className, stroke = "#434343", svgClassName, children }: Car
                 :
                 <div className={`flex items-center text-white gap-0.5 relative ${className}`}
                     aria-label="Carrinho de compras"
-                    onClick={toogleCart}
+                    onClick={() => toogleCart()}
                 >
                     <svg width="24" height="24" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"
                         className={svgClassName}
