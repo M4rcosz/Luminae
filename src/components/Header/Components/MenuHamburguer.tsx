@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const MenuHamburguer = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -48,7 +49,15 @@ const MenuHamburguer = () => {
                 </div>
                 <ul className="flex flex-col mx-1 my-5 py-5 text-sm text-[#000] font-semibold lg:text-base">
                     <li className=" text-white/90 font-semibold text-base px-Mobile bg-black py-4 hover:bg-black/50 hover:text-white">
-                        <Link href="#">Sign In</Link>
+                        <SignedOut>
+                            <Link href="#">Sign In</Link>
+                        </SignedOut>
+                        <SignedIn>
+                            <div className="flex items-center gap-2 hover:text-[#fff] group ease-in-out duration-100">
+                                <UserButton />
+                                {/* <p className="cursor-pointer">{user?.fullName}</p> */}
+                            </div>
+                        </SignedIn>
                     </li>
                     <li className=" text-white/90 font-semibold text-base px-Mobile bg-black py-4 hover:bg-black/50 hover:text-white">
                         <Link href="#">Favorites</Link>

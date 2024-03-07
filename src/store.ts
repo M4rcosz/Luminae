@@ -42,13 +42,15 @@ export const useStoreSearching = create<SearchingState>()(set => ({
 interface CartState {
     cart: ProductTypeStripe[];
     isCartOpen: boolean;
-    toogleCart: () => void;
+    toogleCart: (status?: boolean) => void;
     addCart: (product: ProductTypeStripe) => void;
     removeCart: (product: ProductTypeStripe) => void;
     incrementProduct: (product: ProductTypeStripe) => void;
     decrementProduct: (product: ProductTypeStripe) => void;
     onCheckout: string;
     setCheckout: (status: string) => void;
+    paymentIntent: string;
+    setPaymentIntent: (paymentIntent: string) => void;
 }
 
 export const useStoreCart = create<CartState>()(
@@ -57,13 +59,24 @@ export const useStoreCart = create<CartState>()(
             cart: [],
             isCartOpen: false,
             onCheckout: "cart",
-            toogleCart: () => set(state => ({
-                isCartOpen: !state.isCartOpen
+            paymentIntent: "",
+            toogleCart: (status) => set(state => {
+
+                if (status === true) return { isCartOpen: true }
+
+                else if (status === false) return { isCartOpen: false }
+
+                else return { isCartOpen: !state.isCartOpen }
+            }),
+
+            addCart: (product) => set(state => ({
+                cart: [...state.cart, product]
             })),
-            addCart: (product) => set(state =>
-                ({ cart: [...state.cart, product] })),
-            removeCart: (product) => set(state =>
-                ({ cart: [...state.cart.filter(item => item.id !== product.id)] })),
+
+            removeCart: (product) => set(state => ({
+                cart: [...state.cart.filter(item => item.id !== product.id)]
+            })),
+
             incrementProduct: (product) => set(state => {
 
                 const valor = state.cart.map(item => {
@@ -79,19 +92,27 @@ export const useStoreCart = create<CartState>()(
 
                 return { cart: valor }
             }),
+
             decrementProduct: (product) => set(state => {
 
                 const valor = state.cart.map(item => {
                     if (item.id === product.id) {
-                        if (item.quantity && item.quantity > 1)
-                            return { ...item, quantity: item.quantity - 1 };
+
+                        if (item.quantity && item.quantity > 1) return {
+                            ...item, quantity: item.quantity - 1
+                        };
                     }
+
                     return item
                 })
 
                 return { cart: valor }
             }),
-            setCheckout: (status) => set({ onCheckout: status })
+
+            setCheckout: (status) => set({ onCheckout: status }),
+
+            setPaymentIntent: (paymentIntent) => set({ paymentIntent: paymentIntent })
+
         }),
         {
             name: "cart"

@@ -28,6 +28,7 @@ Estou usando ele como base e fazendo algumas melhorias e mudanças, deixando ass
 - Stripe - `npm install @stripe/stripe-js stripe`
 - svix - `npm install svix`
 - Zustand - `npm install zustand`
+- React Intersection Observer - `npm install react-intersection-observer`
 
 ## Dinamicidade dos Dados
 

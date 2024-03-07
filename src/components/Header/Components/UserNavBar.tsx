@@ -1,6 +1,6 @@
 // "use client"
 import BackgroundScreen from "@/components/utils/BackgroudScreen"
-import { SignedIn, SignedOut, UserButton, UserProfile, useUser } from "@clerk/nextjs"
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import Link from "next/link"
 import CartIcon from "@components/Header/Cart/CartIcon"
 

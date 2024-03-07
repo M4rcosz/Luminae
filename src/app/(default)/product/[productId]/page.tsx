@@ -1,11 +1,8 @@
 import ButtonAddToCart from "@/components/Button/ButtonAddToCart";
 import PricesRow from "@/components/Cards/Items/PricesRow";
 import TitleDesc from "@/components/Cards/Items/TitleDesc";
-import BackgroundScreen from "@/components/utils/BackgroudScreen";
-import { formatPrice } from "@/lib/utils/formatPrice";
-import { ProductTypeStripe } from "@/types/product";
 import Image from "next/image";
-import Stripe from "stripe";
+import { getProduct } from "./actions";
 
 interface ProductPageType {
     params: {
@@ -13,33 +10,8 @@ interface ProductPageType {
     }
 }
 
-const getProduct = async (id: string): Promise<ProductTypeStripe> => {
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!,
-        { apiVersion: "2023-10-16", });
-
-    const product = await stripe.products.retrieve(id);
-
-    const price = await stripe.prices.list({
-        product: product.id,
-    });
-
-    return {
-        id: product.id,
-        price: price.data[0].unit_amount,
-        name: product.name,
-        image: product.images[0],
-        description: product.description,
-        currency: price.data[0].currency,
-        discount: Number(product.metadata.discount),
-        grade: Number(product.metadata.grade),
-        reviews: Number(product.metadata.reviews),
-    };
-}
-
-const ProductPage = async ({ params: { productId } }: ProductPageType) => {
+const ProductPage = async ({ params: { productId }, }: ProductPageType) => {
     const product = await getProduct(productId);
-
-    console.log(product)
 
     return (
         <main className="container mx-auto px-Mobile md:px-Tablet">

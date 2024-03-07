@@ -13,7 +13,7 @@ const CardProduct = ({ product, index }: CardProductProps) => {
     return (
         <div className="w-full max-w-[370px] sm:max-w-none mx-auto flex flex-col gap-3 items-center bg-slate-300 h-fit sm:h-36 rounded-lg p-3 sm:flex-row">
             <div className="w-full h-fit sm:h-32 flex items-center justify-center sm:min-w-[150px] sm:w-[150px]">
-                {index < 4 ? <Image
+                {index < 5 ? <Image
                     width={100}
                     height={100}
                     src={product.image}
