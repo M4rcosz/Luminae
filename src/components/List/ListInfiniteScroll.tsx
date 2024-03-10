@@ -24,8 +24,6 @@ const ListInfiniteScroll = ({ products: initialProducts, filterName, has_More }:
 
     const lastProductId = products[products.length - 1]?.id;
 
-    console.log(lastProductId)
-
     const loadMoreProducts = useCallback(async () => {
         setIsLoading(true);
         const { products, hasMore } = await getProducts(filterName, lastProductId);
@@ -47,8 +45,6 @@ const ListInfiniteScroll = ({ products: initialProducts, filterName, has_More }:
     if (!products) {
         return <div>Loading...</div>
     }
-
-    console.log(products)
 
     return (
         <>
